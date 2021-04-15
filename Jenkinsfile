@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh "mvn compile"
-        sh "http://192.168.0.26:9966/petclinic/swagger-ui.html#/"
+       
       }
     }  
     stage('Test') {
