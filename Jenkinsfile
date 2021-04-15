@@ -4,7 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         sh "mvn compile"
-       
       }
     }  
     stage('Test') {
@@ -14,8 +13,10 @@ pipeline {
      post {
       always {
         junit '**/TEST*.xml'
+
       }
      }
   }
- }
+
+  }
 }
