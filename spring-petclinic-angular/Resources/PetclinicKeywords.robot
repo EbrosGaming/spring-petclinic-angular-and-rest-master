@@ -239,6 +239,41 @@ Verify whether selected Owner is with rightful pet(2 pets)
      ${Actual_Owner3}                            Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
      Should Be Equal                             ${Expecting_Owner3}${Expecting_PetA}${Expecting_PetB}     ${Actual_Owner3}${Actual_PetA}${Actual_PetB}
      Sleep                                       .5
+#--------------------------------------------------------------------------------------------------------------------------
+#Change/Edit Pet Type
+User Clicks On PetTypes
+        Go To Web Page
+        Click Element                                    xpath://html/body/app-root/div[1]/nav/div/ul/li[4]/a
+User Edit's A Pet Type
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+        TearDown After Verifying
+User Verifies Edited Pet Added
+       ${Edited_PetType_Updated}                        get text                               xpath://*[@id="3"]
+       Should Contain                                   ${New_Edited_PetType_Name}              ${Edited_PetType_Updated}
+TearDown After Verifying
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${Old_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+User Edit's PetTypes with Same Name
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+User Verifies Same Pet Type Name Can Add Multiple Times
+        User Verifies Edited Pet Added
+        ${link_text}                                    Get Title
+        Should Not Be Equal                             ${Verify_Old_PetType_existed}        ${link_text}
+        TearDown After Verifying
+        TearDown Second Edited PetType After Verifying
+TearDown Second Edited PetType After Verifying
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
+        Input Text                                       id=name                              ${Second_Old_petType_name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+
 
 
 
