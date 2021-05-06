@@ -11,16 +11,16 @@ ${URL}                       http://localhost:4200
 ${WELCOME_MESSAGE}           Welcome to Petclinic
 *** Test Cases ***
 Test If Home Button Works On Speciality Page
-    [Documentation]     Check If Home Button is Available and Working on Speciality Page
-    [Tags]              Click Home Button On Speciality page should contain element
-    Given User Is On Speciality Page
+    [Documentation]     Check If Home Button is Available and Working on Specialities Page
+    [Tags]              Click Home Button On Specialities page should contain element
+    Given User Is On Specialities Page
     When Clicks on Home Button
     Then Comes back to the Home Page
 *** Test Cases ***
 Test If Home Button Works On Edit Speciality Page
-    [Documentation]     Check If Home Button is Available and Working on Edit Speciality Page
-    [Tags]              Click Home Button On Edit Speciality page should contain element
-    Given User Is On Edit Speciality Page
+    [Documentation]     Check If Home Button is Available and Working on Edit Specialities Page
+    [Tags]              Click Home Button On Edit Specialities page should contain element
+    Given User Is On Edit Specialities Page
     #When Clicks on Home Button
     Then Comes back to the Home Page
 
