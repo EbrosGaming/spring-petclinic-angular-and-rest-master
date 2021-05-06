@@ -19,7 +19,6 @@ All Owners
     Click Element                               //*[@routerlink="/owners"]
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-list/div/div/h2               #Owners List
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/h2
-     Sleep                                         .25
     Page Should Contain Element         //*[@class="table table-striped"]
     Element Should Be Visible           //*[@class="table table-striped"]
      Sleep                                         .25
@@ -27,7 +26,6 @@ Visit is Added To The Pet
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
     Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
-     Sleep                                         .25
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Click Element                       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
