@@ -13,7 +13,7 @@ Verify Page Loaded
 User Clicks Owners
     Page Should Contain Element                 xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a         # Owners Tab
     Click Element                               xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-     Sleep                                         .25
+   
 All Owners
     Page Should Contain Element                //*[@routerlink="/owners"]
     Click Element                               //*[@routerlink="/owners"]
@@ -21,7 +21,7 @@ All Owners
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/h2
     Page Should Contain Element         //*[@class="table table-striped"]
     Element Should Be Visible           //*[@class="table table-striped"]
-     Sleep                                         .25
+    
 Visit is Added To The Pet
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
@@ -34,18 +34,18 @@ Visit is Added To The Pet
     Click Button                        //*[@id="visit"]/div[2]/div/button[2]
     Wait Until Page Contains Element    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
     Element Should Be VIsible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
-     Sleep                                         .25
+    
 
 Delete Pet Visit
     Wait Until Page Contains Element   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Element Should Be Visible          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Click Element                      xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-     Sleep                                         .25
+   
 Verify Visit is Deleted
      Wait Until Element Is Not Visible     ${VISIT_DATE}
      Element Should Not Be Visible         ${VISIT_DATE}
      Wait Until Element Is Not Visible     ${VISIT_DESCRIPTION}
      Element Should Not Be Visible         ${VISIT_DESCRIPTION}
-      Sleep                                         .25
+    
 End Web Tests
     Close Browser
