@@ -24,7 +24,7 @@ pipeline {
 
         stage('Robot') {
             steps {
-                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/PCPetVisitsUpdated/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/PCPetVisitsUpdated/Tests/Results spring-petclinic-angular/RenuRobot/PCPetVisits/Tests'
             }
             post {
                 always {
