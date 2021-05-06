@@ -9,8 +9,65 @@
 			"name": "PCPetVisits",
 			"item": [
 				{
-					"name": "Delete visits",
+					"name": "visits",
 					"item": [
+						{
+							"name": "Get Visits",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/visits",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"visits"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Visits",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"//var jsonData=pm.response.json();\r",
+											"//pm.globals.set(\"visitId\",jsonData.id);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 0,\r\n        \"date\": \"2021/11/04\",\r\n        \"description\": \"Vaccine\",\r\n        \"pet\": {\r\n            \"id\": 7,\r\n            \"name\": \"Samantha\",\r\n            \"birthDate\": \"2012/09/04\",\r\n            \"type\": {\r\n                \"id\": 1,\r\n                \"name\": \"cat\"\r\n            },\r\n            \"owner\": {\r\n                \"id\": 6,\r\n                \"firstName\": \"Jean\",\r\n                \"lastName\": \"Coleman\",\r\n                \"address\": \"105 N. Lake St.\",\r\n                \"city\": \"Monona\",\r\n                \"telephone\": \"6085552654\"\r\n            }\r\n        }\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/visits",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"visits"
+									]
+								}
+							},
+							"response": []
+						},
 						{
 							"name": "Delete visits",
 							"event": [
@@ -18,9 +75,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.test(\"Delete pet visit Status code is 204\", function () {\r",
-											"    pm.response.to.have.status(204);\r",
-											"});\r",
+											"pm.test(\"Delete pet visit Status code is 204\",() => pm.response.to.have.status(204));\r",
 											"\r",
 											"var url = pm.environment.get(\"url\") + \"/visits/\" +  pm.globals.get(\"visitId\");\r",
 											"\r",
