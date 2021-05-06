@@ -9,10 +9,11 @@ Test Teardown                               End Web Test
 ${BROWSER}                                  chrome
 ${URL}                                      http://localhost:4200/
 ${Welcome_Message}                          Welcome to Petclinic
-${Old_PetType_Name}                         snake
-${Second_Old_petType_name}                  hamster
+${Actual_PetType_Name}                      snake
+${Second_petType_Acutal_name}               hamster
 ${New_Edited_PetType_Name}                  rabbit
 ${Verify_Old_PetType_existed}               hamster
+
 
 
 *** Test Cases ***
