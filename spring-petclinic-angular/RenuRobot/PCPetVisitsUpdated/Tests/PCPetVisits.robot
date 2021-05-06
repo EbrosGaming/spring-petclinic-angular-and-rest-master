@@ -8,6 +8,7 @@ Test Teardown        End Web Tests
 *** Variables ***
 ${BROWSER}                   chrome
 ${URL}                       http://localhost:4200
+${WELCOME_MESSAGE}           Welcome to Petclinic
 ${VISIT_DATE}                2021/05/07
 ${VISIT_DESCRIPTION}         checkup
 
@@ -15,10 +16,8 @@ ${VISIT_DESCRIPTION}         checkup
 Remove Pet Visit
     [Documentation]     Delete Pet Visit
     [Tags]              Delete Pet Visit
-    Given Go To Web Page
-    And Click Owners
+    Given User Clicks Owners
     And All Owners
     And Visit is Added To The Pet
     And Delete Pet Visit
-    And Verify Visit is Deleted
-    Then Close Browser
+    Then Verify Visit is Deleted
