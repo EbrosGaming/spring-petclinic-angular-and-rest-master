@@ -12,11 +12,11 @@ Verify Page Loaded
     Page Should Contain             ${WELCOME_MESSAGE}                     Welcome to Petclinic
 
 
-User Is On Speciality Page
+User Is On Specialities Page
     Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
 
-User Is On Edit Speciality Page
+User Is On Edit Specialities Page
     click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     Page Should Contain Element     xpath://*[@id="specialties"]
     Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
@@ -32,7 +32,8 @@ Clicks on Home Button
 
 Comes back to the Home Page
     Page Should Contain             ${WELCOME_MESSAGE}
-    sleep                           .5
+    Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
+    sleep                           .25
 
 End Web Tests
     Close Browser
