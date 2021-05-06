@@ -40,12 +40,15 @@ Delete Pet Visit
     Wait Until Page Contains Element   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Element Should Be Visible          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Click Element                      xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+    sleep                              .25
    
 Verify Visit is Deleted
      Wait Until Element Is Not Visible     ${VISIT_DATE}
      Element Should Not Be Visible         ${VISIT_DATE}
      Wait Until Element Is Not Visible     ${VISIT_DESCRIPTION}
      Element Should Not Be Visible         ${VISIT_DESCRIPTION}
+     sleep                                .25
+     
     
 End Web Tests
     Close Browser
