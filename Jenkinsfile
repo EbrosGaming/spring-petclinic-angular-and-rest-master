@@ -14,15 +14,7 @@ pipeline {
 
             }
         }
-         
-       stage('Postman') {
-            steps {
-                sh 'newman run PostmanFiles/UpdatePetType_Collection.postman_collection.json -e PostmanFiles/UpdatePetType_Environment.postman_environment.json -- reporters junit'
-            }
-
-        }
-
-        stage('Robot') {
+       stage('Robot') {
             steps {
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/PCPetVisitsUpdated/Tests/Results spring-petclinic-angular/RenuRobot/PCPetVisitsUpdated/Tests'
             }
@@ -46,7 +38,26 @@ pipeline {
                 }
             }
         }
-    }
+      
+        stage('DelayPostmanTest') {
+           steps {
+               sh 'sleep 5'
+          }
+        }   
+       stage('Postman') {
+            steps {
+                sh 'newman run PostmanFiles/UpdatePetType_Collection.postman_collection.json -e PostmanFiles/UpdatePetType_Environment.postman_environment.json -- reporters junit'
+            }
+           
+                post {
+                always {
+                    junit '**/TEST*.xml'
+                }
+              }
+
+        }
+
+       
     
   }
 }
