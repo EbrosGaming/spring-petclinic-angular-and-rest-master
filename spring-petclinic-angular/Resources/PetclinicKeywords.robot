@@ -246,8 +246,10 @@ Verify whether selected Owner is with rightful pet(2 pets)
 #Change/Edit Pet Type
 User Clicks On PetTypes
         Go To Web Page
+        Sleep                                           .10
         Click Element                                    xpath://html/body/app-root/div[1]/nav/div/ul/li[4]/a
 User Edit's A Pet Type
+        Sleep                                           .5
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
         Input Text                                       id=name                              ${New_Edited_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
@@ -277,6 +279,25 @@ TearDown Second Edited PetType After Verifying
         Input Text                                       id=name                              ${Second_petType_Acutal_name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 #------------------------------------------------------------------------------------------------------------------------
+#Home Button From Pet Type
+
+User Is At PetTypes Page
+        Sleep                                            .5
+        Page Should Contain Element                      xpath:/html/body/app-root/app-pettype-list/div/div/div/button[1]
+User Can Go Back To Home Page
+       Sleep                                            .5
+       Click Element                                     xpath:/html/body/app-root/app-pettype-list/div/div/div/button[1]
+       Sleep                                            .5
+User Back To Home Page
+      Page should Contain                                ${Welcome_Message}
+User Clicks A Pet Type Edit
+       sleep                                            .5
+       Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+       Page should Contain Element                      xpath://*[@id="pettype"]/div[2]/div/button[2]      
+       Page Should Not Contain Button                   Home
+       Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[2]                                  
+       User Can Go Back To Home Page
+
 
 
 
