@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation                          Testar Selenium och RobotFramework
+Documentation                          Infotiv Petclinic Test Functionality
 Resource                               ../Resources/PetclinicKeywords.robot
 Library                                SeleniumLibrary
 Test Setup                             Begin WebTest

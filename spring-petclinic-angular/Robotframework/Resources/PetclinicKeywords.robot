@@ -277,6 +277,8 @@ a user should be able to see the new Pet Type in the list
   Teardown Add New Pet Type
 
 
+/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
+
 #Add existing Pet Type - Jonna
 
 Add existing pet
