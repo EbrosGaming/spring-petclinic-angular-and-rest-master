@@ -6,265 +6,255 @@
 	},
 	"item": [
 		{
-			"name": "PCPetTypes",
+			"name": "Update PetType",
 			"item": [
 				{
-					"name": "Test Setup",
-					"item": [
+					"name": "Add PetType",
+					"event": [
 						{
-							"name": "Add PetType",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 201\", function () {\r",
-											"    pm.response.to.have.status(201);\r",
-											"});\r",
-											"\r",
-											"\r",
-											"\r",
-											"var jsonData = pm.response.json();\r",
-											"pm.globals.set(\"petTypeID\", pm.response.json().id);\r",
-											"\r",
-											"pm.test(\"Verify Created Pet is not Empty\", () => pm.expect(jsonData.pettypes).to.not.eql(\"\"));\r",
-											"\r",
-											"pm.test(\"Verify if Created Pettype is added in the pettypes Database \", function () {\r",
-											"     pm.expect(pm.response.text()).to.include(\"id\");\r",
-											"     });\r",
-											"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
-											"  pm.expect(jsonData).to.be.an(\"object\");\r",
-											"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Check Pettype which is Added is Correct\", function () {\r",
-											"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameP\"));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": " {\r\n        \r\n        \"name\": \"{{petTypeNameP}}\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/pettypes",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pettypes"
-									]
-								}
-							},
-							"response": []
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.globals.set(\"petTypeID\", pm.response.json().id);\r",
+									"\r",
+									"pm.test(\"Verify Created Pet is not Empty\", () => pm.expect(jsonData.pettypes).to.not.eql(\"\"));\r",
+									"\r",
+									"pm.test(\"Verify if Created Pettype is added in the pettypes Database \", function () {\r",
+									"     pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"     });\r",
+									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check Pettype which is Added is Correct\", function () {\r",
+									"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameP\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
 						}
-					]
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"name\": \"{{petTypeNameP}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/pettypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pettypes"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "Update PetType",
-					"item": [
+					"event": [
 						{
-							"name": "Update PetType",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 204\", function () {\r",
-											"    pm.response.to.have.status(204);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"PetType is updated\", () => {\r",
-											"  const expectedObject = {\r",
-											"    \"created\": true,\r",
-											"    \"errors\": []\r",
-											"  };\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
-									}
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"PetType is updated\", () => {\r",
+									"  const expectedObject = {\r",
+									"    \"created\": true,\r",
+									"    \"errors\": []\r",
+									"  };\r",
+									"});\r",
+									""
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"{{petTypeNameU}}\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/pettypes/{{petTypeID}}",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pettypes",
-										"{{petTypeID}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Updated PetType",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"var jsonData = pm.response.json();\r",
-											" \r",
-											"pm.globals.get(\"petTypeID\", pm.response.json().id);\r",
-											"pm.test(\"Verify that the Updated Pettype Information is not empty\", function () {\r",
-											"    pm.expect(jsonData.pettypes).to.not.eql(\"\");\r",
-											"});\r",
-											" \r",
-											"pm.test(\"Check the contents of Pettype Data are not empty\", function () {\r",
-											"    pm.expect(jsonData.name).to.not.include(null);\r",
-											"});\r",
-											" \r",
-											"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
-											"pm.test(\"Assert that the correct type of data is stored in the Updated object\", () => {\r",
-											"  pm.expect(jsonData).to.be.an(\"object\");\r",
-											"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Verify Pettype is Updated\", function (){\r",
-											"    pm.expect(jsonData.name).to.not.eql(pm.environment.get(\"petTypeNameP\"));\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Check Pettype which is Updated is Correct\", function () {\r",
-											"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameU\"));\r",
-											"});\r",
-											"\r",
-											"\r",
-											"\r",
-											"\r",
-											" \r",
-											"\r",
-											"\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/api/pettypes/{{petTypeID}}",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pettypes",
-										"{{petTypeID}}"
-									]
-								}
-							},
-							"response": []
+								"type": "text/javascript"
+							}
 						}
-					]
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{petTypeNameU}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pettypes",
+								"{{petTypeID}}"
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "Teardown",
-					"item": [
+					"name": "Get Updated PetType",
+					"event": [
 						{
-							"name": "Delete PetType",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 204\", function () {\r",
-											"    pm.response.to.have.status(204);\r",
-											"});\r",
-											"\r",
-											"var url = pm.environment.get(\"url\") + \"/api\" + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
-											"\r",
-											"const getRequest = {\r",
-											"        url: url,\r",
-											"        method: 'GET'\r",
-											"};\r",
-											"pm.sendRequest(getRequest, function (err, res) {\r",
-											"    if (err) { \r",
-											"        console.log(err);\r",
-											"    }\r",
-											"     console.log(res);\r",
-											"    \r",
-											"    pm.test('Response should be Not Found', function () {\r",
-											"        pm.expect(res.status).to.include(\"Not Found\");\r",
-											"    });\r",
-											"    \r",
-											"    pm.test(\"Response code 404\", function() {\r",
-											"        pm.expect(res.code).to.equal(404);\r",
-											"    })\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Cookie",
-										"value": "name={{admin_name}}",
-										"type": "text"
-									}
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									" \r",
+									"pm.globals.get(\"petTypeID\", pm.response.json().id);\r",
+									"pm.test(\"Verify that the Updated Pettype Information is not empty\", function () {\r",
+									"    pm.expect(jsonData.pettypes).to.not.eql(\"\");\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Check the contents of Pettype Data are not empty\", function () {\r",
+									"    pm.expect(jsonData.name).to.not.include(null);\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
+									"pm.test(\"Assert that the correct type of data is stored in the Updated object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify Pettype is Updated\", function (){\r",
+									"    pm.expect(jsonData.name).to.not.eql(pm.environment.get(\"petTypeNameP\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check Pettype which is Updated is Correct\", function () {\r",
+									"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameU\"));\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									" \r",
+									"\r",
+									"\r",
+									""
 								],
-								"url": {
-									"raw": "{{url}}/api/pettypes/{{petTypeID}}",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pettypes",
-										"{{petTypeID}}"
-									]
-								}
-							},
-							"response": []
+								"type": "text/javascript"
+							}
 						}
-					]
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pettypes",
+								"{{petTypeID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teardown",
+			"item": [
+				{
+					"name": "Delete PetType",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Response should be Not Found', function () {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Response code 404\", function() {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    })\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "name={{admin_name}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pettypes",
+								"{{petTypeID}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
