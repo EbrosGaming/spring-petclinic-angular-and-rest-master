@@ -251,11 +251,11 @@ User Edit's A Pet Type
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
         TearDown After Verifying
 User Verifies Edited Pet Added
-       ${Edited_PetType_Updated}                        get text                               xpath://*[@id="3"]
+       ${Edited_PetType_Updated}                        Get Text                               xpath://*[@id="3"]
        Should Contain                                   ${New_Edited_PetType_Name}              ${Edited_PetType_Updated}
 TearDown After Verifying
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
-        Input Text                                       id=name                              ${Old_PetType_Name}
+        Input Text                                       id=name                              ${Actual_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 User Edit's PetTypes with Same Name
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
@@ -266,15 +266,15 @@ User Edit's PetTypes with Same Name
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 User Verifies Same Pet Type Name Can Add Multiple Times
         User Verifies Edited Pet Added
-        ${link_text}                                    Get Title
+        ${link_text}                                    Get Value                            xpath://*[@id="5"]
         Should Not Be Equal                             ${Verify_Old_PetType_existed}        ${link_text}
         TearDown After Verifying
         TearDown Second Edited PetType After Verifying
 TearDown Second Edited PetType After Verifying
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
-        Input Text                                       id=name                              ${Second_Old_petType_name}
+        Input Text                                       id=name                              ${Second_petType_Acutal_name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
-
+#------------------------------------------------------------------------------------------------------------------------
 
 
 
