@@ -17,14 +17,14 @@ pipeline {
          
         stage('Postman') {
             steps {
-                sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+                sh 'newman run PostmanFiles/UpdatePetType_Collection.postman_collection.json -e PostmanFiles/UpdatePetType_Environment.postman_environment.json -- reporters junit'
             }
 
         }
 
         stage('Robot') {
             steps {
-                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/PCPetVisitsUpdated/Tests/Results spring-petclinic-angular/Robotframework/Tests'
             }
             post {
                 always {
