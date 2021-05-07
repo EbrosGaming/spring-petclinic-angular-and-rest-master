@@ -3,7 +3,7 @@ Test Navigates to chrome Home Page
 Begin WebTest
     OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
-    Set Selenium Speed                                .5
+    Set Selenium Speed                                0.07
 Go To Web Page
      Load Page
      Verify Page Loaded
@@ -238,6 +238,66 @@ Verify whether selected Owner is with rightful pet(2 pets)
      Should Be Equal                             ${Expecting_Owner3}${Expecting_PetA}${Expecting_PetB}     ${Actual_Owner3}${Actual_PetA}${Actual_PetB}
      Sleep                                       .5
 
+#------------------------------------
+#Add Pet Type - Jonna
+
+Go to Pet Types
+    User is on the landing page
+    Click element                                 xpath:/html/body/app-root/div[1]/nav/div/ul/li[4]/a/span[2]
+    Verify on the right page
+
+Verify on the right page
+    ${Actual_Pettypes_Page}                       Get Text    xpath:/html/body/app-root/app-pettype-list/div/div/h2
+    Should be equal                               ${Actual_Pettypes_Page}   ${Expected_Pettypes_Page}
+
+Add a new Pet Type
+    Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
+    Wait until page contains                      New Pet Type
+    Click element                                 id:name
+    Input Text                                    id:name           ${New_Pettype_Name}
+    Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
+
+Verify added Pet Type
+    ${Actual_Pettype_Name}                        Get Value     xpath://*[@id="6"]
+    Should be equal                               ${Actual_Pettype_Name}    ${New_Pettype_Name}
+
+Teardown Add New Pet Type
+    Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+    Page should not contain element               xpath://*[@id="6"]
+
+#Gherkin Syntax for Add New Pet Type:
+
+user is on the Pet Types page
+  Go to Pet Types
+
+a user have added a new Pet Type
+  Add a new Pet Type
+
+a user should be able to see the new Pet Type in the list
+  Verify added Pet Type
+  Teardown Add New Pet Type
+
+#Add existing Pet Type - Jonna
+
+Add existing pet
+   Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
+   Wait until page contains                      New Pet Type
+   Click element                                 id:name
+   Input Text                                    id:name           ${Existing_Pettype_Name}
+   Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
+
+Verify added existing Pet Type
+   ${Actual_New_Pettype_Name}                    Get Value     xpath://*[@id="6"]
+   Should be equal                               ${Actual_New_Pettype_Name}    ${Existing_Pettype_Name}
+
+a user has added a new Pet Type that already exists
+  Add existing pet
+
+a user should see two fields with the same Pet Type
+  Verify added existing Pet Type
+  Teardown Add New Pet Type
+
+#------------------------------------
 
 
 End Web Test
