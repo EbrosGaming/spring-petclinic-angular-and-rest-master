@@ -279,24 +279,35 @@ TearDown Second Edited PetType After Verifying
         Input Text                                       id=name                              ${Second_petType_Acutal_name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 #------------------------------------------------------------------------------------------------------------------------
-#Home Button From Pet Type
-
-User Is At PetTypes Page
+#Home Button From Veterinarians
+User Clicks On Veterinarians Page
+        Go To Web Page
+        Sleep                                           .10
+        Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+User Selects All
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
+User Is At Veterinarians Page
         Sleep                                            .5
-        Page Should Contain Element                      xpath:/html/body/app-root/app-pettype-list/div/div/div/button[1]
+        Page Should Contain button                       Home
 User Can Go Back To Home Page
-       Sleep                                            .5
-       Click Element                                     xpath:/html/body/app-root/app-pettype-list/div/div/div/button[1]
-       Sleep                                            .5
+        Click Element                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
+        Sleep                                           .5
 User Back To Home Page
       Page should Contain                                ${Welcome_Message}
-User Clicks A Pet Type Edit
-       sleep                                            .5
-       Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
-       Page should Contain Element                      xpath://*[@id="pettype"]/div[2]/div/button[2]      
+User Clicks On Edit Vet
+       Sleep                                            .5
+       Click Element                                    xpath://*[@id="vets"]/tbody/tr[5]/td[3]/button[1]
+       #Page should Contain Element                      xpath://*[@id="vet_form"]/div[5]/div/button[2]
        Page Should Not Contain Button                   Home
-       Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[2]                                  
+       Sleep                                            .5
+       Click Element                                    xpath://*[@id="vet_form"]/div[5]/div/button[2]
        User Can Go Back To Home Page
+User Clicks On Add New
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+        Page Should Not Contain Button                   Home
+        Sleep                                           .5
+        Click Element                                  xpath://*[@id="vet"]/div[5]/div/button[1]
+
 
 
 
