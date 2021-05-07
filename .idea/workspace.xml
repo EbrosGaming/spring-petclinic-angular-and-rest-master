@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Update Jenkinsfile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicAddPetType.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicAddPetType.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,12 +76,6 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-    </task>
-    <task id="LOCAL−00052" summary="Update Jenkinsfile">
-      <created>1619072138768</created>
-      <option name="number" value="LOCAL−00052" />
-      <option name="presentableId" value="LOCAL−00052" />
-      <updated>1619072138768</updated>
     </task>
     <task id="LOCAL−00053" summary="Update Jenkinsfile">
       <created>1619072980946</created>
@@ -373,7 +365,13 @@
       <option name="presentableId" value="LOCAL−00100" />
       <updated>1620303536541</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL−00101" summary="Updated keywords with sleep time">
+      <created>1620376952244</created>
+      <option name="number" value="LOCAL−00101" />
+      <option name="presentableId" value="LOCAL−00101" />
+      <updated>1620376952244</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +399,7 @@
     <MESSAGE value="Finished tests for Add Pet Type" />
     <MESSAGE value="Added some last changes to tests for Add Pet Types." />
     <MESSAGE value="Started on tasks - click Home button from Owners" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started on tasks - click Home button from Owners" />
+    <MESSAGE value="Updated keywords with sleep time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated keywords with sleep time" />
   </component>
 </project>
