@@ -3,6 +3,7 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -34,6 +35,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
@@ -47,6 +49,7 @@
       </list>
     </option>
   </component>
+
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -63,14 +66,32 @@
     </option>
   </component>
   <component name="ProjectId" id="1rNz9957D4w69HBgyWbfjeWVhMy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-petclinic-rest-master" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,7 +101,313 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618831182123</updated>
+      <workItem from="1619030500602" duration="1836000" />
+      <workItem from="1619035303981" duration="7889000" />
+      <workItem from="1619431374488" duration="639000" />
+      <workItem from="1620115188874" duration="693000" />
+      <workItem from="1620116547686" duration="667000" />
+      <workItem from="1620117336558" duration="175000" />
+      <workItem from="1620117564535" duration="1181000" />
+      <workItem from="1620119103547" duration="318000" />
+      <workItem from="1620198529932" duration="12434000" />
+      <workItem from="1620301108899" duration="2095000" />
+      <workItem from="1620375493131" duration="326000" />
     </task>
+    <task id="LOCAL−00052" summary="Update Jenkinsfile">
+      <created>1619072138768</created>
+      <option name="number" value="LOCAL−00052" />
+      <option name="presentableId" value="LOCAL−00052" />
+      <updated>1619072138768</updated>
+    </task>
+    <task id="LOCAL−00053" summary="Update Jenkinsfile">
+      <created>1619072980946</created>
+      <option name="number" value="LOCAL−00053" />
+      <option name="presentableId" value="LOCAL−00053" />
+      <updated>1619072980947</updated>
+    </task>
+    <task id="LOCAL−00054" summary="Update Jenkinsfile">
+      <created>1619073046222</created>
+      <option name="number" value="LOCAL−00054" />
+      <option name="presentableId" value="LOCAL−00054" />
+      <updated>1619073046222</updated>
+    </task>
+    <task id="LOCAL−00055" summary="Update Jenkinsfile">
+      <created>1619074244040</created>
+      <option name="number" value="LOCAL−00055" />
+      <option name="presentableId" value="LOCAL−00055" />
+      <updated>1619074244040</updated>
+    </task>
+    <task id="LOCAL−00056" summary="Update Jenkinsfile">
+      <created>1619074273225</created>
+      <option name="number" value="LOCAL−00056" />
+      <option name="presentableId" value="LOCAL−00056" />
+      <updated>1619074273225</updated>
+    </task>
+    <task id="LOCAL−00057" summary="Update Jenkinsfile">
+      <created>1619074431501</created>
+      <option name="number" value="LOCAL−00057" />
+      <option name="presentableId" value="LOCAL−00057" />
+      <updated>1619074431501</updated>
+    </task>
+    <task id="LOCAL−00058" summary="Update Jenkinsfile">
+      <created>1619074467476</created>
+      <option name="number" value="LOCAL−00058" />
+      <option name="presentableId" value="LOCAL−00058" />
+      <updated>1619074467476</updated>
+    </task>
+    <task id="LOCAL−00059" summary="Update Jenkinsfile">
+      <created>1619074513619</created>
+      <option name="number" value="LOCAL−00059" />
+      <option name="presentableId" value="LOCAL−00059" />
+      <updated>1619074513620</updated>
+    </task>
+    <task id="LOCAL−00060" summary="Update Jenkinsfile">
+      <created>1619076801110</created>
+      <option name="number" value="LOCAL−00060" />
+      <option name="presentableId" value="LOCAL−00060" />
+      <updated>1619076801110</updated>
+    </task>
+    <task id="LOCAL−00061" summary="Update Jenkinsfile">
+      <created>1619116767937</created>
+      <option name="number" value="LOCAL−00061" />
+      <option name="presentableId" value="LOCAL−00061" />
+      <updated>1619116767937</updated>
+    </task>
+    <task id="LOCAL−00062" summary="Update Jenkinsfile">
+      <created>1619116923186</created>
+      <option name="number" value="LOCAL−00062" />
+      <option name="presentableId" value="LOCAL−00062" />
+      <updated>1619116923186</updated>
+    </task>
+    <task id="LOCAL−00063" summary="Update Jenkinsfile">
+      <created>1619119032871</created>
+      <option name="number" value="LOCAL−00063" />
+      <option name="presentableId" value="LOCAL−00063" />
+      <updated>1619119032871</updated>
+    </task>
+    <task id="LOCAL−00064" summary="Update Jenkinsfile">
+      <created>1619119091207</created>
+      <option name="number" value="LOCAL−00064" />
+      <option name="presentableId" value="LOCAL−00064" />
+      <updated>1619119091207</updated>
+    </task>
+    <task id="LOCAL−00065" summary="Update Jenkinsfile">
+      <created>1619119731332</created>
+      <option name="number" value="LOCAL−00065" />
+      <option name="presentableId" value="LOCAL−00065" />
+      <updated>1619119731332</updated>
+    </task>
+    <task id="LOCAL−00066" summary="Update Jenkinsfile">
+      <created>1619119849598</created>
+      <option name="number" value="LOCAL−00066" />
+      <option name="presentableId" value="LOCAL−00066" />
+      <updated>1619119849598</updated>
+    </task>
+    <task id="LOCAL−00067" summary="Update Jenkinsfile">
+      <created>1619120231866</created>
+      <option name="number" value="LOCAL−00067" />
+      <option name="presentableId" value="LOCAL−00067" />
+      <updated>1619120231866</updated>
+    </task>
+    <task id="LOCAL−00068" summary="Update Jenkinsfile">
+      <created>1619120477418</created>
+      <option name="number" value="LOCAL−00068" />
+      <option name="presentableId" value="LOCAL−00068" />
+      <updated>1619120477418</updated>
+    </task>
+    <task id="LOCAL−00069" summary="Update Jenkinsfile">
+      <created>1619120778395</created>
+      <option name="number" value="LOCAL−00069" />
+      <option name="presentableId" value="LOCAL−00069" />
+      <updated>1619120778395</updated>
+    </task>
+    <task id="LOCAL−00070" summary="Update Jenkinsfile">
+      <created>1619120836847</created>
+      <option name="number" value="LOCAL−00070" />
+      <option name="presentableId" value="LOCAL−00070" />
+      <updated>1619120836847</updated>
+    </task>
+    <task id="LOCAL−00071" summary="Update Jenkinsfile">
+      <created>1619120887805</created>
+      <option name="number" value="LOCAL−00071" />
+      <option name="presentableId" value="LOCAL−00071" />
+      <updated>1619120887806</updated>
+    </task>
+    <task id="LOCAL−00072" summary="Update Jenkinsfile">
+      <created>1619120938544</created>
+      <option name="number" value="LOCAL−00072" />
+      <option name="presentableId" value="LOCAL−00072" />
+      <updated>1619120938544</updated>
+    </task>
+    <task id="LOCAL−00073" summary="Update Jenkinsfile">
+      <created>1619121365094</created>
+      <option name="number" value="LOCAL−00073" />
+      <option name="presentableId" value="LOCAL−00073" />
+      <updated>1619121365094</updated>
+    </task>
+    <task id="LOCAL−00074" summary="Update Jenkinsfile">
+      <created>1619121955174</created>
+      <option name="number" value="LOCAL−00074" />
+      <option name="presentableId" value="LOCAL−00074" />
+      <updated>1619121955174</updated>
+    </task>
+    <task id="LOCAL−00075" summary="Update Jenkinsfile">
+      <created>1619122046512</created>
+      <option name="number" value="LOCAL−00075" />
+      <option name="presentableId" value="LOCAL−00075" />
+      <updated>1619122046512</updated>
+    </task>
+    <task id="LOCAL−00076" summary="Update Jenkinsfile">
+      <created>1619122114949</created>
+      <option name="number" value="LOCAL−00076" />
+      <option name="presentableId" value="LOCAL−00076" />
+      <updated>1619122114949</updated>
+    </task>
+    <task id="LOCAL−00077" summary="Update Jenkinsfile">
+      <created>1619122227968</created>
+      <option name="number" value="LOCAL−00077" />
+      <option name="presentableId" value="LOCAL−00077" />
+      <updated>1619122227968</updated>
+    </task>
+    <task id="LOCAL−00078" summary="Update Jenkinsfile">
+      <created>1619122300584</created>
+      <option name="number" value="LOCAL−00078" />
+      <option name="presentableId" value="LOCAL−00078" />
+      <updated>1619122300584</updated>
+    </task>
+    <task id="LOCAL−00079" summary="Update Jenkinsfile">
+      <created>1619122397078</created>
+      <option name="number" value="LOCAL−00079" />
+      <option name="presentableId" value="LOCAL−00079" />
+      <updated>1619122397078</updated>
+    </task>
+    <task id="LOCAL−00080" summary="Update Jenkinsfile">
+      <created>1619122488295</created>
+      <option name="number" value="LOCAL−00080" />
+      <option name="presentableId" value="LOCAL−00080" />
+      <updated>1619122488295</updated>
+    </task>
+    <task id="LOCAL−00081" summary="Update Jenkinsfile">
+      <created>1619122689888</created>
+      <option name="number" value="LOCAL−00081" />
+      <option name="presentableId" value="LOCAL−00081" />
+      <updated>1619122689888</updated>
+    </task>
+    <task id="LOCAL−00082" summary="Update Jenkinsfile">
+      <created>1619122761206</created>
+      <option name="number" value="LOCAL−00082" />
+      <option name="presentableId" value="LOCAL−00082" />
+      <updated>1619122761206</updated>
+    </task>
+    <task id="LOCAL−00083" summary="Update Jenkinsfile">
+      <created>1619123141834</created>
+      <option name="number" value="LOCAL−00083" />
+      <option name="presentableId" value="LOCAL−00083" />
+      <updated>1619123141834</updated>
+    </task>
+    <task id="LOCAL−00084" summary="Update Jenkinsfile">
+      <created>1619123241785</created>
+      <option name="number" value="LOCAL−00084" />
+      <option name="presentableId" value="LOCAL−00084" />
+      <updated>1619123241785</updated>
+    </task>
+    <task id="LOCAL−00085" summary="Update Jenkinsfile">
+      <created>1619123445572</created>
+      <option name="number" value="LOCAL−00085" />
+      <option name="presentableId" value="LOCAL−00085" />
+      <updated>1619123445572</updated>
+    </task>
+    <task id="LOCAL−00086" summary="Update Jenkinsfile">
+      <created>1619123501505</created>
+      <option name="number" value="LOCAL−00086" />
+      <option name="presentableId" value="LOCAL−00086" />
+      <updated>1619123501505</updated>
+    </task>
+    <task id="LOCAL−00087" summary="Update Jenkinsfile">
+      <created>1619123630485</created>
+      <option name="number" value="LOCAL−00087" />
+      <option name="presentableId" value="LOCAL−00087" />
+      <updated>1619123630485</updated>
+    </task>
+    <task id="LOCAL−00088" summary="Update Jenkinsfile">
+      <created>1619184375137</created>
+      <option name="number" value="LOCAL−00088" />
+      <option name="presentableId" value="LOCAL−00088" />
+      <updated>1619184375138</updated>
+    </task>
+    <task id="LOCAL−00089" summary="Update Jenkinsfile">
+      <created>1619184398176</created>
+      <option name="number" value="LOCAL−00089" />
+      <option name="presentableId" value="LOCAL−00089" />
+      <updated>1619184398176</updated>
+    </task>
+    <task id="LOCAL−00090" summary="Update Jenkinsfile">
+      <created>1619434852473</created>
+      <option name="number" value="LOCAL−00090" />
+      <option name="presentableId" value="LOCAL−00090" />
+      <updated>1619434852474</updated>
+    </task>
+    <task id="LOCAL−00091" summary="Updated JonnasBranch with start of PetClinicAddPetType.robot">
+      <created>1620128032292</created>
+      <option name="number" value="LOCAL−00091" />
+      <option name="presentableId" value="LOCAL−00091" />
+      <updated>1620128032293</updated>
+    </task>
+    <task id="LOCAL−00092" summary="Updated keywords to make it run faster">
+      <created>1620128488547</created>
+      <option name="number" value="LOCAL−00092" />
+      <option name="presentableId" value="LOCAL−00092" />
+      <updated>1620128488547</updated>
+    </task>
+    <task id="LOCAL−00093" summary="Updated keywords to make it run faster">
+      <created>1620131855826</created>
+      <option name="number" value="LOCAL−00093" />
+      <option name="presentableId" value="LOCAL−00093" />
+      <updated>1620131855828</updated>
+    </task>
+    <task id="LOCAL−00094" summary="Updated Jenkins with longer sleep for Postman">
+      <created>1620131954648</created>
+      <option name="number" value="LOCAL−00094" />
+      <option name="presentableId" value="LOCAL−00094" />
+      <updated>1620131954648</updated>
+    </task>
+    <task id="LOCAL−00095" summary="Updated with new tests and assertions for adding new pettypes. Assertions not working properly yet.">
+      <created>1620136974418</created>
+      <option name="number" value="LOCAL−00095" />
+      <option name="presentableId" value="LOCAL−00095" />
+      <updated>1620136974418</updated>
+    </task>
+    <task id="LOCAL−00096" summary="Finished tests for Add Pet Type">
+      <created>1620207233220</created>
+      <option name="number" value="LOCAL−00096" />
+      <option name="presentableId" value="LOCAL−00096" />
+      <updated>1620207233221</updated>
+    </task>
+    <task id="LOCAL−00097" summary="Finished tests for Add Pet Type">
+      <created>1620216447875</created>
+      <option name="number" value="LOCAL−00097" />
+      <option name="presentableId" value="LOCAL−00097" />
+      <updated>1620216447875</updated>
+    </task>
+    <task id="LOCAL−00098" summary="Added some last changes to tests for Add Pet Types.">
+      <created>1620220961434</created>
+      <option name="number" value="LOCAL−00098" />
+      <option name="presentableId" value="LOCAL−00098" />
+      <updated>1620220961434</updated>
+    </task>
+    <task id="LOCAL−00099" summary="Added some last changes to tests for Add Pet Types.">
+      <created>1620221376911</created>
+      <option name="number" value="LOCAL−00099" />
+      <option name="presentableId" value="LOCAL−00099" />
+      <updated>1620221376911</updated>
+    </task>
+    <task id="LOCAL−00100" summary="Started on tasks - click Home button from Owners">
+      <created>1620303536540</created>
+      <option name="number" value="LOCAL−00100" />
+      <option name="presentableId" value="LOCAL−00100" />
+      <updated>1620303536541</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <task id="LOCAL-00001" summary="Update pet.robot file">
       <created>1619216075469</created>
       <option name="number" value="00001" />
@@ -112,6 +439,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -126,6 +456,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit Robotframework folder" />
+    <MESSAGE value="Update Jenkinsfile" />
+    <MESSAGE value="Updated JonnasBranch with start of PetClinicAddPetType.robot" />
+    <MESSAGE value="Updated keywords to make it run faster" />
+    <MESSAGE value="Updated Jenkins with longer sleep for Postman" />
+    <MESSAGE value="Updated with new tests and assertions for adding new pettypes. Assertions not working properly yet." />
+    <MESSAGE value="Finished tests for Add Pet Type" />
+    <MESSAGE value="Added some last changes to tests for Add Pet Types." />
+    <MESSAGE value="Started on tasks - click Home button from Owners" />
     <MESSAGE value="Update pet.robot file" />
     <MESSAGE value="Removed postman stage in jenkins file" />
     <MESSAGE value="Updated pet.robot file and PetKeywords file" />
@@ -165,5 +503,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="494" y="239" key="git4idea.ui.GitStashDialog/0.0.1280.680@0.0.1280.680" timestamp="1618920695659" />
+
   </component>
 </project>
