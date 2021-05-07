@@ -296,8 +296,85 @@ a user has added a new Pet Type that already exists
 a user should see two fields with the same Pet Type
   Verify added existing Pet Type
   Teardown Add New Pet Type
+#--------------------------------------------------------------------------------------------------------------------------
+#Change/Edit Pet Type
 
-#------------------------------------
+User Clicks On PetTypes
+        Go To Web Page
+        Sleep                                           .10
+        Click Element                                    xpath://html/body/app-root/div[1]/nav/div/ul/li[4]/a
+User Edit's A Pet Type
+        Sleep                                            .5
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+        TearDown After Verifying
+User Verifies Edited Pet Added
+       Sleep                                            .2
+       ${Edited_PetType_Updated}                        Get Text                               xpath://*[@id="3"]
+       Should Contain                                   ${New_Edited_PetType_Name}              ${Edited_PetType_Updated}
+TearDown After Verifying
+        Sleep                                            .2
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${Actual_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+User Edit's PetTypes with Same Name
+        Sleep                                            .2
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
+        Input Text                                       id=name                              ${New_Edited_PetType_Name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+User Verifies Same Pet Type Name Can Add Multiple Times
+        Sleep                                            .2
+        User Verifies Edited Pet Added
+        ${link_text}                                    Get Value                            xpath://*[@id="5"]
+        Should Not Be Equal                             ${Verify_Old_PetType_existed}        ${link_text}
+        TearDown After Verifying
+        TearDown Second Edited PetType After Verifying
+TearDown Second Edited PetType After Verifying
+        Sleep                                            .2
+        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
+        Input Text                                       id=name                              ${Second_petType_Acutal_name}
+        Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+#-------------------------------------------------------------------------------------------------------------------------
+#Home Button From Veterinarians
+User Clicks On Veterinarians Page
+        Go To Web Page
+        Sleep                                           .5
+        Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+User Selects All Veterinarians
+        Sleep                                           .2
+        User Clicks On Veterinarians Page
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
+User Is At Veterinarians Page
+        Sleep                                            .2
+        Page Should Contain button                       Home
+User Can Go Back To Home Page
+        Click Element                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
+        Sleep                                           .2
+User Back To Home Page
+      Page should Contain                                ${Welcome_Message}
+User Clicks On Edit Vet
+       Sleep                                            .2
+       Click Element                                    xpath://*[@id="vets"]/tbody/tr[5]/td[3]/button[1]
+       #Page should Contain Element                      xpath://*[@id="vet_form"]/div[5]/div/button[2]
+       Page Should Not Contain Button                   Home
+       Sleep                                            .2
+       Click Element                                    xpath://*[@id="vet_form"]/div[5]/div/button[2]
+       User Can Go Back To Home Page
+User Clicks On Add New
+        Sleep                                           .2
+        User Clicks On Veterinarians Page
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+        Page Should Not Contain Button                  Home
+        Sleep                                           .2
+        Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[1]
+
+
+
+
 
 
 End Web Test
