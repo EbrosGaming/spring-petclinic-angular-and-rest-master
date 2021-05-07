@@ -13,18 +13,20 @@ Verify Page Loaded
 
 
 User Is On Specialities Page
-    Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    Wait Until Element Is Visible    xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    click element                    xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
 
 User Is On Edit Specialities Page
-    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    Page Should Contain Element     xpath://*[@id="specialties"]
-    Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Element Should Be Visible       xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
-    #Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
+    click element                    xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    Page Should Contain Element      xpath://*[@id="specialties"]
+    Page Should Contain Element      xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Click Button                     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Page Should Contain Element      xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Element Should Be Visible        xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Page Should Not Contain Button   Home
+    #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
+    Click Button                     xpath://*[@id="specialty"]/div[2]/div/button[1]
+
 Clicks on Home Button
     page should contain button       Home
     click button                     Home
