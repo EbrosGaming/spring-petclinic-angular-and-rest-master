@@ -1,7 +1,7 @@
 *** Keywords ***
 Test Navigates to chrome Home Page
 Begin WebTest
-    OPEN BROWSER                                       about:blank                         ${BROWSER}
+    OPEN BROWSER                                       about:blank                         chrome
     #Maximize Browser Window
     Set Selenium Speed                                0.07
 
@@ -276,6 +276,7 @@ a user should be able to see the new Pet Type in the list
 #Add existing Pet Type - Jonna
 
 Add existing pet
+   ${Existing_Pettype_Name}                      Get Value     id=0
    Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
    Wait until page contains                      New Pet Type
    Click element                                 id:name
@@ -283,7 +284,9 @@ Add existing pet
    Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
 
 Verify added existing Pet Type
+   ${Existing_Pettype_Name}                      Get Value     id=0
    ${Actual_New_Pettype_Name}                    Get Value     xpath://*[@id="6"]
+   Sleep                                         0.1 s
    Should be equal                               ${Actual_New_Pettype_Name}    ${Existing_Pettype_Name}
 
 a user has added a new Pet Type that already exists
@@ -294,6 +297,27 @@ a user should see two fields with the same Pet Type
   Teardown Add New Pet Type
 
 #------------------------------------
+
+#------------------------------------
+#Click on Home button from Owners section - Jonna
+
+Check if button exist
+  Page should contain button      ${Home_Button}
+
+Click an owner
+  Click element                   xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[1]/td[1]/a
+  Wait until page contains        Owner Information
+
+
+#Gherkin syntax
+
+user is on Owners page
+  Go To Web Page
+  All owners
+
+
+
+
 
 End Web Test
     close browser
