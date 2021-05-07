@@ -26,7 +26,7 @@ ${Mobile2}         0702342343
 
 Test add a new owner
     [Documentation]         Adding a new owner
-    [Tags]                  Test 1 Add new owner
+    [Tags]                  Add
 
     Given that the user is on the landing page
     When a user Creates a new owner

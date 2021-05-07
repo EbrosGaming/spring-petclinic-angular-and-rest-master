@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210429 12:19:40.886" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210429 14:26:16.329" rpa="false">
 <suite id="s1" name="Webtest" source="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframework\Tests\webtest.robot">
 <kw name="Suite settings" library="keywords" type="setup">
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
@@ -7,9 +7,9 @@
 <arguments>
 <arg>5 seconds</arg>
 </arguments>
-<status status="PASS" starttime="20210429 12:19:41.195" endtime="20210429 12:19:41.196"></status>
+<status status="PASS" starttime="20210429 14:26:16.682" endtime="20210429 14:26:16.682"></status>
 </kw>
-<status status="PASS" starttime="20210429 12:19:41.195" endtime="20210429 12:19:41.196"></status>
+<status status="PASS" starttime="20210429 14:26:16.681" endtime="20210429 14:26:16.682"></status>
 </kw>
 <test id="s1-t1" name="Test add a new owner">
 <kw name="Begin Web Test" library="keywords" type="setup">
@@ -19,22 +19,14 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20210429 12:19:41.197" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:41.197" endtime="20210429 12:19:42.454"></status>
+<msg timestamp="20210429 14:26:16.684" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210429 14:26:16.684" endtime="20210429 14:26:18.162"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:42.454" endtime="20210429 12:19:42.571"></status>
+<status status="PASS" starttime="20210429 14:26:18.162" endtime="20210429 14:26:18.277"></status>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:42.571" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:42.571" endtime="20210429 12:19:42.943"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:41.197" endtime="20210429 12:19:42.944"></status>
+<status status="PASS" starttime="20210429 14:26:16.683" endtime="20210429 14:26:18.277"></status>
 </kw>
 <kw name="Given that the user is on the landing page" library="keywords">
 <kw name="Begin Web Test" library="keywords">
@@ -44,24 +36,16 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20210429 12:19:42.946" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:42.946" endtime="20210429 12:19:44.074"></status>
+<msg timestamp="20210429 14:26:18.278" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210429 14:26:18.278" endtime="20210429 14:26:19.398"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:44.074" endtime="20210429 12:19:44.190"></status>
+<status status="PASS" starttime="20210429 14:26:19.398" endtime="20210429 14:26:19.513"></status>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:44.190" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:44.190" endtime="20210429 12:19:44.651"></status>
+<status status="PASS" starttime="20210429 14:26:18.278" endtime="20210429 14:26:19.513"></status>
 </kw>
-<status status="PASS" starttime="20210429 12:19:42.945" endtime="20210429 12:19:44.652"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:42.945" endtime="20210429 12:19:44.652"></status>
+<status status="PASS" starttime="20210429 14:26:18.277" endtime="20210429 14:26:19.514"></status>
 </kw>
 <kw name="When a user Creates a new owner" library="keywords">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -69,733 +53,43 @@
 <arguments>
 <arg>xpath://a[contains(text(),'Owners')]</arg>
 </arguments>
-<msg timestamp="20210429 12:19:44.654" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:44.653" endtime="20210429 12:19:44.739"></status>
+<msg timestamp="20210429 14:26:19.515" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210429 14:26:19.765" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210429 14:26:19.535" endtime="20210429 14:26:19.765"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:44.740" endtime="20210429 12:19:44.757"></status>
+<msg timestamp="20210429 14:26:19.860" level="FAIL">Element with locator 'xpath://a[contains(text(),'Owners')]' not found.</msg>
+<status status="FAIL" starttime="20210429 14:26:19.515" endtime="20210429 14:26:19.860"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]/../ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20210429 12:19:44.757" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]/../ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210429 12:19:44.757" endtime="20210429 12:19:44.846"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:44.846" endtime="20210429 12:19:44.858"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=firstName</arg>
-<arg>${Firstname}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:44.858" level="INFO">Typing text 'Anna' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20210429 12:19:44.858" endtime="20210429 12:19:44.961"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=lastName</arg>
-<arg>${Lastname}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:44.962" level="INFO">Typing text 'Ramsey' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20210429 12:19:44.961" endtime="20210429 12:19:45.118"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=address</arg>
-<arg>${Adress1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.119" level="INFO">Typing text 'Zooet' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.119" endtime="20210429 12:19:45.223"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=city</arg>
-<arg>${City1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.224" level="INFO">Typing text 'Göteborg' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.223" endtime="20210429 12:19:45.334"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=telephone</arg>
-<arg>${Mobile1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.335" level="INFO">Typing text '070234234' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.334" endtime="20210429 12:19:45.452"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div/button[contains(string(), "Add Owner")]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.452" level="INFO">Clicking element 'xpath://div/button[contains(string(), "Add Owner")]'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.452" endtime="20210429 12:19:45.509"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:44.653" endtime="20210429 12:19:45.509"></status>
-</kw>
-<kw name="Then a new owner should be created" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.511" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.510" endtime="20210429 12:19:45.750"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:45.750" endtime="20210429 12:19:45.759"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a/span[contains(text(),'All')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.760" level="INFO">Clicking element 'xpath://a/span[contains(text(),'All')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.759" endtime="20210429 12:19:45.824"></status>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>${Firstname}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.841" level="INFO">Current page contains text 'Anna'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.825" endtime="20210429 12:19:45.841"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:45.510" endtime="20210429 12:19:45.841"></status>
+<status status="FAIL" starttime="20210429 14:26:19.514" endtime="20210429 14:26:19.860"></status>
 </kw>
 <doc>Adding a new owner</doc>
 <tags>
-<tag>Test 1 Add new owner</tag>
+<tag>Add</tag>
 </tags>
-<status status="PASS" starttime="20210429 12:19:41.196" endtime="20210429 12:19:45.842" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Test to insert variables as name and lasname">
-<kw name="Begin Web Test" library="keywords" type="setup">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:45.845" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:45.844" endtime="20210429 12:19:46.999"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:46.999" endtime="20210429 12:19:47.112"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:47.113" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:47.112" endtime="20210429 12:19:49.214"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:45.844" endtime="20210429 12:19:49.214"></status>
-</kw>
-<kw name="Given that the user has acces to the web page" library="keywords">
-<kw name="Begin Web Test" library="keywords">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:49.220" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:49.219" endtime="20210429 12:19:50.457"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:50.457" endtime="20210429 12:19:50.579"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:50.580" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:50.579" endtime="20210429 12:19:52.618"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:49.219" endtime="20210429 12:19:52.618"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:49.218" endtime="20210429 12:19:52.618"></status>
-</kw>
-<kw name="When a user creates a new owner with variables instead of letters" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:52.620" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:52.620" endtime="20210429 12:19:52.675"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:52.675" endtime="20210429 12:19:52.688"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]/../ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20210429 12:19:52.688" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]/../ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210429 12:19:52.688" endtime="20210429 12:19:52.757"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:52.757" endtime="20210429 12:19:52.768"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=firstName</arg>
-<arg>${Firstname2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:52.768" level="INFO">Typing text '343434' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20210429 12:19:52.768" endtime="20210429 12:19:52.873"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=lastName</arg>
-<arg>${Firstname2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:52.874" level="INFO">Typing text '343434' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20210429 12:19:52.873" endtime="20210429 12:19:53.001"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=address</arg>
-<arg>${Adress2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.001" level="INFO">Typing text 'Glasvägen 33' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.001" endtime="20210429 12:19:53.107"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=city</arg>
-<arg>${City2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.108" level="INFO">Typing text 'Göteborg' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.108" endtime="20210429 12:19:53.220"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=telephone</arg>
-<arg>${Mobile2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.221" level="INFO">Typing text '0702342343' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.220" endtime="20210429 12:19:53.323"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div/button[contains(string(), "Add Owner")]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.324" level="INFO">Clicking element 'xpath://div/button[contains(string(), "Add Owner")]'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.324" endtime="20210429 12:19:53.377"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:52.619" endtime="20210429 12:19:53.377"></status>
-</kw>
-<kw name="Then a new owner should be added to the list" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.379" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.378" endtime="20210429 12:19:53.585"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:53.585" endtime="20210429 12:19:53.596"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a/span[contains(text(),'All')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.597" level="INFO">Clicking element 'xpath://a/span[contains(text(),'All')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.596" endtime="20210429 12:19:53.654"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>All</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:53.654" endtime="20210429 12:19:53.671"></status>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>${Firstname2}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.702" level="INFO">Current page contains text '343434'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.671" endtime="20210429 12:19:53.702"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:53.378" endtime="20210429 12:19:53.702"></status>
-</kw>
-<doc>Variables as input for name/lastname</doc>
-<tags>
-<tag>Test 2 Variables for input text</tag>
-</tags>
-<status status="PASS" starttime="20210429 12:19:45.843" endtime="20210429 12:19:53.702" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Test to add a owner that already exist">
-<kw name="Begin Web Test" library="keywords" type="setup">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:53.705" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:53.705" endtime="20210429 12:19:54.826"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:54.826" endtime="20210429 12:19:54.937"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:54.938" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:54.937" endtime="20210429 12:19:56.942"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:53.704" endtime="20210429 12:19:56.942"></status>
-</kw>
-<kw name="Given user is on the landing page" library="keywords">
-<kw name="Begin Web Test" library="keywords">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:56.944" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:19:56.944" endtime="20210429 12:19:58.242"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:19:58.242" endtime="20210429 12:19:58.349"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:58.349" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:19:58.349" endtime="20210429 12:19:58.771"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:56.944" endtime="20210429 12:19:58.771"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:56.943" endtime="20210429 12:19:58.772"></status>
-</kw>
-<kw name="When the user Creates a new owner" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:58.773" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:58.773" endtime="20210429 12:19:58.850"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:58.850" endtime="20210429 12:19:58.870"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]/../ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20210429 12:19:58.870" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]/../ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210429 12:19:58.870" endtime="20210429 12:19:58.946"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:58.946" endtime="20210429 12:19:58.956"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:58.773" endtime="20210429 12:19:58.956"></status>
-</kw>
-<kw name="And put already existing personal data" library="keywords">
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=firstName</arg>
-<arg>${Firstname}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:58.957" level="INFO">Typing text 'Anna' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20210429 12:19:58.957" endtime="20210429 12:19:59.058"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=lastName</arg>
-<arg>${Lastname}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.058" level="INFO">Typing text 'Ramsey' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.058" endtime="20210429 12:19:59.174"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=address</arg>
-<arg>${Adress1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.175" level="INFO">Typing text 'Zooet' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.174" endtime="20210429 12:19:59.295"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=city</arg>
-<arg>${City1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.295" level="INFO">Typing text 'Göteborg' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.295" endtime="20210429 12:19:59.416"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=telephone</arg>
-<arg>${Mobile1}</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.417" level="INFO">Typing text '070234234' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.417" endtime="20210429 12:19:59.527"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div/button[contains(string(), "Add Owner")]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.528" level="INFO">Clicking element 'xpath://div/button[contains(string(), "Add Owner")]'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.527" endtime="20210429 12:19:59.580"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:58.956" endtime="20210429 12:19:59.580"></status>
-</kw>
-<kw name="Then a duplicate of the owner should be added" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.581" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.581" endtime="20210429 12:19:59.853"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:19:59.854" endtime="20210429 12:19:59.879"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a/span[contains(text(),'All')]</arg>
-</arguments>
-<msg timestamp="20210429 12:19:59.880" level="INFO">Clicking element 'xpath://a/span[contains(text(),'All')]'.</msg>
-<status status="PASS" starttime="20210429 12:19:59.880" endtime="20210429 12:20:00.058"></status>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>${Firstname}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:00.124" level="INFO">Current page contains text 'Anna'.</msg>
-<status status="PASS" starttime="20210429 12:20:00.058" endtime="20210429 12:20:00.124"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:19:59.581" endtime="20210429 12:20:00.124"></status>
-</kw>
-<doc>Adding already existing owner</doc>
-<tags>
-<tag>Test 3 Add same owner</tag>
-</tags>
-<status status="PASS" starttime="20210429 12:19:53.704" endtime="20210429 12:20:00.125" critical="yes"></status>
-</test>
-<test id="s1-t4" name="Test to add owner with special signs">
-<kw name="Begin Web Test" library="keywords" type="setup">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:00.133" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:20:00.133" endtime="20210429 12:20:01.297"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:20:01.297" endtime="20210429 12:20:01.418"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:01.419" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:20:01.418" endtime="20210429 12:20:01.777"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:00.132" endtime="20210429 12:20:01.778"></status>
-</kw>
-<kw name="Given user is located on landing page" library="keywords">
-<kw name="Begin Web Test" library="keywords">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:01.779" level="INFO">Opening browser 'headless chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210429 12:20:01.779" endtime="20210429 12:20:02.971"></status>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210429 12:20:02.971" endtime="20210429 12:20:03.088"></status>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.088" level="INFO">Opening url 'http://localhost:4200'</msg>
-<status status="PASS" starttime="20210429 12:20:03.088" endtime="20210429 12:20:03.475"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:01.778" endtime="20210429 12:20:03.475"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:01.778" endtime="20210429 12:20:03.475"></status>
-</kw>
-<kw name="When the user creates new owner" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.477" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.476" endtime="20210429 12:20:03.540"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:03.540" endtime="20210429 12:20:03.555"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]/../ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.555" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]/../ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.555" endtime="20210429 12:20:03.641"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:03.641" endtime="20210429 12:20:03.650"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:03.476" endtime="20210429 12:20:03.651"></status>
-</kw>
-<kw name="And use special signs for input in name field" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.652" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.651" endtime="20210429 12:20:03.683"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:03.683" endtime="20210429 12:20:03.691"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]/../ul/li[2]/a</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.691" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]/../ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.691" endtime="20210429 12:20:03.730"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:03.730" endtime="20210429 12:20:03.741"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=firstName</arg>
-<arg>${Firstname3}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.741" level="INFO">Typing text '&gt;Matt#&lt;' into text field 'id=firstName'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.741" endtime="20210429 12:20:03.886"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=lastName</arg>
-<arg>${Lastname3}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:03.887" level="INFO">Typing text 'Uber!' into text field 'id=lastName'.</msg>
-<status status="PASS" starttime="20210429 12:20:03.887" endtime="20210429 12:20:04.003"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=address</arg>
-<arg>${Adress2}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.004" level="INFO">Typing text 'Glasvägen 33' into text field 'id=address'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.003" endtime="20210429 12:20:04.159"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=city</arg>
-<arg>${City2}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.160" level="INFO">Typing text 'Göteborg' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.160" endtime="20210429 12:20:04.321"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=telephone</arg>
-<arg>${Mobile2}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.322" level="INFO">Typing text '0702342343' into text field 'id=telephone'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.322" endtime="20210429 12:20:04.466"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://div/button[contains(string(), "Add Owner")]</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.467" level="INFO">Clicking element 'xpath://div/button[contains(string(), "Add Owner")]'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.467" endtime="20210429 12:20:04.542"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:03.651" endtime="20210429 12:20:04.543"></status>
-</kw>
-<kw name="Then the new owner should be created" library="keywords">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a[contains(text(),'Owners')]</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.544" level="INFO">Clicking element 'xpath://a[contains(text(),'Owners')]'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.544" endtime="20210429 12:20:04.756"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>Owners</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:04.756" endtime="20210429 12:20:04.769"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://a/span[contains(text(),'All')]</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.769" level="INFO">Clicking element 'xpath://a/span[contains(text(),'All')]'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.769" endtime="20210429 12:20:04.842"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on the current page.</doc>
-<arguments>
-<arg>All</arg>
-</arguments>
-<status status="PASS" starttime="20210429 12:20:04.843" endtime="20210429 12:20:04.859"></status>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>${Firstname3}</arg>
-</arguments>
-<msg timestamp="20210429 12:20:04.876" level="INFO">Current page contains text '&gt;Matt#&lt;'.</msg>
-<status status="PASS" starttime="20210429 12:20:04.859" endtime="20210429 12:20:04.876"></status>
-</kw>
-<status status="PASS" starttime="20210429 12:20:04.543" endtime="20210429 12:20:04.876"></status>
-</kw>
-<doc>input with special signs</doc>
-<tags>
-<tag>Test 4 special signs</tag>
-</tags>
-<status status="PASS" starttime="20210429 12:20:00.130" endtime="20210429 12:20:04.876" critical="yes"></status>
+<status status="FAIL" starttime="20210429 14:26:16.682" endtime="20210429 14:26:19.862" critical="yes">Element with locator 'xpath://a[contains(text(),'Owners')]' not found.</status>
 </test>
 <kw name="End Web Test" library="keywords" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210429 12:20:04.879" endtime="20210429 12:20:07.008"></status>
+<status status="PASS" starttime="20210429 14:26:19.868" endtime="20210429 14:26:21.954"></status>
 </kw>
-<status status="PASS" starttime="20210429 12:20:04.878" endtime="20210429 12:20:07.008"></status>
+<status status="PASS" starttime="20210429 14:26:19.868" endtime="20210429 14:26:21.954"></status>
 </kw>
 <doc>Testar Selenium och RobotFramework</doc>
-<status status="PASS" starttime="20210429 12:19:40.889" endtime="20210429 12:20:07.008"></status>
+<status status="FAIL" starttime="20210429 14:26:16.332" endtime="20210429 14:26:21.954"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">Test 1 Add new owner</stat>
-<stat pass="1" fail="0">Test 2 Variables for input text</stat>
-<stat pass="1" fail="0">Test 3 Add same owner</stat>
-<stat pass="1" fail="0">Test 4 special signs</stat>
+<stat pass="0" fail="1">Add</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Webtest">Webtest</stat>
+<stat pass="0" fail="1" id="s1" name="Webtest">Webtest</stat>
 </suite>
 </statistics>
 <errors>

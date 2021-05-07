@@ -7,7 +7,10 @@ Suite settings
 Begin Web Test
     Open browser                            about:blank   ${BROWSER}
     Maximize Browser Window
-    Go to                                   ${URL}
+
+Go to web page
+  Load Page     go to ${URL}
+  Verify Page Loaded
 
 
 Load Page

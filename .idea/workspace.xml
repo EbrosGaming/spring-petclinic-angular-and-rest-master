@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Update Robot">
-      <change afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Resources/keywords.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/webtest2.robot" afterDir="false" />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Update Robot 3">
+      <change afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Resources/keywords2.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/HomeButtonPetType.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/keywords.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" afterDir="false" />
@@ -32,6 +32,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframeworktest2\Resources" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +71,31 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1619598824943</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Update Robot 2">
+      <created>1619682736793</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1619682736793</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Update Robot 2">
+      <created>1619682742568</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1619682742568</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Update Robot 2">
+      <created>1619682750974</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1619682750974</updated>
+    </task>
+    <task id="LOCAL−00008" summary="Update Robot 3">
+      <created>1619697603839</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1619697603839</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +114,8 @@
     <MESSAGE value="Commit Robotframework folder" />
     <MESSAGE value="Update Jenkinsfile" />
     <MESSAGE value="Update Robot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Robot" />
+    <MESSAGE value="Update Robot 2" />
+    <MESSAGE value="Update Robot 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Robot 3" />
   </component>
 </project>
