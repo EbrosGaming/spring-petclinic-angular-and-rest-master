@@ -26,7 +26,11 @@ pipeline {
 
         }
         
-      
+      stage('DelayRobotTest') {
+           steps {
+               sh 'sleep 20'
+          }
+        }
         
         
         
