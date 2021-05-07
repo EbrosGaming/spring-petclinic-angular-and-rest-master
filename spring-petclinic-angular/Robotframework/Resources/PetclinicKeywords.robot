@@ -3,6 +3,7 @@ Test Navigates to chrome Home Page
 Begin WebTest
     OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
+    Set Selenium Speed                                .5
 Go To Web Page
      Load Page
      Verify Page Loaded
@@ -16,7 +17,6 @@ All Owners
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
 Select A Owner From The List
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
-    SLeep                                            0.1 s
 Add New Pet
      Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[3]
 Input New Pet Detalis
@@ -28,6 +28,7 @@ Pet Details
     Click Element                                    id=type
     Click Element                                    xpath://*[@id="type"]/option[2]
     Click Element                                    xpath:/html/body/app-root/app-pet-add/div/div/form/div[6]/div/button[2]
+    Set Selenium Speed                                .5
 Name
     [Arguments]                                       ${Pet_Name}
     Input Text                                        id=name                             ${Pet_Name}
