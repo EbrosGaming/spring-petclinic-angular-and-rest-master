@@ -12,12 +12,11 @@ ${URL}                                     http://localhost:4200/
 ${Welcome_Message}                         Welcome to Petclinic
 ${Pet_Visit_Date_1}                        2021/05/11
 ${Pet_Visit_Description_1}                 Dental
-${Pet_Visit_Description_2}                 Skeletal Checkup
 ${Row_Path1}                               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr
-${Pet_Visit_Date_2}                              2021/05/09
-${Pet_Visit_Date_3}                              2021/05/15
-${Pet_Visit_Description_2}                       Body Checkup
-${Pet_Visit_Description_3}                       Overall Health Checkup
+${Pet_Visit_Date_2}                        2021/05/09
+${Pet_Visit_Date_3}                        2021/05/15
+${Pet_Visit_Description_2}                 Body Checkup
+${Pet_Visit_Description_3}                 Overall Health Checkup
 
 *** Test Cases ***
 Adding a pet visit
@@ -101,21 +100,21 @@ Teardown Add Pet Visit
 
 Verify able to add multiple pet visits
      # Sleep                                         0.5 s
-      ${Verify_Pet_Visit_Date2_Added}              get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[1]
-      ${Verify_Pet_Visit_Description2_Added}       get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[2]
-      ${Verify_Pet_Visit_Date3_Added}              get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
-      ${Verify_Pet_Visit_Description3_Added}       get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[2]
-      Table should contain                         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date2_Added} ${Verify_Pet_Visit_Description2_Added}
-      Table should contain                         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date3_Added} ${Verify_Pet_Visit_Description3_Added}
+      ${Verify_Pet_Visit_Date2_Added}          get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[1]
+      ${Verify_Pet_Visit_Description2_Added}   get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[2]
+      ${Verify_Pet_Visit_Date3_Added}          get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
+      ${Verify_Pet_Visit_Description3_Added}   get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[2]
+      Table should contain                     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date2_Added} ${Verify_Pet_Visit_Description2_Added}
+      Table should contain                     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date3_Added} ${Verify_Pet_Visit_Description3_Added}
       #${VerifyRow_Path2}                            get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]
       #${VerifyRow_Path3}                            get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[2]
       #Table should contain                          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${VerifyRow_Path2}  ${VerifyRow_Path3}
 
 Teardown Add Multiple Pet Visits 1
-      Click button                                  xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-      Click button                                  xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-      Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
-      Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
+      Click button                              xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+      Click button                              xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+      Page should not contain element           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
+      Page should not contain element           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
 #     Page should not contain element               ${VerifyRow_Path2}
 #     Page should not contain element               ${VerifyRow_Path3}
 
