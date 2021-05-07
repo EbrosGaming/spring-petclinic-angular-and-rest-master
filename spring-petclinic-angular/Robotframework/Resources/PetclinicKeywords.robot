@@ -244,24 +244,21 @@ Go to Pet Types
 
 Verify on the right page
     ${Actual_Pettypes_Page}                       Get Text    xpath:/html/body/app-root/app-pettype-list/div/div/h2
-    Should be equal                               ${Actual_Pettypes_Page}   ${EXPECTED_PETTYPES_PAGE}
+    Should be equal                               ${Actual_Pettypes_Page}   ${Expected_Pettypes_Page}
 
 Add a new Pet Type
     Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
     Wait until page contains                      New Pet Type
     Click element                                 id:name
-    Input Text                                    id:name           ${NEW_PETTYPE_NAME}
+    Input Text                                    id:name           ${New_Pettype_Name}
     Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
-    Sleep                                         0.2 s
 
 Verify added Pet Type
     ${Actual_Pettype_Name}                        Get Value     xpath://*[@id="6"]
-    Should be equal                               ${Actual_Pettype_Name}    ${NEW_PETTYPE_NAME}
-    Sleep                                         0.2 s
+    Should be equal                               ${Actual_Pettype_Name}    ${New_Pettype_Name}
 
 Teardown Add New Pet Type
     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
-    Sleep                                         0.2 s
     Page should not contain element               xpath://*[@id="6"]
 
 #Gherkin Syntax for Add New Pet Type:
@@ -275,9 +272,6 @@ a user have added a new Pet Type
 a user should be able to see the new Pet Type in the list
   Verify added Pet Type
   Teardown Add New Pet Type
-
-
-/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
 
 #Add existing Pet Type - Jonna
 

@@ -9,8 +9,8 @@ Test Teardown                          End Web Test
 ${BROWSER}                             chrome
 ${URL}                                 http://localhost:4200/
 ${Welcome_Message}                     Welcome to Petclinic
-${EXPECTED_PETTYPES_PAGE}              Pet Types
-${NEW_PETTYPE_NAME}                    bunny
+${Expected_Pettypes_Page}             Pet Types
+${New_Pettype_Name}                    bunny
 ${Existing_Pettype_Name}               Get Value     xpath://*[@id="0"]
 
 *** Test Cases ***
