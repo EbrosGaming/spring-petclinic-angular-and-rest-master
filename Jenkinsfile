@@ -24,7 +24,8 @@ pipeline {
 
         stage('Robot') {
             steps {
-                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+
+                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/src/test/automation/Tests/Results spring-petclinic-angular/src/test/automation/Tests'
             }
             post {
                 always {
@@ -32,7 +33,7 @@ pipeline {
                         step(
                             [
                                 $class                  :   'RobotPublisher',
-                                outputPath              :   'spring-petclinic-angular/Robotframework/Tests/Results',
+                                outputPath              :   'spring-petclinic-angular/src/test/automation/Tests/Results',
                                 outputFileName          :   '**/output.xml',
                                 reportFileName          :   '**/report.html',
                                 logFileName             :   '**/log.html',
@@ -46,6 +47,7 @@ pipeline {
                 }
             }
         }
+
     }
     post{
         success{
@@ -74,5 +76,6 @@ pipeline {
             }
           }
         }
+
 
 }
