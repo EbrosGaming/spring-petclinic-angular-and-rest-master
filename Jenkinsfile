@@ -26,7 +26,21 @@ pipeline {
             }
 
         } 
-       stage('Robot') {
+      
+       
+     stage('Postman') {
+            steps {
+                sh 'newman run PostmanFiles/PetClinic.postman_collection.json -e PostmanFiles/PetClinic.postman_environment.json -- reporters junit'
+            }
+           
+                post {
+                always {
+                    junit '**/TEST*.xml'
+                }
+              }
+
+        }
+ stage('Robot') {
             steps {
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/SpecialityHOME/Tests/Results spring-petclinic-angular/RenuRobot/SpecialityHOME/Tests'
             }
@@ -51,20 +65,6 @@ pipeline {
             }
         }
       
-       
-     stage('Postman') {
-            steps {
-                sh 'newman run PostmanFiles/PetClinic.postman_collection.json -e PostmanFiles/PetClinic.postman_environment.json -- reporters junit'
-            }
-           
-                post {
-                always {
-                    junit '**/TEST*.xml'
-                }
-              }
-
-        }
-
        
     
   }
