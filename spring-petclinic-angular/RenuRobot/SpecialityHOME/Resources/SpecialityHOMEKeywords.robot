@@ -26,6 +26,7 @@ User Is On Edit Specialities Page
     Page Should Not Contain Button   Home
     #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
     Click Button                     xpath://*[@id="specialty"]/div[2]/div/button[1]
+    sleep                            .25 
 
 Clicks on Home Button
     page should contain button       Home
