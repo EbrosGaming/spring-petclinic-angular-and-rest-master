@@ -350,7 +350,30 @@ Teardown added multiple visits
      Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
      Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
 
-#------------------------------------
+#---------------------------------------------------------------------------------
+# Delete PetType -Swetha
+
+Select the Pet Type to delete
+     wait until page contains element              xpath://*[@id="6"]
+     Page should contain element                   xpath://*[@id="6"]
+Delete the added Pet Type
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+Verify Pet Type is deleted
+     wait until page contains                      Pet Types
+     Page should not contain element               xpath://*[@id="6"]
+--------------------------------------------------------------------------------------------------------------------------------------
+# Deleting multiple PetTypes - Swetha
+Delete multiple Pet Types
+     wait until page contains element              xpath://*[@id="7"]
+     Page should contain element                   xpath://*[@id="7"]
+     Select the pettype to delete
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[8]/td[2]/button[2]
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+Verify multiple Pet Types are deleted
+     wait until page contains                      Pet Types
+     Page should not contain element               xpath://*[@id="7"]
+     Page should not contain element               xpath://*[@id="6"]
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 End Web Test
     close browser
