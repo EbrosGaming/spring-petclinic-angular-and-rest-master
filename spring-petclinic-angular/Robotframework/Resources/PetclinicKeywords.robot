@@ -1,9 +1,9 @@
 *** Keywords ***
 Test Navigates to chrome Home Page
 Begin WebTest
-    OPEN BROWSER                                       about:blank                         chrome
+    OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
-    Set Selenium Speed                                0.07
+    Set Selenium Speed                                0.2
 
 Go To Web Page
      Load Page
@@ -313,6 +313,7 @@ Check each owner if there is a Home button
     Click element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a
     Wait until page contains            Owner Information
     Run Keyword And Continue On Failure   Check if button exist
+    Run Keyword If                      ${Home_Button}      Click Home button
     Click button                        xpath:/html/body/app-root/app-owner-detail/div/div/button[1]
     Wait until page contains            Owners
   END
