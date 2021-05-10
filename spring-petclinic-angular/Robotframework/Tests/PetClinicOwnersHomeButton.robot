@@ -20,12 +20,16 @@ Test you can click on Home button from Owners page
     Given user is on Owners page
     Check if button exist
 
-Test you can click on Home button from and page under Owners
-    [Documentation]                    Click on Home button from Owners page
+Test you can click on Home button from any page under Owners
+    [Documentation]                    Click on Home button from subpages to Owners page
     [Tags]                             Home button
 
     Given user is on Owners page
     Click an owner
     Check if button exist
+
+For Loop
+  Given user is on Owners page
+  Check each owner if there is a Home button
 
 

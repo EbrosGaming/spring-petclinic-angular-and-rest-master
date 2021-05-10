@@ -304,20 +304,33 @@ a user should see two fields with the same Pet Type
 Check if button exist
   Page should contain button      ${Home_Button}
 
-Click an owner
-  Click element                   xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[1]/td[1]/a
-  Wait until page contains        Owner Information
 
+
+Check each owner if there is a Home button
+  ${All_Links_Count}                    Get element count    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr
+  Log                                   ${All_Links_Count}
+  @{Owner_Id_List}=                     Create list    ${All_Links_Count}
+  FOR    ${Owner_Id}  IN RANGE          @{Owner_Id_List}
+    ${Owner_Id}=                        Evaluate      ${Owner_Id}+1
+    Click element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a
+    Wait until page contains            Owner Information
+    Run Keyword And Continue On Failure   Page should contain button          Home
+    Click button                        xpath:/html/body/app-root/app-owner-detail/div/div/button[1]
+    Sleep                               0.5 s
+  END
+
+
+
+
+
+
+Check subpage number for Home Button
 
 #Gherkin syntax
 
 user is on Owners page
   Go To Web Page
   All owners
-
-
-
-
 
 End Web Test
     close browser
