@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7ebbcdc2-aee7-466d-bb10-fe6e4d1007b6",
+		"_postman_id": "bede5edf-30c0-418c-9530-14500f7f492f",
 		"name": "Spring_PetClinic",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1066,6 +1066,57 @@
 							"path": [
 								"api",
 								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Visit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete pet visit Status code is 204\",() => pm.response.to.have.status(204));\r",
+									"\r",
+									"var url = pm.environment.get(\"url\") + \"/visits/\" +  pm.environment.get(\"visitId\");\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Visit Response Should Be Not Found', function () {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Visit Response Code 404\", function() {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    })\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/visits/{{visitId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"visits",
+								"{{visitId}}"
 							]
 						}
 					},
