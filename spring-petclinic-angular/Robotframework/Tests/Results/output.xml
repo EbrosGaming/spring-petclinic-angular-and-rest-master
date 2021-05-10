@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210510 21:26:32.732" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210510 21:46:41.303" rpa="false">
 <suite id="s1" name="PetClinicOwnersHomeButton" source="/Users/jonnahagberg/PycharmProjects/spring-petclinic-angular-and-rest-master/spring-petclinic-angular/Robotframework/Tests/PetClinicOwnersHomeButton.robot">
 <test id="s1-t1" name="Test you can click on Home button from Owners page">
 <kw name="Begin WebTest" library="PetclinicKeywords" type="setup">
@@ -9,17 +9,17 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210510 21:26:32.984" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210510 21:26:32.983" endtime="20210510 21:26:35.602"></status>
+<msg timestamp="20210510 21:46:41.508" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210510 21:46:41.508" endtime="20210510 21:46:44.336"></status>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>0.07</arg>
+<arg>0.2</arg>
 </arguments>
-<status status="PASS" starttime="20210510 21:26:35.603" endtime="20210510 21:26:35.605"></status>
+<status status="PASS" starttime="20210510 21:46:44.336" endtime="20210510 21:46:44.337"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:32.983" endtime="20210510 21:26:35.606"></status>
+<status status="PASS" starttime="20210510 21:46:41.507" endtime="20210510 21:46:44.338"></status>
 </kw>
 <kw name="Given user is on Owners page" library="PetclinicKeywords">
 <kw name="Go To Web Page" library="PetclinicKeywords">
@@ -29,10 +29,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20210510 21:26:35.610" level="INFO">Opening url 'http://localhost:4200/'</msg>
-<status status="PASS" starttime="20210510 21:26:35.609" endtime="20210510 21:26:36.472"></status>
+<msg timestamp="20210510 21:46:44.341" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:46:44.341" endtime="20210510 21:46:45.606"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:35.608" endtime="20210510 21:26:36.472"></status>
+<status status="PASS" starttime="20210510 21:46:44.340" endtime="20210510 21:46:45.607"></status>
 </kw>
 <kw name="Verify Page Loaded" library="PetclinicKeywords">
 <kw name="Get Text" library="SeleniumLibrary">
@@ -43,8 +43,8 @@
 <assign>
 <var>${actualTerm}</var>
 </assign>
-<msg timestamp="20210510 21:26:36.679" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
-<status status="PASS" starttime="20210510 21:26:36.474" endtime="20210510 21:26:36.680"></status>
+<msg timestamp="20210510 21:46:46.035" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:46:45.607" endtime="20210510 21:46:46.035"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -52,11 +52,11 @@
 <arg>${Welcome_Message}</arg>
 <arg>${actualTerm}</arg>
 </arguments>
-<status status="PASS" starttime="20210510 21:26:36.680" endtime="20210510 21:26:36.681"></status>
+<status status="PASS" starttime="20210510 21:46:46.035" endtime="20210510 21:46:46.036"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:36.473" endtime="20210510 21:26:36.681"></status>
+<status status="PASS" starttime="20210510 21:46:45.607" endtime="20210510 21:46:46.036"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:35.608" endtime="20210510 21:26:36.681"></status>
+<status status="PASS" starttime="20210510 21:46:44.339" endtime="20210510 21:46:46.037"></status>
 </kw>
 <kw name="All Owners" library="PetclinicKeywords">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -64,20 +64,20 @@
 <arguments>
 <arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
 </arguments>
-<msg timestamp="20210510 21:26:36.682" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210510 21:26:36.682" endtime="20210510 21:26:36.876"></status>
+<msg timestamp="20210510 21:46:46.038" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:46.038" endtime="20210510 21:46:46.488"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
 </arguments>
-<msg timestamp="20210510 21:26:36.876" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20210510 21:26:36.876" endtime="20210510 21:26:37.094"></status>
+<msg timestamp="20210510 21:46:46.488" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:46.488" endtime="20210510 21:46:46.965"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:36.681" endtime="20210510 21:26:37.094"></status>
+<status status="PASS" starttime="20210510 21:46:46.037" endtime="20210510 21:46:46.966"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:35.607" endtime="20210510 21:26:37.094"></status>
+<status status="PASS" starttime="20210510 21:46:44.339" endtime="20210510 21:46:46.966"></status>
 </kw>
 <kw name="When user clicks on Home button" library="PetclinicKeywords">
 <kw name="Check if button exist" library="PetclinicKeywords">
@@ -88,28 +88,28 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210510 21:26:37.858" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-235.png"&gt;&lt;img src="selenium-screenshot-235.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210510 21:26:37.501" endtime="20210510 21:26:37.858"></status>
+<msg timestamp="20210510 21:46:48.512" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-269.png"&gt;&lt;img src="selenium-screenshot-269.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:46:48.019" endtime="20210510 21:46:48.512"></status>
 </kw>
-<msg timestamp="20210510 21:26:37.862" level="FAIL">Page should have contained button 'Home' but did not.</msg>
-<status status="FAIL" starttime="20210510 21:26:37.096" endtime="20210510 21:26:37.862"></status>
+<msg timestamp="20210510 21:46:48.516" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:46:46.967" endtime="20210510 21:46:48.516"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:37.096" endtime="20210510 21:26:37.862"></status>
+<status status="FAIL" starttime="20210510 21:46:46.967" endtime="20210510 21:46:48.516"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:37.095" endtime="20210510 21:26:37.863"></status>
+<status status="FAIL" starttime="20210510 21:46:46.966" endtime="20210510 21:46:48.516"></status>
 </kw>
 <kw name="End Web Test" library="PetclinicKeywords" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210510 21:26:37.863" endtime="20210510 21:26:38.025"></status>
+<status status="PASS" starttime="20210510 21:46:48.517" endtime="20210510 21:46:48.812"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:37.863" endtime="20210510 21:26:38.026"></status>
+<status status="PASS" starttime="20210510 21:46:48.516" endtime="20210510 21:46:48.812"></status>
 </kw>
 <doc>Click on Home button from Owners page</doc>
 <tags>
 <tag>Home button</tag>
 </tags>
-<status status="FAIL" starttime="20210510 21:26:32.982" endtime="20210510 21:26:38.026" critical="yes">Page should have contained button 'Home' but did not.</status>
+<status status="FAIL" starttime="20210510 21:46:41.506" endtime="20210510 21:46:48.812" critical="yes">Page should have contained button 'Home' but did not.</status>
 </test>
 <test id="s1-t2" name="Test you can click on Home button from any page under Owners">
 <kw name="Begin WebTest" library="PetclinicKeywords" type="setup">
@@ -119,17 +119,17 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210510 21:26:38.031" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210510 21:26:38.031" endtime="20210510 21:26:40.849"></status>
+<msg timestamp="20210510 21:46:48.814" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210510 21:46:48.814" endtime="20210510 21:46:51.882"></status>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>0.07</arg>
+<arg>0.2</arg>
 </arguments>
-<status status="PASS" starttime="20210510 21:26:40.850" endtime="20210510 21:26:40.851"></status>
+<status status="PASS" starttime="20210510 21:46:51.882" endtime="20210510 21:46:51.883"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:38.030" endtime="20210510 21:26:40.852"></status>
+<status status="PASS" starttime="20210510 21:46:48.813" endtime="20210510 21:46:51.884"></status>
 </kw>
 <kw name="Given user is on Owners page" library="PetclinicKeywords">
 <kw name="Go To Web Page" library="PetclinicKeywords">
@@ -139,10 +139,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20210510 21:26:40.856" level="INFO">Opening url 'http://localhost:4200/'</msg>
-<status status="PASS" starttime="20210510 21:26:40.855" endtime="20210510 21:26:41.584"></status>
+<msg timestamp="20210510 21:46:51.888" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:46:51.888" endtime="20210510 21:46:52.804"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:40.855" endtime="20210510 21:26:41.584"></status>
+<status status="PASS" starttime="20210510 21:46:51.887" endtime="20210510 21:46:52.804"></status>
 </kw>
 <kw name="Verify Page Loaded" library="PetclinicKeywords">
 <kw name="Get Text" library="SeleniumLibrary">
@@ -153,8 +153,8 @@
 <assign>
 <var>${actualTerm}</var>
 </assign>
-<msg timestamp="20210510 21:26:41.753" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
-<status status="PASS" starttime="20210510 21:26:41.584" endtime="20210510 21:26:41.753"></status>
+<msg timestamp="20210510 21:46:53.236" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:46:52.805" endtime="20210510 21:46:53.236"></status>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
@@ -162,11 +162,11 @@
 <arg>${Welcome_Message}</arg>
 <arg>${actualTerm}</arg>
 </arguments>
-<status status="PASS" starttime="20210510 21:26:41.754" endtime="20210510 21:26:41.754"></status>
+<status status="PASS" starttime="20210510 21:46:53.237" endtime="20210510 21:46:53.237"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:41.584" endtime="20210510 21:26:41.755"></status>
+<status status="PASS" starttime="20210510 21:46:52.805" endtime="20210510 21:46:53.238"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:40.854" endtime="20210510 21:26:41.755"></status>
+<status status="PASS" starttime="20210510 21:46:51.886" endtime="20210510 21:46:53.238"></status>
 </kw>
 <kw name="All Owners" library="PetclinicKeywords">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -174,20 +174,20 @@
 <arguments>
 <arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
 </arguments>
-<msg timestamp="20210510 21:26:41.756" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20210510 21:26:41.755" endtime="20210510 21:26:41.958"></status>
+<msg timestamp="20210510 21:46:53.239" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:53.239" endtime="20210510 21:46:53.691"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
 </arguments>
-<msg timestamp="20210510 21:26:41.959" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
-<status status="PASS" starttime="20210510 21:26:41.958" endtime="20210510 21:26:42.184"></status>
+<msg timestamp="20210510 21:46:53.692" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:53.691" endtime="20210510 21:46:54.168"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:41.755" endtime="20210510 21:26:42.185"></status>
+<status status="PASS" starttime="20210510 21:46:53.238" endtime="20210510 21:46:54.169"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:40.853" endtime="20210510 21:26:42.185"></status>
+<status status="PASS" starttime="20210510 21:46:51.885" endtime="20210510 21:46:54.169"></status>
 </kw>
 <kw name="When user clicks on a user and clicks the Home button" library="PetclinicKeywords">
 <kw name="Check each owner if there is a Home button" library="PetclinicKeywords">
@@ -199,16 +199,16 @@
 <assign>
 <var>${All_Links_Count}</var>
 </assign>
-<msg timestamp="20210510 21:26:42.270" level="INFO">${All_Links_Count} = 11</msg>
-<status status="PASS" starttime="20210510 21:26:42.187" endtime="20210510 21:26:42.270"></status>
+<msg timestamp="20210510 21:46:54.389" level="INFO">${All_Links_Count} = 15</msg>
+<status status="PASS" starttime="20210510 21:46:54.171" endtime="20210510 21:46:54.389"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${All_Links_Count}</arg>
 </arguments>
-<msg timestamp="20210510 21:26:42.271" level="INFO">11</msg>
-<status status="PASS" starttime="20210510 21:26:42.271" endtime="20210510 21:26:42.271"></status>
+<msg timestamp="20210510 21:46:54.390" level="INFO">15</msg>
+<status status="PASS" starttime="20210510 21:46:54.390" endtime="20210510 21:46:54.391"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
@@ -218,8 +218,8 @@
 <assign>
 <var>@{Owner_Id_List}</var>
 </assign>
-<msg timestamp="20210510 21:26:42.272" level="INFO">@{Owner_Id_List} = [ 11 ]</msg>
-<status status="PASS" starttime="20210510 21:26:42.271" endtime="20210510 21:26:42.272"></status>
+<msg timestamp="20210510 21:46:54.391" level="INFO">@{Owner_Id_List} = [ 15 ]</msg>
+<status status="PASS" starttime="20210510 21:46:54.391" endtime="20210510 21:46:54.392"></status>
 </kw>
 <kw name="${Owner_Id} IN RANGE [ @{Owner_Id_List} ]" type="for">
 <kw name="${Owner_Id} = 0" type="foritem">
@@ -231,23 +231,23 @@
 <assign>
 <var>${Owner_Id}</var>
 </assign>
-<msg timestamp="20210510 21:26:42.273" level="INFO">${Owner_Id} = 1</msg>
-<status status="PASS" starttime="20210510 21:26:42.272" endtime="20210510 21:26:42.273"></status>
+<msg timestamp="20210510 21:46:54.393" level="INFO">${Owner_Id} = 1</msg>
+<status status="PASS" starttime="20210510 21:46:54.392" endtime="20210510 21:46:54.393"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
 </arguments>
-<msg timestamp="20210510 21:26:42.273" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[1]/td[1]/a'.</msg>
-<status status="PASS" starttime="20210510 21:26:42.273" endtime="20210510 21:26:42.488"></status>
+<msg timestamp="20210510 21:46:54.393" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[1]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:54.393" endtime="20210510 21:46:54.860"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Owner Information</arg>
 </arguments>
-<status status="PASS" starttime="20210510 21:26:42.488" endtime="20210510 21:26:42.574"></status>
+<status status="PASS" starttime="20210510 21:46:54.860" endtime="20210510 21:46:55.074"></status>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
@@ -262,52 +262,2164 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20210510 21:26:43.305" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-236.png"&gt;&lt;img src="selenium-screenshot-236.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20210510 21:26:42.985" endtime="20210510 21:26:43.305"></status>
+<msg timestamp="20210510 21:46:56.600" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-270.png"&gt;&lt;img src="selenium-screenshot-270.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:46:56.130" endtime="20210510 21:46:56.600"></status>
 </kw>
-<msg timestamp="20210510 21:26:43.305" level="FAIL">Page should have contained button 'Home' but did not.</msg>
-<status status="FAIL" starttime="20210510 21:26:42.576" endtime="20210510 21:26:43.306"></status>
+<msg timestamp="20210510 21:46:56.601" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:46:55.076" endtime="20210510 21:46:56.601"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.575" endtime="20210510 21:26:43.306"></status>
+<status status="FAIL" starttime="20210510 21:46:55.075" endtime="20210510 21:46:56.601"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.575" endtime="20210510 21:26:43.306"></status>
+<status status="FAIL" starttime="20210510 21:46:55.075" endtime="20210510 21:46:56.601"></status>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
-<arg>${Home_Button}</arg>
 <arg>Click Home button</arg>
 </arguments>
-<msg timestamp="20210510 21:26:43.307" level="FAIL">Evaluating expression 'Home' failed: NameError: name 'Home' is not defined nor importable as module</msg>
-<status status="FAIL" starttime="20210510 21:26:43.306" endtime="20210510 21:26:43.307"></status>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:46:56.602" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:46:57.713" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-271.png"&gt;&lt;img src="selenium-screenshot-271.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:46:57.237" endtime="20210510 21:46:57.713"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.272" endtime="20210510 21:26:43.307"></status>
+<msg timestamp="20210510 21:46:57.718" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:46:56.602" endtime="20210510 21:46:57.718"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.272" endtime="20210510 21:26:43.307"></status>
+<status status="FAIL" starttime="20210510 21:46:56.602" endtime="20210510 21:46:57.718"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.186" endtime="20210510 21:26:43.307"></status>
+<status status="FAIL" starttime="20210510 21:46:56.602" endtime="20210510 21:46:57.718"></status>
 </kw>
-<status status="FAIL" starttime="20210510 21:26:42.186" endtime="20210510 21:26:43.307"></status>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:46:57.719" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:46:57.719" endtime="20210510 21:46:58.145"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:46:57.719" endtime="20210510 21:46:58.146"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:46:58.566" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:46:58.146" endtime="20210510 21:46:58.566"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:46:58.566" endtime="20210510 21:46:58.567"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:46:58.146" endtime="20210510 21:46:58.567"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:46:57.718" endtime="20210510 21:46:58.568"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:46:58.569" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:58.568" endtime="20210510 21:46:59.008"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:46:59.008" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:59.008" endtime="20210510 21:46:59.500"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:46:58.568" endtime="20210510 21:46:59.500"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:46:57.718" endtime="20210510 21:46:59.501"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:46:59.501" endtime="20210510 21:46:59.717"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:46:54.392" endtime="20210510 21:46:59.717"></status>
+</kw>
+<kw name="${Owner_Id} = 1" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:46:59.719" level="INFO">${Owner_Id} = 2</msg>
+<status status="PASS" starttime="20210510 21:46:59.718" endtime="20210510 21:46:59.719"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:46:59.719" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:46:59.719" endtime="20210510 21:47:00.190"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:00.190" endtime="20210510 21:47:00.403"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:01.882" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-272.png"&gt;&lt;img src="selenium-screenshot-272.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:01.457" endtime="20210510 21:47:01.883"></status>
+</kw>
+<msg timestamp="20210510 21:47:01.884" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:00.406" endtime="20210510 21:47:01.884"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:00.404" endtime="20210510 21:47:01.884"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:00.403" endtime="20210510 21:47:01.884"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:01.885" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:02.942" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-273.png"&gt;&lt;img src="selenium-screenshot-273.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:02.514" endtime="20210510 21:47:02.942"></status>
+</kw>
+<msg timestamp="20210510 21:47:02.942" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:01.885" endtime="20210510 21:47:02.942"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:01.884" endtime="20210510 21:47:02.943"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:01.884" endtime="20210510 21:47:02.943"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:02.944" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:02.944" endtime="20210510 21:47:03.482"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:02.944" endtime="20210510 21:47:03.482"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:03.909" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:03.483" endtime="20210510 21:47:03.909"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:03.910" endtime="20210510 21:47:03.910"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:03.483" endtime="20210510 21:47:03.911"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:02.943" endtime="20210510 21:47:03.911"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:03.912" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:03.911" endtime="20210510 21:47:04.354"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:04.355" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:04.354" endtime="20210510 21:47:04.814"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:03.911" endtime="20210510 21:47:04.815"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:02.943" endtime="20210510 21:47:04.816"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:04.816" endtime="20210510 21:47:05.027"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:46:59.718" endtime="20210510 21:47:05.027"></status>
+</kw>
+<kw name="${Owner_Id} = 2" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:05.029" level="INFO">${Owner_Id} = 3</msg>
+<status status="PASS" starttime="20210510 21:47:05.028" endtime="20210510 21:47:05.029"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:05.029" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:05.029" endtime="20210510 21:47:05.504"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:05.504" endtime="20210510 21:47:05.716"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:07.178" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-274.png"&gt;&lt;img src="selenium-screenshot-274.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:06.757" endtime="20210510 21:47:07.179"></status>
+</kw>
+<msg timestamp="20210510 21:47:07.179" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:05.717" endtime="20210510 21:47:07.179"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:05.716" endtime="20210510 21:47:07.179"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:05.716" endtime="20210510 21:47:07.180"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:07.180" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:08.247" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-275.png"&gt;&lt;img src="selenium-screenshot-275.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:07.811" endtime="20210510 21:47:08.247"></status>
+</kw>
+<msg timestamp="20210510 21:47:08.248" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:07.180" endtime="20210510 21:47:08.248"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:07.180" endtime="20210510 21:47:08.249"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:07.180" endtime="20210510 21:47:08.249"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:08.250" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:08.250" endtime="20210510 21:47:08.757"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:08.249" endtime="20210510 21:47:08.758"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:09.179" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:08.759" endtime="20210510 21:47:09.179"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:09.180" endtime="20210510 21:47:09.180"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:08.758" endtime="20210510 21:47:09.180"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:08.249" endtime="20210510 21:47:09.181"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:09.182" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:09.181" endtime="20210510 21:47:09.627"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:09.628" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:09.627" endtime="20210510 21:47:10.092"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:09.181" endtime="20210510 21:47:10.092"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:08.249" endtime="20210510 21:47:10.092"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:10.093" endtime="20210510 21:47:10.302"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:05.028" endtime="20210510 21:47:10.302"></status>
+</kw>
+<kw name="${Owner_Id} = 3" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:10.303" level="INFO">${Owner_Id} = 4</msg>
+<status status="PASS" starttime="20210510 21:47:10.303" endtime="20210510 21:47:10.303"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:10.304" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[4]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:10.304" endtime="20210510 21:47:10.770"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:10.770" endtime="20210510 21:47:10.980"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:12.445" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-276.png"&gt;&lt;img src="selenium-screenshot-276.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:12.024" endtime="20210510 21:47:12.446"></status>
+</kw>
+<msg timestamp="20210510 21:47:12.447" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:10.981" endtime="20210510 21:47:12.447"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:10.981" endtime="20210510 21:47:12.447"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:10.980" endtime="20210510 21:47:12.447"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:12.448" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:13.493" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-277.png"&gt;&lt;img src="selenium-screenshot-277.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:13.075" endtime="20210510 21:47:13.493"></status>
+</kw>
+<msg timestamp="20210510 21:47:13.493" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:12.448" endtime="20210510 21:47:13.494"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:12.448" endtime="20210510 21:47:13.494"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:12.447" endtime="20210510 21:47:13.494"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:13.496" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:13.496" endtime="20210510 21:47:13.979"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:13.496" endtime="20210510 21:47:13.979"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:14.411" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:13.980" endtime="20210510 21:47:14.411"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:14.411" endtime="20210510 21:47:14.412"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:13.980" endtime="20210510 21:47:14.412"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:13.495" endtime="20210510 21:47:14.412"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:14.413" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:14.413" endtime="20210510 21:47:14.856"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:14.857" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:14.856" endtime="20210510 21:47:15.334"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:14.412" endtime="20210510 21:47:15.335"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:13.495" endtime="20210510 21:47:15.335"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:15.335" endtime="20210510 21:47:15.547"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:10.302" endtime="20210510 21:47:15.547"></status>
+</kw>
+<kw name="${Owner_Id} = 4" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:15.549" level="INFO">${Owner_Id} = 5</msg>
+<status status="PASS" starttime="20210510 21:47:15.548" endtime="20210510 21:47:15.549"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:15.549" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[5]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:15.549" endtime="20210510 21:47:16.023"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:16.023" endtime="20210510 21:47:16.233"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:17.714" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-278.png"&gt;&lt;img src="selenium-screenshot-278.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:17.283" endtime="20210510 21:47:17.714"></status>
+</kw>
+<msg timestamp="20210510 21:47:17.715" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:16.234" endtime="20210510 21:47:17.715"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:16.233" endtime="20210510 21:47:17.715"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:16.233" endtime="20210510 21:47:17.716"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:17.717" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:18.810" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-279.png"&gt;&lt;img src="selenium-screenshot-279.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:18.351" endtime="20210510 21:47:18.810"></status>
+</kw>
+<msg timestamp="20210510 21:47:18.811" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:17.716" endtime="20210510 21:47:18.811"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:17.716" endtime="20210510 21:47:18.811"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:17.716" endtime="20210510 21:47:18.812"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:18.813" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:18.813" endtime="20210510 21:47:19.276"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:18.813" endtime="20210510 21:47:19.277"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:19.709" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:19.278" endtime="20210510 21:47:19.709"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:19.710" endtime="20210510 21:47:19.710"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:19.277" endtime="20210510 21:47:19.711"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:18.812" endtime="20210510 21:47:19.711"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:19.712" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:19.711" endtime="20210510 21:47:20.156"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:20.157" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:20.157" endtime="20210510 21:47:20.617"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:19.711" endtime="20210510 21:47:20.618"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:18.812" endtime="20210510 21:47:20.618"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:20.618" endtime="20210510 21:47:20.831"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:15.547" endtime="20210510 21:47:20.831"></status>
+</kw>
+<kw name="${Owner_Id} = 5" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:20.832" level="INFO">${Owner_Id} = 6</msg>
+<status status="PASS" starttime="20210510 21:47:20.831" endtime="20210510 21:47:20.832"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:20.833" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:20.832" endtime="20210510 21:47:21.302"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:21.302" endtime="20210510 21:47:21.510"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:23.000" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-280.png"&gt;&lt;img src="selenium-screenshot-280.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:22.558" endtime="20210510 21:47:23.000"></status>
+</kw>
+<msg timestamp="20210510 21:47:23.001" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:21.511" endtime="20210510 21:47:23.001"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:21.511" endtime="20210510 21:47:23.001"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:21.510" endtime="20210510 21:47:23.002"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:23.002" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:24.068" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-281.png"&gt;&lt;img src="selenium-screenshot-281.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:23.634" endtime="20210510 21:47:24.068"></status>
+</kw>
+<msg timestamp="20210510 21:47:24.069" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:23.002" endtime="20210510 21:47:24.069"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:23.002" endtime="20210510 21:47:24.069"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:23.002" endtime="20210510 21:47:24.069"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:24.070" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:24.070" endtime="20210510 21:47:24.537"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:24.070" endtime="20210510 21:47:24.537"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:24.967" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:24.538" endtime="20210510 21:47:24.967"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:24.968" endtime="20210510 21:47:24.968"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:24.537" endtime="20210510 21:47:24.969"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:24.070" endtime="20210510 21:47:24.969"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:24.970" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:24.969" endtime="20210510 21:47:25.414"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:25.415" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:25.414" endtime="20210510 21:47:25.879"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:24.969" endtime="20210510 21:47:25.880"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:24.069" endtime="20210510 21:47:25.881"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:25.881" endtime="20210510 21:47:26.091"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:20.831" endtime="20210510 21:47:26.092"></status>
+</kw>
+<kw name="${Owner_Id} = 6" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:26.093" level="INFO">${Owner_Id} = 7</msg>
+<status status="PASS" starttime="20210510 21:47:26.092" endtime="20210510 21:47:26.093"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:26.093" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[7]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:26.093" endtime="20210510 21:47:26.561"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:26.561" endtime="20210510 21:47:26.770"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:28.273" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-282.png"&gt;&lt;img src="selenium-screenshot-282.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:27.815" endtime="20210510 21:47:28.273"></status>
+</kw>
+<msg timestamp="20210510 21:47:28.274" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:26.771" endtime="20210510 21:47:28.274"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:26.771" endtime="20210510 21:47:28.274"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:26.770" endtime="20210510 21:47:28.274"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:28.275" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:29.330" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-283.png"&gt;&lt;img src="selenium-screenshot-283.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:28.907" endtime="20210510 21:47:29.330"></status>
+</kw>
+<msg timestamp="20210510 21:47:29.331" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:28.275" endtime="20210510 21:47:29.331"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:28.275" endtime="20210510 21:47:29.331"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:28.274" endtime="20210510 21:47:29.331"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:29.333" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:29.332" endtime="20210510 21:47:29.757"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:29.332" endtime="20210510 21:47:29.757"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:30.187" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:29.758" endtime="20210510 21:47:30.187"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:30.188" endtime="20210510 21:47:30.188"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:29.758" endtime="20210510 21:47:30.189"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:29.332" endtime="20210510 21:47:30.189"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:30.190" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:30.189" endtime="20210510 21:47:30.631"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:30.631" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:30.631" endtime="20210510 21:47:31.096"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:30.189" endtime="20210510 21:47:31.096"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:29.331" endtime="20210510 21:47:31.097"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:31.097" endtime="20210510 21:47:31.305"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:26.092" endtime="20210510 21:47:31.305"></status>
+</kw>
+<kw name="${Owner_Id} = 7" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:31.306" level="INFO">${Owner_Id} = 8</msg>
+<status status="PASS" starttime="20210510 21:47:31.305" endtime="20210510 21:47:31.306"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:31.307" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:31.306" endtime="20210510 21:47:31.780"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:31.780" endtime="20210510 21:47:31.991"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:33.485" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-284.png"&gt;&lt;img src="selenium-screenshot-284.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:33.040" endtime="20210510 21:47:33.486"></status>
+</kw>
+<msg timestamp="20210510 21:47:33.486" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:31.992" endtime="20210510 21:47:33.486"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:31.992" endtime="20210510 21:47:33.487"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:31.991" endtime="20210510 21:47:33.487"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:33.488" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:34.535" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-285.png"&gt;&lt;img src="selenium-screenshot-285.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:34.116" endtime="20210510 21:47:34.535"></status>
+</kw>
+<msg timestamp="20210510 21:47:34.536" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:33.488" endtime="20210510 21:47:34.536"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:33.487" endtime="20210510 21:47:34.536"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:33.487" endtime="20210510 21:47:34.536"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:34.537" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:34.537" endtime="20210510 21:47:34.957"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:34.537" endtime="20210510 21:47:34.957"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:35.389" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:34.958" endtime="20210510 21:47:35.389"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:35.389" endtime="20210510 21:47:35.390"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:34.957" endtime="20210510 21:47:35.390"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:34.537" endtime="20210510 21:47:35.391"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:35.391" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:35.391" endtime="20210510 21:47:35.837"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:35.838" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:35.838" endtime="20210510 21:47:36.294"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:35.391" endtime="20210510 21:47:36.294"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:34.536" endtime="20210510 21:47:36.294"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:36.295" endtime="20210510 21:47:36.505"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:31.305" endtime="20210510 21:47:36.506"></status>
+</kw>
+<kw name="${Owner_Id} = 8" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:36.507" level="INFO">${Owner_Id} = 9</msg>
+<status status="PASS" starttime="20210510 21:47:36.506" endtime="20210510 21:47:36.507"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:36.508" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:36.507" endtime="20210510 21:47:36.994"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:36.994" endtime="20210510 21:47:37.202"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:38.670" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-286.png"&gt;&lt;img src="selenium-screenshot-286.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:38.250" endtime="20210510 21:47:38.670"></status>
+</kw>
+<msg timestamp="20210510 21:47:38.671" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:37.204" endtime="20210510 21:47:38.671"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:37.203" endtime="20210510 21:47:38.671"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:37.203" endtime="20210510 21:47:38.671"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:38.673" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:39.715" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-287.png"&gt;&lt;img src="selenium-screenshot-287.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:39.302" endtime="20210510 21:47:39.715"></status>
+</kw>
+<msg timestamp="20210510 21:47:39.716" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:38.672" endtime="20210510 21:47:39.716"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:38.672" endtime="20210510 21:47:39.716"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:38.672" endtime="20210510 21:47:39.716"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:39.718" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:39.717" endtime="20210510 21:47:40.144"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:39.717" endtime="20210510 21:47:40.144"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:40.571" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:40.145" endtime="20210510 21:47:40.571"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:40.572" endtime="20210510 21:47:40.572"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:40.145" endtime="20210510 21:47:40.573"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:39.717" endtime="20210510 21:47:40.573"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:40.574" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:40.573" endtime="20210510 21:47:41.013"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:41.014" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:41.014" endtime="20210510 21:47:41.479"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:40.573" endtime="20210510 21:47:41.479"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:39.716" endtime="20210510 21:47:41.480"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:41.480" endtime="20210510 21:47:41.693"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:36.506" endtime="20210510 21:47:41.694"></status>
+</kw>
+<kw name="${Owner_Id} = 9" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:41.695" level="INFO">${Owner_Id} = 10</msg>
+<status status="PASS" starttime="20210510 21:47:41.694" endtime="20210510 21:47:41.695"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:41.695" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[10]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:41.695" endtime="20210510 21:47:42.157"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:42.157" endtime="20210510 21:47:42.366"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:43.849" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-288.png"&gt;&lt;img src="selenium-screenshot-288.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:43.409" endtime="20210510 21:47:43.849"></status>
+</kw>
+<msg timestamp="20210510 21:47:43.850" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:42.367" endtime="20210510 21:47:43.850"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:42.367" endtime="20210510 21:47:43.850"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:42.366" endtime="20210510 21:47:43.851"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:43.852" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:44.963" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-289.png"&gt;&lt;img src="selenium-screenshot-289.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:44.480" endtime="20210510 21:47:44.964"></status>
+</kw>
+<msg timestamp="20210510 21:47:44.964" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:43.852" endtime="20210510 21:47:44.965"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:43.851" endtime="20210510 21:47:44.965"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:43.851" endtime="20210510 21:47:44.965"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:44.966" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:44.966" endtime="20210510 21:47:45.441"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:44.966" endtime="20210510 21:47:45.442"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:45.866" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:45.443" endtime="20210510 21:47:45.866"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:45.867" endtime="20210510 21:47:45.867"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:45.442" endtime="20210510 21:47:45.867"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:44.966" endtime="20210510 21:47:45.868"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:45.868" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:45.868" endtime="20210510 21:47:46.315"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:46.316" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:46.316" endtime="20210510 21:47:46.778"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:45.868" endtime="20210510 21:47:46.779"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:44.965" endtime="20210510 21:47:46.780"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:46.780" endtime="20210510 21:47:46.995"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:41.694" endtime="20210510 21:47:46.995"></status>
+</kw>
+<kw name="${Owner_Id} = 10" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:46.996" level="INFO">${Owner_Id} = 11</msg>
+<status status="PASS" starttime="20210510 21:47:46.995" endtime="20210510 21:47:46.996"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:46.997" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:46.996" endtime="20210510 21:47:47.461"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:47.462" endtime="20210510 21:47:47.670"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:49.204" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-290.png"&gt;&lt;img src="selenium-screenshot-290.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:48.714" endtime="20210510 21:47:49.204"></status>
+</kw>
+<msg timestamp="20210510 21:47:49.205" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:47.672" endtime="20210510 21:47:49.205"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:47.671" endtime="20210510 21:47:49.205"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:47.671" endtime="20210510 21:47:49.206"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:49.207" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:50.251" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-291.png"&gt;&lt;img src="selenium-screenshot-291.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:49.836" endtime="20210510 21:47:50.251"></status>
+</kw>
+<msg timestamp="20210510 21:47:50.252" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:49.207" endtime="20210510 21:47:50.252"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:49.206" endtime="20210510 21:47:50.252"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:49.206" endtime="20210510 21:47:50.252"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:50.253" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:50.253" endtime="20210510 21:47:50.668"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:50.253" endtime="20210510 21:47:50.668"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:51.092" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:50.670" endtime="20210510 21:47:51.092"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:51.092" endtime="20210510 21:47:51.093"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:50.669" endtime="20210510 21:47:51.093"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:50.253" endtime="20210510 21:47:51.093"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:51.094" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:51.094" endtime="20210510 21:47:51.551"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:51.552" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:51.552" endtime="20210510 21:47:52.012"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:51.093" endtime="20210510 21:47:52.013"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:50.252" endtime="20210510 21:47:52.013"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:52.013" endtime="20210510 21:47:52.225"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:46.995" endtime="20210510 21:47:52.225"></status>
+</kw>
+<kw name="${Owner_Id} = 11" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:52.226" level="INFO">${Owner_Id} = 12</msg>
+<status status="PASS" starttime="20210510 21:47:52.226" endtime="20210510 21:47:52.226"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:52.227" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[12]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:52.226" endtime="20210510 21:47:52.709"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:52.709" endtime="20210510 21:47:52.919"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:54.431" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-292.png"&gt;&lt;img src="selenium-screenshot-292.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:53.962" endtime="20210510 21:47:54.431"></status>
+</kw>
+<msg timestamp="20210510 21:47:54.431" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:52.921" endtime="20210510 21:47:54.432"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:52.920" endtime="20210510 21:47:54.432"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:52.920" endtime="20210510 21:47:54.432"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:54.433" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:55.470" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-293.png"&gt;&lt;img src="selenium-screenshot-293.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:55.057" endtime="20210510 21:47:55.471"></status>
+</kw>
+<msg timestamp="20210510 21:47:55.471" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:54.433" endtime="20210510 21:47:55.471"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:54.433" endtime="20210510 21:47:55.471"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:54.432" endtime="20210510 21:47:55.472"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:55.473" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:47:55.473" endtime="20210510 21:47:55.921"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:55.473" endtime="20210510 21:47:55.922"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:47:56.350" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:47:55.923" endtime="20210510 21:47:56.350"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:56.350" endtime="20210510 21:47:56.351"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:55.922" endtime="20210510 21:47:56.351"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:55.472" endtime="20210510 21:47:56.351"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:56.352" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:56.352" endtime="20210510 21:47:56.800"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:56.801" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:56.800" endtime="20210510 21:47:57.263"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:56.351" endtime="20210510 21:47:57.264"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:47:55.472" endtime="20210510 21:47:57.264"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:57.264" endtime="20210510 21:47:57.476"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:52.225" endtime="20210510 21:47:57.476"></status>
+</kw>
+<kw name="${Owner_Id} = 12" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:47:57.477" level="INFO">${Owner_Id} = 13</msg>
+<status status="PASS" starttime="20210510 21:47:57.477" endtime="20210510 21:47:57.477"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:47:57.478" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[13]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:47:57.477" endtime="20210510 21:47:57.953"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:47:57.954" endtime="20210510 21:47:58.162"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:47:59.683" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-294.png"&gt;&lt;img src="selenium-screenshot-294.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:47:59.206" endtime="20210510 21:47:59.683"></status>
+</kw>
+<msg timestamp="20210510 21:47:59.683" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:47:58.164" endtime="20210510 21:47:59.683"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:58.163" endtime="20210510 21:47:59.684"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:58.163" endtime="20210510 21:47:59.684"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:47:59.685" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:00.790" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-295.png"&gt;&lt;img src="selenium-screenshot-295.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:00.313" endtime="20210510 21:48:00.790"></status>
+</kw>
+<msg timestamp="20210510 21:48:00.791" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:47:59.685" endtime="20210510 21:48:00.791"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:59.684" endtime="20210510 21:48:00.791"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:59.684" endtime="20210510 21:48:00.791"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:48:00.793" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:48:00.793" endtime="20210510 21:48:01.229"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:00.792" endtime="20210510 21:48:01.229"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:48:01.657" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:48:01.230" endtime="20210510 21:48:01.657"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:01.657" endtime="20210510 21:48:01.658"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:01.230" endtime="20210510 21:48:01.658"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:00.792" endtime="20210510 21:48:01.658"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:01.660" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:01.659" endtime="20210510 21:48:02.100"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:02.101" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:02.101" endtime="20210510 21:48:02.558"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:01.659" endtime="20210510 21:48:02.559"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:00.791" endtime="20210510 21:48:02.559"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:02.559" endtime="20210510 21:48:02.766"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:47:57.476" endtime="20210510 21:48:02.767"></status>
+</kw>
+<kw name="${Owner_Id} = 13" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:48:02.768" level="INFO">${Owner_Id} = 14</msg>
+<status status="PASS" starttime="20210510 21:48:02.767" endtime="20210510 21:48:02.768"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:02.768" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[14]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:02.768" endtime="20210510 21:48:03.244"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:03.244" endtime="20210510 21:48:03.453"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:04.936" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-296.png"&gt;&lt;img src="selenium-screenshot-296.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:04.503" endtime="20210510 21:48:04.936"></status>
+</kw>
+<msg timestamp="20210510 21:48:04.937" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:48:03.454" endtime="20210510 21:48:04.937"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:03.454" endtime="20210510 21:48:04.937"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:03.453" endtime="20210510 21:48:04.937"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:48:04.938" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:06.014" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-297.png"&gt;&lt;img src="selenium-screenshot-297.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:05.562" endtime="20210510 21:48:06.015"></status>
+</kw>
+<msg timestamp="20210510 21:48:06.015" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:48:04.937" endtime="20210510 21:48:06.015"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:04.937" endtime="20210510 21:48:06.016"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:04.937" endtime="20210510 21:48:06.016"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:48:06.017" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:48:06.017" endtime="20210510 21:48:06.488"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:06.017" endtime="20210510 21:48:06.488"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:48:06.912" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:48:06.488" endtime="20210510 21:48:06.912"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:06.912" endtime="20210510 21:48:06.913"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:06.488" endtime="20210510 21:48:06.913"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:06.017" endtime="20210510 21:48:06.913"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:06.914" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:06.914" endtime="20210510 21:48:07.359"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:07.360" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:07.359" endtime="20210510 21:48:07.823"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:06.914" endtime="20210510 21:48:07.823"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:06.016" endtime="20210510 21:48:07.823"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:07.824" endtime="20210510 21:48:08.032"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:02.767" endtime="20210510 21:48:08.032"></status>
+</kw>
+<kw name="${Owner_Id} = 14" type="foritem">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Owner_Id}+1</arg>
+</arguments>
+<assign>
+<var>${Owner_Id}</var>
+</assign>
+<msg timestamp="20210510 21:48:08.033" level="INFO">${Owner_Id} = 15</msg>
+<status status="PASS" starttime="20210510 21:48:08.032" endtime="20210510 21:48:08.033"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:08.034" level="INFO">Clicking element 'xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[15]/td[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:08.033" endtime="20210510 21:48:08.509"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owner Information</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:08.509" endtime="20210510 21:48:08.718"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Check if button exist</arg>
+</arguments>
+<kw name="Check if button exist" library="PetclinicKeywords">
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:10.255" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-298.png"&gt;&lt;img src="selenium-screenshot-298.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:09.764" endtime="20210510 21:48:10.256"></status>
+</kw>
+<msg timestamp="20210510 21:48:10.256" level="FAIL">Page should have contained button 'Home' but did not.</msg>
+<status status="FAIL" starttime="20210510 21:48:08.719" endtime="20210510 21:48:10.256"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:08.719" endtime="20210510 21:48:10.257"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:08.718" endtime="20210510 21:48:10.257"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Click Home button</arg>
+</arguments>
+<kw name="Click Home button" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Home_Button}</arg>
+</arguments>
+<msg timestamp="20210510 21:48:10.258" level="INFO">Clicking button 'Home'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:11.299" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-299.png"&gt;&lt;img src="selenium-screenshot-299.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:10.885" endtime="20210510 21:48:11.300"></status>
+</kw>
+<msg timestamp="20210510 21:48:11.301" level="FAIL">Button with locator 'Home' not found.</msg>
+<status status="FAIL" starttime="20210510 21:48:10.258" endtime="20210510 21:48:11.301"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:10.257" endtime="20210510 21:48:11.301"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:10.257" endtime="20210510 21:48:11.301"></status>
+</kw>
+<kw name="user is on Owners page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210510 21:48:11.303" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210510 21:48:11.303" endtime="20210510 21:48:11.699"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:11.303" endtime="20210510 21:48:11.700"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210510 21:48:12.126" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210510 21:48:11.701" endtime="20210510 21:48:12.126"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:12.127" endtime="20210510 21:48:12.127"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:11.700" endtime="20210510 21:48:12.127"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:11.302" endtime="20210510 21:48:12.128"></status>
+</kw>
+<kw name="All Owners" library="PetclinicKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:12.128" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:12.128" endtime="20210510 21:48:12.569"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a</arg>
+</arguments>
+<msg timestamp="20210510 21:48:12.570" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a'.</msg>
+<status status="PASS" starttime="20210510 21:48:12.570" endtime="20210510 21:48:13.031"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:12.128" endtime="20210510 21:48:13.031"></status>
+</kw>
+<status status="PASS" starttime="20210510 21:48:11.301" endtime="20210510 21:48:13.032"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Owners</arg>
+</arguments>
+<status status="PASS" starttime="20210510 21:48:13.032" endtime="20210510 21:48:13.241"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:08.032" endtime="20210510 21:48:13.242"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:46:54.392" endtime="20210510 21:48:13.242"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:46:54.171" endtime="20210510 21:48:13.243"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:46:54.170" endtime="20210510 21:48:13.243"></status>
+</kw>
+<kw name="Then user should be back on Home Page" library="PetclinicKeywords">
+<kw name="Verify back on Home Page" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${Actual_Welcome_Message}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210510 21:48:13.887" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-300.png"&gt;&lt;img src="selenium-screenshot-300.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210510 21:48:13.452" endtime="20210510 21:48:13.887"></status>
+</kw>
+<msg timestamp="20210510 21:48:13.888" level="FAIL">Element with locator 'xpath:/html/body/app-root/app-welcome/h1' not found.</msg>
+<status status="FAIL" starttime="20210510 21:48:13.244" endtime="20210510 21:48:13.888"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:13.244" endtime="20210510 21:48:13.888"></status>
+</kw>
+<status status="FAIL" starttime="20210510 21:48:13.243" endtime="20210510 21:48:13.889"></status>
 </kw>
 <kw name="End Web Test" library="PetclinicKeywords" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210510 21:26:43.308" endtime="20210510 21:26:43.456"></status>
+<status status="PASS" starttime="20210510 21:48:13.890" endtime="20210510 21:48:14.169"></status>
 </kw>
-<status status="PASS" starttime="20210510 21:26:43.308" endtime="20210510 21:26:43.457"></status>
+<status status="PASS" starttime="20210510 21:48:13.889" endtime="20210510 21:48:14.169"></status>
 </kw>
 <doc>Click on Home button from subpages to Owners page</doc>
 <tags>
 <tag>Home button</tag>
 </tags>
-<status status="FAIL" starttime="20210510 21:26:38.027" endtime="20210510 21:26:43.457" critical="yes">Several failures occurred:
+<status status="FAIL" starttime="20210510 21:46:48.813" endtime="20210510 21:48:14.169" critical="yes">Several failures occurred:
 
 1) Page should have contained button 'Home' but did not.
 
-2) Evaluating expression 'Home' failed: NameError: name 'Home' is not defined nor importable as module</status>
+2) Button with locator 'Home' not found.
+
+3) Page should have contained button 'Home' but did not.
+
+4) Button with locator 'Home' not found.
+
+5) Page should have contained button 'Home' but did not.
+
+6) Button with locator 'Home' not found.
+
+7) Page should have contained button 'Home' but did not.
+
+8) Button with locator 'Home' not found.
+
+9) Page should have contained button 'Home' but did not.
+
+    [ Message content over the limit has been removed. ]
+
+22) Button with locator 'Home' not found.
+
+23) Page should have contained button 'Home' but did not.
+
+24) Button with locator 'Home' not found.
+
+25) Page should have contained button 'Home' but did not.
+
+26) Button with locator 'Home' not found.
+
+27) Page should have contained button 'Home' but did not.
+
+28) Button with locator 'Home' not found.
+
+29) Page should have contained button 'Home' but did not.
+
+30) Button with locator 'Home' not found.
+
+31) Element with locator 'xpath:/html/body/app-root/app-welcome/h1' not found.</status>
 </test>
 <doc>Infotiv Petclinic Test Functionality</doc>
-<status status="FAIL" starttime="20210510 21:26:32.734" endtime="20210510 21:26:43.459"></status>
+<status status="FAIL" starttime="20210510 21:46:41.304" endtime="20210510 21:48:14.170"></status>
 </suite>
 <statistics>
 <total>

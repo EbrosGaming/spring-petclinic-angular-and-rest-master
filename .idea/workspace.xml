@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Continued working on test for Home button. Added a forloop and git it to work." />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Continued working on test for Home button. Added a forloop and git it to work.">
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +82,7 @@
       <workItem from="1620378666556" duration="1063000" />
       <workItem from="1620379851505" duration="1724000" />
       <workItem from="1620387250930" duration="2000" />
-      <workItem from="1620387404419" duration="12828000" />
-    </task>
-    <task id="LOCAL−00057" summary="Update Jenkinsfile">
-      <created>1619074431501</created>
-      <option name="number" value="LOCAL−00057" />
-      <option name="presentableId" value="LOCAL−00057" />
-      <updated>1619074431501</updated>
+      <workItem from="1620387404419" duration="13261000" />
     </task>
     <task id="LOCAL−00058" summary="Update Jenkinsfile">
       <created>1619074467476</created>
@@ -373,7 +372,13 @@
       <option name="presentableId" value="LOCAL−00105" />
       <updated>1620675366536</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL−00106" summary="Continued working on test for Home button. Added a forloop and git it to work.">
+      <created>1620675480744</created>
+      <option name="number" value="LOCAL−00106" />
+      <option name="presentableId" value="LOCAL−00106" />
+      <updated>1620675480744</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
