@@ -56,7 +56,7 @@ pipeline {
       
         stage('Postman') {
             steps {
-                sh 'newman run PostmanFiles/PCollection.postman_collection.json -e PostmanFiles/PEnvironment.postman_environment.json -- reporters junit'
+                sh 'newman run PCollection.postman_collection.json -e PEnvironment.postman_environment.json -- reporters junit'
             }
            
                 post {
