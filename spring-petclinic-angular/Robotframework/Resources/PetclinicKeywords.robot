@@ -1,9 +1,9 @@
 *** Keywords ***
 Test Navigates to chrome Home Page
 Begin WebTest
-    OPEN BROWSER                                       about:blank                         chrome
+    OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
-    Set Selenium Speed                                0.07
+    Set Selenium Speed                                0.3
 
 Go To Web Page
      Load Page
@@ -316,7 +316,7 @@ user is on Owners page
   All owners
 
 #____________________________________________________________________________________________________
-  #Get back to landing page from pet type
+  #Get back to landing page from pet type /Sami
 
 user is on landing page
 
@@ -325,16 +325,17 @@ user is on landing page
 user enters pet types
 
   Click Element                            xpath://html/body/app-root/div[1]/nav/div/ul/li[4]/a
+
   wait until page contains                 Pet Types
 
 click on the home button
 
-  Click element                            xpath://html/body/app-root/div[1]/nav/div/ul/li[1]/a
+  Click element                            xpath://html/body/app-root/app-pettype-list/div/div/div/button[1]
 
 
 the user should return to the landing page
 
-  page should contain                      Welcome to Petclinic
+  page should contain                      ${Welcome_Message}
 
 
 End Web Test

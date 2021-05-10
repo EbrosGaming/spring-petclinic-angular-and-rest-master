@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Latest 2021-05-07&#10;New : HomeButtonPetType.robot">
+      <change afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/HomePageFromPetType.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Resources/keywords2.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Resources/keywords2.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/selenium-screenshot-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframeworktest2/Tests/Results/selenium-screenshot-9.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +58,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframework\Resources" />
+      <recent name="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframework\Tests\Results" />
       <recent name="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframeworktest2\Resources" />
     </key>
   </component>
@@ -95,7 +126,19 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1620378909404</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="Latest 2021-05-07&#10;New : HomeButtonPetType.robot">
+      <created>1620636439179</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1620636439179</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Latest 2021-05-07&#10;New : HomeButtonPetType.robot">
+      <created>1620636481322</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1620636481322</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
