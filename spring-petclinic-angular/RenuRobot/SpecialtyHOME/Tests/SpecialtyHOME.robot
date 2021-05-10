@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation        Test to Add, Edit & Delete Visit for a Pet
 ...                  Test to check all Actions for Visits of a Pet
-Resource             ../Resources/SpecialityHOMEKeywords.robot
+Resource             ../Resources/SpecialtyHOMEKeywords.robot
 Library              SeleniumLibrary
 Test Setup           Begin Web Tests
 Test Teardown        End Web Tests
