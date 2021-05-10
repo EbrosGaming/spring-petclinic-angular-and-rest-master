@@ -1262,10 +1262,10 @@
 									"  pm.expect(jsonData.lastName).to.be.a(\"string\"); \r",
 									"  pm.expect(jsonData.specialties).to.be.an(\"array\");    \r",
 									"});\r",
-									"pm.test(\"Verify Information of New Owner Added\", function () {\r",
+									"pm.test(\"Verify Information of New Vet Added\", function () {\r",
 									"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"vetfirstNameP\"));\r",
 									"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"vetlastNameP\"));\r",
-									"    pm.expect(jsonData.specialities).to.not.eql(null);\r",
+									"    //pm.expect(jsonData.specialities).to.not.eql(null);\r",
 									"});   "
 								],
 								"type": "text/javascript"
@@ -1373,7 +1373,7 @@
 									"pm.test(\"Verify Information of Updated Vet\", function () {\r",
 									"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"vetfirstNameU\"));\r",
 									"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"vetlastNameU\"));\r",
-									"    pm.expect(jsonData.specialities).to.not.eql(null);\r",
+									"    //pm.expect(jsonData.specialities).to.not.eql(null);\r",
 									"});   "
 								],
 								"type": "text/javascript"
