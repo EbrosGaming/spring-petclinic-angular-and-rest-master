@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation                               Infotiv Petclinic Test Functionality
-Resource                                    ../Resources/keywords2.robot
+Resource                                    ../Resources/PetclinicKeywords.robot
 Library                                     SeleniumLibrary
 Test Setup                                  Begin WebTest
 Test Teardown                               End Web Test
