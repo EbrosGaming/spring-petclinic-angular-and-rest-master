@@ -304,8 +304,6 @@ a user should see two fields with the same Pet Type
 Check if button exist
   Page should contain button      ${Home_Button}
 
-
-
 Check each owner if there is a Home button
   ${All_Links_Count}                    Get element count    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr
   Log                                   ${All_Links_Count}
@@ -314,23 +312,35 @@ Check each owner if there is a Home button
     ${Owner_Id}=                        Evaluate      ${Owner_Id}+1
     Click element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a
     Wait until page contains            Owner Information
-    Run Keyword And Continue On Failure   Page should contain button          Home
+    Run Keyword And Continue On Failure   Check if button exist
     Click button                        xpath:/html/body/app-root/app-owner-detail/div/div/button[1]
-    Sleep                               0.5 s
+    Wait until page contains            Owners
   END
 
+Click Home button
+  Click button                          ${Home_Button}
+  Wait until page contains              ${Welcome_Message}
 
+Verify back on Home Page
+  ${Actual_Welcome_Message}             Get text      xpath:/html/body/app-root/app-welcome/h1
+  Should be equal                       ${Actual_Welcome_Message}       ${Welcome_Message}
 
-
-
-
-Check subpage number for Home Button
 
 #Gherkin syntax
 
 user is on Owners page
   Go To Web Page
   All owners
+
+user clicks on Home button
+  Check if button exist
+  Click Home button
+
+user should be back on Home Page
+  Verify back on Home Page
+
+user clicks on a user and clicks the Home button
+  Check each owner if there is a Home button
 
 End Web Test
     close browser
