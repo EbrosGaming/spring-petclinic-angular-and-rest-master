@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210510 10:46:54.987" rpa="false">
+<suite id="s1" name="HomeButtonPetType" source="C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframeworktest2\Tests\HomeButtonPetType.robot">
+<test id="s1-t1" name="Editing A Pet Type">
+<kw name="Begin WebTest" type="setup">
+<msg timestamp="20210510 10:46:55.427" level="FAIL">No keyword with name 'Begin WebTest' found.</msg>
+<status status="FAIL" starttime="20210510 10:46:55.427" endtime="20210510 10:46:55.427"></status>
+</kw>
+<kw name="End Web Test" type="teardown">
+<msg timestamp="20210510 10:46:55.434" level="FAIL">No keyword with name 'End Web Test' found.</msg>
+<status status="FAIL" starttime="20210510 10:46:55.434" endtime="20210510 10:46:55.434">No keyword with name 'End Web Test' found.</status>
+</kw>
+<doc>Home</doc>
+<tags>
+<tag>Landing page</tag>
+</tags>
+<status status="FAIL" starttime="20210510 10:46:55.421" endtime="20210510 10:46:55.435" critical="yes">Setup failed:
+No keyword with name 'Begin WebTest' found.
+
+Also teardown failed:
+No keyword with name 'End Web Test' found.</status>
+</test>
+<doc>Infotiv Petclinic Test Functionality</doc>
+<status status="FAIL" starttime="20210510 10:46:54.992" endtime="20210510 10:46:55.438"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Landing page</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="HomeButtonPetType">HomeButtonPetType</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210510 10:46:55.020" level="ERROR">Error in file 'C:\Users\Sempa\PycharmProjects\spring-petclinic-angular-and-rest-master\spring-petclinic-angular\Robotframeworktest2\Tests\HomeButtonPetType.robot' on line 3: Resource file '..\Resources\PetclinicKeywords.robot' does not exist.</msg>
+</errors>
+</robot>
