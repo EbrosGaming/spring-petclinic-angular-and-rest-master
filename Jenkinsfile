@@ -4,6 +4,7 @@ pipeline {
         stage('Build Rest-API') {
                     steps {
                         sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
+                        sh 'sleep 11'
                     }
                 }
 
@@ -31,8 +32,10 @@ pipeline {
    
  stage('Robot') {
             steps {
+                catchError {
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/SpecialtyHOME/Tests/Results spring-petclinic-angular/RenuRobot/SpecialtyHOME/Tests'
-            }
+                            }
+                  }     
             post {
                 always {
                     script {
