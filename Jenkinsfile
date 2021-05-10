@@ -15,13 +15,6 @@ pipeline {
             }
         }
       
-         stage('Postman') {
-            steps {
-                sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
-            }
-
-        }
-
         stage('Robot') {
             steps {
 
@@ -50,6 +43,12 @@ pipeline {
 
     }
     
+      stage('Postman') {
+            steps {
+                sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+            }
+
+        }
     
      
     post{
