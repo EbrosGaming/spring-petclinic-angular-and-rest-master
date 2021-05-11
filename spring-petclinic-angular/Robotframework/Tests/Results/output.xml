@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on darwin)" generated="20210507 10:45:27.785" rpa="false">
+<suite id="s1" name="PetClinicAddPetType" source="/Users/jonnahagberg/PycharmProjects/spring-petclinic-angular-and-rest-master/spring-petclinic-angular/Robotframework/Tests/PetClinicAddPetType.robot">
+<test id="s1-t1" name="Test add a new Pet Type">
+<kw name="Begin WebTest" library="PetclinicKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:28.033" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210507 10:45:28.032" endtime="20210507 10:45:29.594"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>.5</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:29.594" endtime="20210507 10:45:29.595"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:28.032" endtime="20210507 10:45:29.595"></status>
+</kw>
+<kw name="Given user is on the Pet Types page" library="PetclinicKeywords">
+<kw name="Go to Pet Types" library="PetclinicKeywords">
+<kw name="user is on the landing page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:29.597" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210507 10:45:29.597" endtime="20210507 10:45:30.378"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:29.597" endtime="20210507 10:45:30.378"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210507 10:45:31.407" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210507 10:45:30.379" endtime="20210507 10:45:31.407"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:31.407" endtime="20210507 10:45:31.408"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:30.378" endtime="20210507 10:45:31.408"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:29.597" endtime="20210507 10:45:31.408"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:29.596" endtime="20210507 10:45:31.408"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[4]/a/span[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:31.409" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[4]/a/span[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:31.408" endtime="20210507 10:45:32.517"></status>
+</kw>
+<kw name="Verify on the right page" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-pettype-list/div/div/h2</arg>
+</arguments>
+<assign>
+<var>${Actual_Pettypes_Page}</var>
+</assign>
+<msg timestamp="20210507 10:45:33.549" level="INFO">${Actual_Pettypes_Page} = Pet Types</msg>
+<status status="PASS" starttime="20210507 10:45:32.518" endtime="20210507 10:45:33.549"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Actual_Pettypes_Page}</arg>
+<arg>${Expected_Pettypes_Page}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:33.549" endtime="20210507 10:45:33.550"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:32.517" endtime="20210507 10:45:33.550"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:29.596" endtime="20210507 10:45:33.550"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:29.596" endtime="20210507 10:45:33.550"></status>
+</kw>
+<kw name="When a user have added a new Pet Type" library="PetclinicKeywords">
+<kw name="Add a new Pet Type" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:33.552" level="INFO">Clicking button 'xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:33.551" endtime="20210507 10:45:36.152"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>New Pet Type</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:36.152" endtime="20210507 10:45:36.669"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+</arguments>
+<msg timestamp="20210507 10:45:36.669" level="INFO">Clicking element 'id:name'.</msg>
+<status status="PASS" starttime="20210507 10:45:36.669" endtime="20210507 10:45:37.717"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>${New_Pettype_Name}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:37.717" level="INFO">Typing text 'bunny' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210507 10:45:37.717" endtime="20210507 10:45:39.309"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pettype"]/div[2]/div/button</arg>
+</arguments>
+<msg timestamp="20210507 10:45:39.310" level="INFO">Clicking element 'xpath://*[@id="pettype"]/div[2]/div/button'.</msg>
+<status status="PASS" starttime="20210507 10:45:39.309" endtime="20210507 10:45:40.353"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:33.551" endtime="20210507 10:45:40.354"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:33.550" endtime="20210507 10:45:40.354"></status>
+</kw>
+<kw name="Then a user should be able to see the new Pet Type in the list" library="PetclinicKeywords">
+<kw name="Verify added Pet Type" library="PetclinicKeywords">
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="6"]</arg>
+</arguments>
+<assign>
+<var>${Actual_Pettype_Name}</var>
+</assign>
+<msg timestamp="20210507 10:45:41.377" level="INFO">${Actual_Pettype_Name} = bunny</msg>
+<status status="PASS" starttime="20210507 10:45:40.355" endtime="20210507 10:45:41.377"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Actual_Pettype_Name}</arg>
+<arg>${New_Pettype_Name}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:41.378" endtime="20210507 10:45:41.378"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:40.355" endtime="20210507 10:45:41.378"></status>
+</kw>
+<kw name="Teardown Add New Pet Type" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:41.380" level="INFO">Clicking button 'xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:41.379" endtime="20210507 10:45:43.953"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="6"]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:44.465" level="INFO">Current page does not contain element 'xpath://*[@id="6"]'.</msg>
+<status status="PASS" starttime="20210507 10:45:43.953" endtime="20210507 10:45:44.465"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:41.379" endtime="20210507 10:45:44.465"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:40.354" endtime="20210507 10:45:44.465"></status>
+</kw>
+<kw name="End Web Test" library="PetclinicKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210507 10:45:44.467" endtime="20210507 10:45:45.033"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:44.466" endtime="20210507 10:45:45.033"></status>
+</kw>
+<doc>Adding a new Pet Type</doc>
+<tags>
+<tag>Add</tag>
+<tag>Pet Type</tag>
+</tags>
+<status status="PASS" starttime="20210507 10:45:28.031" endtime="20210507 10:45:45.033" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Test adding an existing Pet Type">
+<kw name="Begin WebTest" library="PetclinicKeywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:45.038" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210507 10:45:45.037" endtime="20210507 10:45:47.246"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>.5</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:47.246" endtime="20210507 10:45:47.247"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:45.036" endtime="20210507 10:45:47.247"></status>
+</kw>
+<kw name="Given user is on the Pet Types page" library="PetclinicKeywords">
+<kw name="Go to Pet Types" library="PetclinicKeywords">
+<kw name="user is on the landing page" library="PetclinicKeywords">
+<kw name="Go To Web Page" library="PetclinicKeywords">
+<kw name="Load Page" library="PetclinicKeywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:47.250" level="INFO">Opening url 'http://localhost:4200/'</msg>
+<status status="PASS" starttime="20210507 10:45:47.249" endtime="20210507 10:45:48.073"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:47.249" endtime="20210507 10:45:48.073"></status>
+</kw>
+<kw name="Verify Page Loaded" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-welcome/h1</arg>
+</arguments>
+<assign>
+<var>${actualTerm}</var>
+</assign>
+<msg timestamp="20210507 10:45:49.101" level="INFO">${actualTerm} = Welcome to Petclinic</msg>
+<status status="PASS" starttime="20210507 10:45:48.074" endtime="20210507 10:45:49.101"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Welcome_Message}</arg>
+<arg>${actualTerm}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:49.101" endtime="20210507 10:45:49.102"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:48.073" endtime="20210507 10:45:49.102"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:47.249" endtime="20210507 10:45:49.102"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:47.248" endtime="20210507 10:45:49.102"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[4]/a/span[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:49.102" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[4]/a/span[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:49.102" endtime="20210507 10:45:50.178"></status>
+</kw>
+<kw name="Verify on the right page" library="PetclinicKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-pettype-list/div/div/h2</arg>
+</arguments>
+<assign>
+<var>${Actual_Pettypes_Page}</var>
+</assign>
+<msg timestamp="20210507 10:45:51.205" level="INFO">${Actual_Pettypes_Page} = Pet Types</msg>
+<status status="PASS" starttime="20210507 10:45:50.179" endtime="20210507 10:45:51.205"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Actual_Pettypes_Page}</arg>
+<arg>${Expected_Pettypes_Page}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:51.205" endtime="20210507 10:45:51.205"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:50.178" endtime="20210507 10:45:51.205"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:47.248" endtime="20210507 10:45:51.206"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:47.248" endtime="20210507 10:45:51.206"></status>
+</kw>
+<kw name="When a user has added a new Pet Type that already exists" library="PetclinicKeywords">
+<kw name="Add existing pet" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:51.207" level="INFO">Clicking button 'xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:51.207" endtime="20210507 10:45:53.822"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>New Pet Type</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:53.822" endtime="20210507 10:45:54.337"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+</arguments>
+<msg timestamp="20210507 10:45:54.338" level="INFO">Clicking element 'id:name'.</msg>
+<status status="PASS" starttime="20210507 10:45:54.337" endtime="20210507 10:45:55.417"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:name</arg>
+<arg>${Existing_Pettype_Name}</arg>
+</arguments>
+<msg timestamp="20210507 10:45:55.418" level="INFO">Typing text 'Get Value xpath://*[@id="0"]' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20210507 10:45:55.418" endtime="20210507 10:45:57.140"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pettype"]/div[2]/div/button</arg>
+</arguments>
+<msg timestamp="20210507 10:45:57.140" level="INFO">Clicking element 'xpath://*[@id="pettype"]/div[2]/div/button'.</msg>
+<status status="PASS" starttime="20210507 10:45:57.140" endtime="20210507 10:45:58.192"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:51.206" endtime="20210507 10:45:58.192"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:51.206" endtime="20210507 10:45:58.192"></status>
+</kw>
+<kw name="Then a user should see two fields with the same Pet Type" library="PetclinicKeywords">
+<kw name="Verify added existing Pet Type" library="PetclinicKeywords">
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="6"]</arg>
+</arguments>
+<assign>
+<var>${Actual_New_Pettype_Name}</var>
+</assign>
+<msg timestamp="20210507 10:45:59.218" level="INFO">${Actual_New_Pettype_Name} = Get Value xpath://*[@id="0"]</msg>
+<status status="PASS" starttime="20210507 10:45:58.194" endtime="20210507 10:45:59.218"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${Actual_New_Pettype_Name}</arg>
+<arg>${Existing_Pettype_Name}</arg>
+</arguments>
+<status status="PASS" starttime="20210507 10:45:59.218" endtime="20210507 10:45:59.219"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:58.194" endtime="20210507 10:45:59.219"></status>
+</kw>
+<kw name="Teardown Add New Pet Type" library="PetclinicKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]</arg>
+</arguments>
+<msg timestamp="20210507 10:45:59.220" level="INFO">Clicking button 'xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]'.</msg>
+<status status="PASS" starttime="20210507 10:45:59.220" endtime="20210507 10:46:01.796"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="6"]</arg>
+</arguments>
+<msg timestamp="20210507 10:46:02.307" level="INFO">Current page does not contain element 'xpath://*[@id="6"]'.</msg>
+<status status="PASS" starttime="20210507 10:46:01.796" endtime="20210507 10:46:02.308"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:59.219" endtime="20210507 10:46:02.308"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:45:58.193" endtime="20210507 10:46:02.308"></status>
+</kw>
+<kw name="End Web Test" library="PetclinicKeywords" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210507 10:46:02.309" endtime="20210507 10:46:02.869"></status>
+</kw>
+<status status="PASS" starttime="20210507 10:46:02.308" endtime="20210507 10:46:02.869"></status>
+</kw>
+<doc>Adding a new Pet Type</doc>
+<tags>
+<tag>Add</tag>
+<tag>Pet Type</tag>
+</tags>
+<status status="PASS" starttime="20210507 10:45:45.035" endtime="20210507 10:46:02.869" critical="yes"></status>
+</test>
+<doc>Infotiv Petclinic Test Functionality</doc>
+<status status="PASS" starttime="20210507 10:45:27.787" endtime="20210507 10:46:02.872"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0">Add</stat>
+<stat pass="2" fail="0">Pet Type</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="PetClinicAddPetType">PetClinicAddPetType</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
