@@ -79,8 +79,8 @@ pipeline {
 	    
 	    post{
 		always{
-			emailext body: 'Test Message',
-                                 subject: 'Test Subject',
+			emailext body: 'Pravalika jenkins build',
+                                 subject: "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
    				 to: 'pravalika6882@gmail.com'
 		}
 	    }
