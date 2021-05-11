@@ -344,7 +344,7 @@ user clicks on Home button
 user should be back on Home Page
   Verify back on Home Page
 
-user clicks on a user and clicks the Home button
+user clicks on an owner and clicks the Home button
   Check each owner if there is a Home button
 
 End Web Test
