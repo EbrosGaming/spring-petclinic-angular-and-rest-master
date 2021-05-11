@@ -16,8 +16,11 @@ Get back to homepage from pet type
    [Documentation]                               Get back to homepage from pettype
    [Tags]                                        Back to homepage
 
-   When user is on landing page
-   And user enters pet types
+   Given user is on landing page
+   When user enters pet types
    And click on the home button
    Then the user should return to the landing page
+
+#__________________________________________________________
+
 
