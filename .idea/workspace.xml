@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Refactored my testcases and made them rerun.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicOwnersHomeButton.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicOwnersHomeButton.robot" afterDir="false" />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Removed set selenium speed">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +88,6 @@
       <workItem from="1620379851505" duration="1724000" />
       <workItem from="1620387250930" duration="2000" />
       <workItem from="1620387404419" duration="18902000" />
-    </task>
-    <task id="LOCAL−00060" summary="Update Jenkinsfile">
-      <created>1619076801110</created>
-      <option name="number" value="LOCAL−00060" />
-      <option name="presentableId" value="LOCAL−00060" />
-      <updated>1619076801110</updated>
     </task>
     <task id="LOCAL−00061" summary="Update Jenkinsfile">
       <created>1619116767937</created>
@@ -385,7 +377,13 @@
       <option name="presentableId" value="LOCAL−00108" />
       <updated>1620723377323</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL−00109" summary="Removed set selenium speed">
+      <created>1620731983692</created>
+      <option name="number" value="LOCAL−00109" />
+      <option name="presentableId" value="LOCAL−00109" />
+      <updated>1620731983692</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,6 +415,7 @@
     <MESSAGE value="Added start of test for Home button on Owners page and its subpages." />
     <MESSAGE value="Continued working on test for Home button. Added a forloop and git it to work." />
     <MESSAGE value="Refactored my testcases and made them rerun." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored my testcases and made them rerun." />
+    <MESSAGE value="Removed set selenium speed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed set selenium speed" />
   </component>
 </project>

@@ -44,7 +44,9 @@ pipeline {
 
         stage('Postman') {
             steps {
-                sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+            	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                	sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+                }
             }
 
         }
