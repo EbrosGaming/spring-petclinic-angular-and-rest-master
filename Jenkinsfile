@@ -27,28 +27,27 @@ pipeline {
         }
         
         
-        stage('DelayPostManTest') {
-           steps {
-               sh 'sleep 20'
-          }
-        }
+        
         stage('Postman') {
             steps {
+                sleep(20)
                 sh 'newman run PostManReviewFiles/PetClinic_Swagger.postman_collection.json -e PostManReviewFiles/PetClinic_Swagger.postman_environment.json -- reporters junit'
             }
 
+        
+        post {
+			 always {
+				junit '**/*xml'
+					}
+				}
         }
         
         
+       
         
-        
-      stage('DelayRobotTest') {
-           steps {
-               sh 'sleep 20'
-          }
-        }
-         stage('Robot') {
+        stage('Robot') {
             steps {
+                sleep(20)
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Results spring-petclinic-angular/Tests'
             }
             post {
