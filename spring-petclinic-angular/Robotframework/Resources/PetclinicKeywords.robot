@@ -196,7 +196,7 @@ a new owner should be created
 
     Click Element                                   xpath://a[contains(text(),'Owners')]
     wait until page contains                        Owners
-    Sleep                                           1s
+    Sleep                                           3s
     Click Element                                   xpath://a/span[contains(text(),'All')]
     page should contain                             ${Firstname}
 
