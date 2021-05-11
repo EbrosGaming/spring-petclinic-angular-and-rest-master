@@ -306,7 +306,7 @@ a user should see two fields with the same Pet Type
 #Click on Home button from Owners section - Jonna
 
 Check if button exist
-  Page should not contain button      ${Home_Button}
+  Page should not contain button      ${Home_Button}      # BUG CONFIRMED // Remove when Home button exists
 
 Check each owner if there is a Home button
   ${All_Links_Count}                        Get element count    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr
@@ -316,8 +316,8 @@ Check each owner if there is a Home button
     ${Owner_Id}=                            Evaluate      ${Owner_Id}+1
     Click element                           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[${Owner_Id}]/td[1]/a
     Wait until page contains                Owner Information
-    Run Keyword And Continue On Failure     Check if button exist      # Remove when Home button exists
-    #Run Keyword And Continue On Failure    Click Home button          Activate when Home button exists
+    Run Keyword And Continue On Failure     Check if button exist      # BUG CONFIRMED // Remove when Home button exists
+    #Run Keyword And Continue On Failure    Click Home button            BUG CONFIRMED // Activate when Home button exists
     User is on Owners page
     Wait until page contains                Owners
   END
@@ -339,7 +339,7 @@ user is on Owners page
 
 user clicks on Home button
   Check if button exist
-  #Click Home button                    Activate when Home button exists
+  #Click Home button                    BUG CONFIRMED // Activate when Home button exists
 
 user should be back on Home Page
   Verify back on Home Page
