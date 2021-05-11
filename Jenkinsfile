@@ -79,7 +79,7 @@ pipeline {
 	    
 	    post{
 		always{
-			emailext body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}"}}},
+			emailext body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}",
                                  subject: 'Test Subject',
    				 to: 'pravalika6882@gmail.com'
 		}
