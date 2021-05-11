@@ -306,7 +306,7 @@ a user should see two fields with the same Pet Type
 #Click on Home button from Owners section - Jonna
 
 Check if button exist
-  Page should not contain button      ${Home_Button}      # BUG CONFIRMED // Remove when Home button exists
+  Page should not contain button            ${Home_Button}      # BUG CONFIRMED // Remove when Home button exists
 
 Check each owner if there is a Home button
   ${All_Links_Count}                        Get element count    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr
