@@ -38,22 +38,16 @@ pipeline {
             }
 
         }
-         post {
-                always {
-                    junit '**/TEST*.xml'
-                }
-              }
+        
+        
+        
         
       stage('DelayRobotTest') {
            steps {
                sh 'sleep 20'
           }
         }
-        
-        
-        
-
-                stage('Robot') {
+         stage('Robot') {
             steps {
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Results spring-petclinic-angular/Tests'
             }
