@@ -74,16 +74,30 @@ pipeline {
 	    
 	    
     } //this is for stages
-	    
-	    
-	    
-	    post{
-		always{
-			emailext body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}",
-                                 subject: 'Test Subject',
+	
+	
+	 post{
+		Success {
+			emailext body: "Job Success - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}",
+                                 subject:  " Build: ${env.JOB_NAME} - Success",
    				 to: 'pravalika6882@gmail.com'
 		}
-	    }
+		 
+               failure {
+			emailext body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}",
+                                 subject: 'Build: ${env.JOB_NAME} - failure"',
+   				 to: 'pravalika6882@gmail.com'
+		}
+	    		 
+		 
+	 }
+	    
+	
+	    
+	    
+	    
+	    
+		
 	    
 	
 	 
