@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
