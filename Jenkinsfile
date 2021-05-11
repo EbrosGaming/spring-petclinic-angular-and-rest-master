@@ -77,9 +77,9 @@ pipeline {
 	
 	
 	 post{
-		Success {
+		success {
 			emailext body: "Job Success - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}",
-                                 subject:  " Build: ${env.JOB_NAME} - Success",
+                                 subject:  " Build: ${env.JOB_NAME} - success",
    				 to: 'pravalika6882@gmail.com'
 		}
 		 
