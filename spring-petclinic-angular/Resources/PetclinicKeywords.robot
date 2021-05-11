@@ -307,8 +307,49 @@ User Clicks On Add New
         Page Should Not Contain Button                   Home
         Sleep                                           .5
         Click Element                                  xpath://*[@id="vet"]/div[5]/div/button[1]
+ #--------------------------------------------------------------------------------------------------------------------------------------------------
+#Performance Task
 
+User Adds An Owner
+        Set Selenium Speed                               .25
+        Go To Web Page
+        A User Creates A New Owner
+        Sleep                                          .2
+User Verifies Owner Added
+        Sleep                                          .2
+        Page Should Contain Element                     xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+User Adds Two Pets To An Owner
+         Sleep                                          .3
+         Click Element                                  xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+         Add New Pet
+         Input New Pet Detalis
+         Pet Details                                    ${Give_New_PetName_1}                ${NewPet_BirthDate}
+         Add New Pet
+         Input New Pet Detalis
+         Pet Details                                    ${Give_New_PetName_2}                ${NewPet_BirthDate}
+User Verifies Two Pets Adedd To The owner
+        ${pet_1_added}                                   get text                           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
+        Should Contain                                   ${Verify_pet_1_Added}              ${pet_1_added}
+        ${pet_2_added}                                   get text                            xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[1]
+        Should Be Equal                                  ${Verify_Pet_2_Added}               ${pet_2_added}
+User Removes a Pet
+        Sleep                                           .3
+        Click Element                                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
+User Verifies Pet Removed
+        Page Should Not Contain button                   Venus
+        Sleep                                            .3
+        Tear Down
+TearDown
+        Click Element                                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[2]
 
+User Changes The Last Name
+        Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[2]
+        Click Element                                   id=lastName
+        Input Text                                      id=lastName                          ${Updated_Last_Name}
+        Click Element                                   xpath:/html/body/app-root/app-owner-edit/div/div/form/div[7]/div/button[2]
+User Verifies Updated Last Name
+       ${Link_Text}                                     Get Text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
+       Should Contain                                   ${Verify_Last_Name}                  ${Link_Text}
 
 
 
