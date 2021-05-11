@@ -9,20 +9,24 @@
 	stage('Build Angular-Front End') {
             steps {
                 sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
-                sh 'sleep 20'
+                sh 'sleep 25'
 
             }
         }
          
         stage('Postman') {
             steps {
-               sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+            	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            		sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+            	}
             }
         }
 
         stage('Robot') {
             steps {
-                sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+            	catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                	sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+                }
             }
             post {
                 always {
