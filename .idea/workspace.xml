@@ -3,7 +3,6 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -23,19 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Add Pet Visit.robot file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/AddPetVisit.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/AddPetVisit.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/src/test/automation/Tests/Results/report.html" afterDir="false" />
-    </list>
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
@@ -49,11 +41,10 @@
       </list>
     </option>
   </component>
-
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="JonnasBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,7 +82,6 @@
       <recent name="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
-
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -112,42 +102,6 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-    </task>
-    <task id="LOCAL−00052" summary="Update Jenkinsfile">
-      <created>1619072138768</created>
-      <option name="number" value="LOCAL−00052" />
-      <option name="presentableId" value="LOCAL−00052" />
-      <updated>1619072138768</updated>
-    </task>
-    <task id="LOCAL−00053" summary="Update Jenkinsfile">
-      <created>1619072980946</created>
-      <option name="number" value="LOCAL−00053" />
-      <option name="presentableId" value="LOCAL−00053" />
-      <updated>1619072980947</updated>
-    </task>
-    <task id="LOCAL−00054" summary="Update Jenkinsfile">
-      <created>1619073046222</created>
-      <option name="number" value="LOCAL−00054" />
-      <option name="presentableId" value="LOCAL−00054" />
-      <updated>1619073046222</updated>
-    </task>
-    <task id="LOCAL−00055" summary="Update Jenkinsfile">
-      <created>1619074244040</created>
-      <option name="number" value="LOCAL−00055" />
-      <option name="presentableId" value="LOCAL−00055" />
-      <updated>1619074244040</updated>
-    </task>
-    <task id="LOCAL−00056" summary="Update Jenkinsfile">
-      <created>1619074273225</created>
-      <option name="number" value="LOCAL−00056" />
-      <option name="presentableId" value="LOCAL−00056" />
-      <updated>1619074273225</updated>
-    </task>
-    <task id="LOCAL−00057" summary="Update Jenkinsfile">
-      <created>1619074431501</created>
-      <option name="number" value="LOCAL−00057" />
-      <option name="presentableId" value="LOCAL−00057" />
-      <updated>1619074431501</updated>
     </task>
     <task id="LOCAL−00058" summary="Update Jenkinsfile">
       <created>1619074467476</created>
@@ -407,7 +361,6 @@
       <option name="presentableId" value="LOCAL−00100" />
       <updated>1620303536541</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
     <task id="LOCAL-00001" summary="Update pet.robot file">
       <created>1619216075469</created>
       <option name="number" value="00001" />
@@ -436,7 +389,19 @@
       <option name="project" value="LOCAL" />
       <updated>1620165514714</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+      <created>1620733038896</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1620733038896</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+      <created>1620733127719</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1620733127719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,41 +433,7 @@
     <MESSAGE value="Removed postman stage in jenkins file" />
     <MESSAGE value="Updated pet.robot file and PetKeywords file" />
     <MESSAGE value="Add Pet Visit.robot file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Pet Visit.robot file" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618935858570">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="95" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1618935858570" />
-    <state x="370" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1618935479838">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="370" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1618935479838" />
-    <state x="93" y="93" width="1094" height="494" key="DiffContextDialog" timestamp="1620059453211">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="93" y="93" width="1094" height="494" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1620059453211" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1618925088851">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1618925088851" />
-    <state x="471" y="43" key="RollbackChangesDialog" timestamp="1618921128036">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="471" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1618921128036" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1620165517142">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1620165517142" />
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618921155009">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="458" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1618921155009" />
-    <state x="494" y="239" key="git4idea.ui.GitStashDialog" timestamp="1618920695659">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="494" y="239" key="git4idea.ui.GitStashDialog/0.0.1280.680@0.0.1280.680" timestamp="1618920695659" />
-
+    <MESSAGE value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
   </component>
 </project>

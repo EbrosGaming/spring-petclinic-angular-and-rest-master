@@ -6,7 +6,7 @@ Begin WebTest
 
     OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
-    Set Selenium Speed                                0.07
+    Set Selenium Speed                                0.2
 
 Go To Web Page
 
@@ -572,7 +572,7 @@ Verify that all information has been edited
 End Web Test
 
     close browser
-    
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Test To Remove Visit by Renu
 
@@ -697,5 +697,5 @@ Comes back to the Home Page
     Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
     sleep                           .25
 
-    
-    
+
+
