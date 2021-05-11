@@ -26,7 +26,7 @@ Test you can click on Home button from any page under Owners
     [Tags]                             Home button
 
     Given user is on Owners page
-    When user clicks on an owner and clicks the Home button
+    When user clicks on a user and clicks the Home button
     #Then user should be back on Home Page              BUG CONFIRMED // Activate when Home button exists
 
 
