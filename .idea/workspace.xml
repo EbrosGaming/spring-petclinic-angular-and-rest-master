@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Continued working on test for Home button. Added a forloop and git it to work.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicOwnersHomeButton.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/PetClinicOwnersHomeButton.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" afterDir="false" />
@@ -32,6 +34,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1rNz9957D4w69HBgyWbfjeWVhMy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -82,13 +92,7 @@
       <workItem from="1620378666556" duration="1063000" />
       <workItem from="1620379851505" duration="1724000" />
       <workItem from="1620387250930" duration="2000" />
-      <workItem from="1620387404419" duration="13261000" />
-    </task>
-    <task id="LOCAL−00058" summary="Update Jenkinsfile">
-      <created>1619074467476</created>
-      <option name="number" value="LOCAL−00058" />
-      <option name="presentableId" value="LOCAL−00058" />
-      <updated>1619074467476</updated>
+      <workItem from="1620387404419" duration="17963000" />
     </task>
     <task id="LOCAL−00059" summary="Update Jenkinsfile">
       <created>1619074513619</created>
@@ -378,7 +382,13 @@
       <option name="presentableId" value="LOCAL−00106" />
       <updated>1620675480744</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL−00107" summary="Continued working on test for Home button. Added a forloop and git it to work.">
+      <created>1620676115872</created>
+      <option name="number" value="LOCAL−00107" />
+      <option name="presentableId" value="LOCAL−00107" />
+      <updated>1620676115872</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

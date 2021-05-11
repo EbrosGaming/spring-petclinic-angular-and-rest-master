@@ -19,7 +19,7 @@ Test you can click on Home button from Owners page
 
     Given user is on Owners page
     When user clicks on Home button
-    Then user should be back on Home Page
+    #Then user should be back on Home Page              Activate when Home button exists
 
 Test you can click on Home button from any page under Owners
     [Documentation]                    Click on Home button from subpages to Owners page
@@ -27,6 +27,6 @@ Test you can click on Home button from any page under Owners
 
     Given user is on Owners page
     When user clicks on a user and clicks the Home button
-    Then user should be back on Home Page
+    #Then user should be back on Home Page              Activate when Home button exists
 
 
