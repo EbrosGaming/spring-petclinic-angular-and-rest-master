@@ -390,7 +390,7 @@ a user should be able to see the new Pet Type in the list
 #Add existing Pet Type - Jonna
 
 Add existing pet
-
+   ${Existing_Pettype_Name}                      Get Value      xpath://*[@id="1"]
    Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
    Wait until page contains                      New Pet Type
    Click element                                 id:name
@@ -398,7 +398,6 @@ Add existing pet
    Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
 
 Verify added existing Pet Type
-
    ${Actual_New_Pettype_Name}                    Get Value     xpath://*[@id="6"]
    Should be equal                               ${Actual_New_Pettype_Name}    ${Existing_Pettype_Name}
 

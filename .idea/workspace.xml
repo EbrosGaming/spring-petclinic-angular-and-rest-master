@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile e-mail with my own e-mailaddress" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,12 +103,6 @@
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
       <workItem from="1620826774981" duration="9376000" />
-    </task>
-    <task id="LOCAL−00069" summary="Update Jenkinsfile">
-      <created>1619120778395</created>
-      <option name="number" value="LOCAL−00069" />
-      <option name="presentableId" value="LOCAL−00069" />
-      <updated>1619120778395</updated>
     </task>
     <task id="LOCAL−00070" summary="Update Jenkinsfile">
       <created>1619120836847</created>
@@ -402,7 +396,13 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1620849430987</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="Updated Jenkinsfile e-mail with my own e-mailaddress">
+      <created>1620850834576</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1620850834576</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,6 +436,7 @@
     <MESSAGE value="Add Pet Visit.robot file" />
     <MESSAGE value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
     <MESSAGE value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
+    <MESSAGE value="Updated Jenkinsfile e-mail with my own e-mailaddress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkinsfile e-mail with my own e-mailaddress" />
   </component>
 </project>
