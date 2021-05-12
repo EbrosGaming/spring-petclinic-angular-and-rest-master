@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
-    </list>
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,19 +102,7 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-      <workItem from="1620826774981" duration="4004000" />
-    </task>
-    <task id="LOCAL−00059" summary="Update Jenkinsfile">
-      <created>1619074513619</created>
-      <option name="number" value="LOCAL−00059" />
-      <option name="presentableId" value="LOCAL−00059" />
-      <updated>1619074513620</updated>
-    </task>
-    <task id="LOCAL−00060" summary="Update Jenkinsfile">
-      <created>1619076801110</created>
-      <option name="number" value="LOCAL−00060" />
-      <option name="presentableId" value="LOCAL−00060" />
-      <updated>1619076801110</updated>
+      <workItem from="1620826774981" duration="4621000" />
     </task>
     <task id="LOCAL−00061" summary="Update Jenkinsfile">
       <created>1619116767937</created>
@@ -404,7 +390,19 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1620830542434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620830850657</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1620830850657</updated>
+    </task>
+    <task id="LOCAL−00009" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620831110293</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1620831110294</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
