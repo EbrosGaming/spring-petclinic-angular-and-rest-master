@@ -4,9 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile with Stage info on failure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-13.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-14.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-17.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-7.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-8.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Results/geckodriver-9.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

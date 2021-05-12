@@ -305,7 +305,7 @@ a user should see two fields with the same Pet Type
 #------------------------------------
 #Click on Home button from Owners section - Jonna
 
-Check if button exist
+Check if button exist                       # BUG CONFIRMED // Remove when Home button exists
   Page should not contain button            ${Home_Button}      # BUG CONFIRMED // Remove when Home button exists
 
 Check each owner if there is a Home button
