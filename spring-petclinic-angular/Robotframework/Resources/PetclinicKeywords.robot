@@ -68,9 +68,9 @@ Delete Pet After Verifying
 #------------------------------------
 
 Verify Pet Added To Invalid Owner
-
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-    Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a/span[2]
+    #Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a/span[2]
+    Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
     Wait until page contains                         Owners
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
     ${link_text}                                    Get Title
@@ -475,7 +475,7 @@ User Is At Veterinarians Page
 
 User Can Go Back To Home Page
         Wait until page contains                         Veterinarians
-        Click Element                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
+        Click Button                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
 
 User Back To Home Page
       Wait until page contains                           ${Welcome_Message}
