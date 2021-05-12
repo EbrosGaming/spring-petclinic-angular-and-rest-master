@@ -3,15 +3,36 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile with Stagefor sending e-mail">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-    </list>
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -20,24 +41,20 @@
       </list>
     </option>
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="JonnasBranch" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="JonnasBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1rNz9957D4w69HBgyWbfjeWVhMy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -53,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -85,46 +102,7 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-      <workItem from="1620378666556" duration="1063000" />
-      <workItem from="1620379851505" duration="1724000" />
-      <workItem from="1620387250930" duration="2000" />
-      <workItem from="1620387404419" duration="18902000" />
-    </task>
-    <task id="LOCAL−00063" summary="Update Jenkinsfile">
-      <created>1619119032871</created>
-      <option name="number" value="LOCAL−00063" />
-      <option name="presentableId" value="LOCAL−00063" />
-      <updated>1619119032871</updated>
-    </task>
-    <task id="LOCAL−00064" summary="Update Jenkinsfile">
-      <created>1619119091207</created>
-      <option name="number" value="LOCAL−00064" />
-      <option name="presentableId" value="LOCAL−00064" />
-      <updated>1619119091207</updated>
-    </task>
-    <task id="LOCAL−00065" summary="Update Jenkinsfile">
-      <created>1619119731332</created>
-      <option name="number" value="LOCAL−00065" />
-      <option name="presentableId" value="LOCAL−00065" />
-      <updated>1619119731332</updated>
-    </task>
-    <task id="LOCAL−00066" summary="Update Jenkinsfile">
-      <created>1619119849598</created>
-      <option name="number" value="LOCAL−00066" />
-      <option name="presentableId" value="LOCAL−00066" />
-      <updated>1619119849598</updated>
-    </task>
-    <task id="LOCAL−00067" summary="Update Jenkinsfile">
-      <created>1619120231866</created>
-      <option name="number" value="LOCAL−00067" />
-      <option name="presentableId" value="LOCAL−00067" />
-      <updated>1619120231866</updated>
-    </task>
-    <task id="LOCAL−00068" summary="Update Jenkinsfile">
-      <created>1619120477418</created>
-      <option name="number" value="LOCAL−00068" />
-      <option name="presentableId" value="LOCAL−00068" />
-      <updated>1619120477418</updated>
+      <workItem from="1620826774981" duration="9376000" />
     </task>
     <task id="LOCAL−00069" summary="Update Jenkinsfile">
       <created>1619120778395</created>
@@ -318,73 +296,113 @@
       <option name="presentableId" value="LOCAL−00100" />
       <updated>1620303536541</updated>
     </task>
-    <task id="LOCAL−00101" summary="Updated keywords with sleep time">
-      <created>1620376952244</created>
-      <option name="number" value="LOCAL−00101" />
-      <option name="presentableId" value="LOCAL−00101" />
-      <updated>1620376952244</updated>
+    <task id="LOCAL-00001" summary="Update pet.robot file">
+      <created>1619216075469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619216075469</updated>
     </task>
-    <task id="LOCAL−00102" summary="Added start of test for Home button on Owners page and its subpages.">
-      <created>1620390266764</created>
-      <option name="number" value="LOCAL−00102" />
-      <option name="presentableId" value="LOCAL−00102" />
-      <updated>1620390266766</updated>
+    <task id="LOCAL-00002" summary="Removed postman stage in jenkins file">
+      <created>1619558959498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1619558959498</updated>
     </task>
-    <task id="LOCAL−00103" summary="Continued working on test for Home button. Added a forloop and git it to work.">
-      <created>1620670510623</created>
-      <option name="number" value="LOCAL−00103" />
-      <option name="presentableId" value="LOCAL−00103" />
-      <updated>1620670510623</updated>
+    <task id="LOCAL-00003" summary="Updated pet.robot file and PetKeywords file">
+      <created>1619702239964</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619702239964</updated>
     </task>
-    <task id="LOCAL−00104" summary="Continued working on test for Home button. Added a forloop and git it to work.">
-      <created>1620672162970</created>
-      <option name="number" value="LOCAL−00104" />
-      <option name="presentableId" value="LOCAL−00104" />
-      <updated>1620672162970</updated>
+    <task id="LOCAL-00004" summary="Add Pet Visit.robot file">
+      <created>1620165514714</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620165514714</updated>
     </task>
-    <task id="LOCAL−00105" summary="Continued working on test for Home button. Added a forloop and git it to work.">
-      <created>1620675366536</created>
-      <option name="number" value="LOCAL−00105" />
-      <option name="presentableId" value="LOCAL−00105" />
-      <updated>1620675366536</updated>
+    <task id="LOCAL−00005" summary="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+      <created>1620733038896</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1620733038896</updated>
     </task>
-    <task id="LOCAL−00106" summary="Continued working on test for Home button. Added a forloop and git it to work.">
-      <created>1620675480744</created>
-      <option name="number" value="LOCAL−00106" />
-      <option name="presentableId" value="LOCAL−00106" />
-      <updated>1620675480744</updated>
+    <task id="LOCAL−00006" summary="Updated Jenkinsfile so that it keeps running even if the previous build fails.">
+      <created>1620733127719</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1620733127719</updated>
     </task>
-    <task id="LOCAL−00107" summary="Continued working on test for Home button. Added a forloop and git it to work.">
-      <created>1620676115872</created>
-      <option name="number" value="LOCAL−00107" />
-      <option name="presentableId" value="LOCAL−00107" />
-      <updated>1620676115872</updated>
+    <task id="LOCAL−00007" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620830542433</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1620830542434</updated>
     </task>
-    <task id="LOCAL−00108" summary="Refactored my testcases and made them rerun.">
-      <created>1620723377323</created>
-      <option name="number" value="LOCAL−00108" />
-      <option name="presentableId" value="LOCAL−00108" />
-      <updated>1620723377323</updated>
+    <task id="LOCAL−00008" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620830850657</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1620830850657</updated>
     </task>
-    <task id="LOCAL−00109" summary="Removed set selenium speed">
-      <created>1620731983692</created>
-      <option name="number" value="LOCAL−00109" />
-      <option name="presentableId" value="LOCAL−00109" />
-      <updated>1620731983692</updated>
+    <task id="LOCAL−00009" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620831110293</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1620831110294</updated>
     </task>
-    <task id="LOCAL−00110" summary="Updated Jenkinsfile with Stagefor sending e-mail">
-      <created>1620820891137</created>
-      <option name="number" value="LOCAL−00110" />
-      <option name="presentableId" value="LOCAL−00110" />
-      <updated>1620820891137</updated>
+    <task id="LOCAL−00010" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620831621608</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1620831621608</updated>
     </task>
-    <task id="LOCAL−00111" summary="Updated Jenkinsfile with Stagefor sending e-mail">
-      <created>1620822089414</created>
-      <option name="number" value="LOCAL−00111" />
-      <option name="presentableId" value="LOCAL−00111" />
-      <updated>1620822089414</updated>
+    <task id="LOCAL−00011" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620844897892</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1620844897892</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL−00012" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620845737396</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1620845737396</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620846315417</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1620846315417</updated>
+    </task>
+    <task id="LOCAL−00014" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620846926198</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1620846926198</updated>
+    </task>
+    <task id="LOCAL−00015" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620848467189</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1620848467189</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620849121624</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1620849121624</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620849430987</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1620849430987</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,12 +430,12 @@
     <MESSAGE value="Finished tests for Add Pet Type" />
     <MESSAGE value="Added some last changes to tests for Add Pet Types." />
     <MESSAGE value="Started on tasks - click Home button from Owners" />
-    <MESSAGE value="Updated keywords with sleep time" />
-    <MESSAGE value="Added start of test for Home button on Owners page and its subpages." />
-    <MESSAGE value="Continued working on test for Home button. Added a forloop and git it to work." />
-    <MESSAGE value="Refactored my testcases and made them rerun." />
-    <MESSAGE value="Removed set selenium speed" />
-    <MESSAGE value="Updated Jenkinsfile with Stagefor sending e-mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkinsfile with Stagefor sending e-mail" />
+    <MESSAGE value="Update pet.robot file" />
+    <MESSAGE value="Removed postman stage in jenkins file" />
+    <MESSAGE value="Updated pet.robot file and PetKeywords file" />
+    <MESSAGE value="Add Pet Visit.robot file" />
+    <MESSAGE value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
+    <MESSAGE value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
   </component>
 </project>

@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
     stages {
         stage('Build Rest-API') {
@@ -6,20 +6,19 @@ pipeline {
                         sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
                     }
                 }
-
-        stage('Build Angular-Front End') {
+	stage('Build Angular-Front End') {
             steps {
                 sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
                 sh 'sleep 20'
 
             }
         }
-
+         
         stage('Postman') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                	sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
-                }
+            		sh 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit'
+            	}
             }
         }
 
@@ -55,20 +54,19 @@ pipeline {
         success{
         	emailext (
             	subject: "PASSED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-            	body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                 		<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-            	to: "jonnahagberg@gmail.com"
+                to: "jenkins.iths.mailer@gmail.com"
             )
         }
         failure{
-			emailext (
+        	emailext (
             	subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
             	body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
             			<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-            	to: "jonnahagberg@gmail.com"
+            	to: "jenkins.iths.mailer@gmail.com"
             )
+
         }
     }
 }
-
-

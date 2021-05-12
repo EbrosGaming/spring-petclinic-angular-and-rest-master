@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "7ebbcdc2-aee7-466d-bb10-fe6e4d1007b6",
-		"name": "Spring_PetClinic",
+		"_postman_id": "4db66673-b6c6-4cd8-bb3b-9f56835f2591",
+		"name": "Spring_PetClinic Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -740,7 +740,7 @@
 									"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameP\"));\r",
 									"});\r",
 									"\r",
-									"pm.globals.set(\"petTypeIdPost\", pm.response.json().id);"
+									"pm.globals.set(\"petTypeID\", pm.response.json().id);"
 								],
 								"type": "text/javascript"
 							}
@@ -784,7 +784,7 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
 									"pm.test(\"PetType is updated\", () => {\r",
 									"  const expectedObject = {\r",
 									"    \"created\": true,\r",
@@ -792,21 +792,8 @@
 									"  };\r",
 									"\r",
 									"});\r",
-									"var url = pm.environment.get(\"url\") + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
-									"const getRequest = {\r",
-									"        url: url,\r",
-									"        method: 'GET'\r",
-									"};\r",
 									"\r",
-									"pm.sendRequest(getRequest, function (okay, res) {\r",
-									"    if (okay) { \r",
-									"        console.log(okay);\r",
-									"    }\r",
-									"     console.log(res);\r",
-									"pm.test('PetType is updated in database', function () {\r",
-									"        pm.expect(console.log(okay));\r",
-									"    })\r",
-									"   }); "
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -834,14 +821,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/pettypes/{{petTypeIdPost}}",
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"pettypes",
-								"{{petTypeIdPost}}"
+								"{{petTypeID}}"
 							]
 						}
 					},
@@ -856,9 +843,9 @@
 								"exec": [
 									"var jsonData = pm.response.json();\r",
 									" \r",
-									"pm.globals.get(\"petTypeIdP\", pm.response.json().id);\r",
+									"\r",
 									"pm.test(\"Verify that the Pettype Information is not empty\", function () {\r",
-									"    pm.expect(jsonData.owners).to.not.eql(\"\");\r",
+									"    pm.expect(jsonData.pettypes).to.not.eql(\"\");\r",
 									"});\r",
 									" \r",
 									"pm.test(\"Check the contents of Pettype Data are not empty\", function () {\r",
@@ -866,7 +853,19 @@
 									"});\r",
 									" \r",
 									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+									"});\r",
 									"\r",
+									"pm.test(\"Check Pettype which is Updated is Correct\", function () {\r",
+									"    pm.expect(jsonData.id).to.eql(pm.globals.get(\"petTypeID\"));\r",
+									"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameU\"));\r",
+									"});\r",
+									"pm.test(\"Check Pettype which is Updated is overwritten\", function () {\r",
+									"    pm.expect(jsonData.name).to.not.eql(pm.environment.get(\"petTypeNameP\"));\r",
+									"});\r",
 									""
 								],
 								"type": "text/javascript"
@@ -880,14 +879,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/pettypes/{{petTypeIdPost}}",
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"pettypes",
-								"{{petTypeIdPost}}"
+								"{{petTypeID}}"
 							]
 						}
 					},
@@ -903,8 +902,8 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"var url = pm.environment.get(\"url\") + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
 									"\r",
 									"const getRequest = {\r",
 									"        url: url,\r",
@@ -939,14 +938,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/pettypes/{{petTypeIdPost}}",
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"pettypes",
-								"{{petTypeIdPost}}"
+								"{{petTypeID}}"
 							]
 						}
 					},
@@ -966,7 +965,7 @@
 								"exec": [
 									"var jsonData = pm.response.json();\r",
 									"\r",
-									"pm.test(\"Successfully Created Owner / Status Code 201 \", () => pm.response.to.have.status(201));\r",
+									"pm.test(\"Successfully Added Visit / Status Code 201 \", () => pm.response.to.have.status(201));\r",
 									"\r",
 									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
 									"\r",
@@ -1040,7 +1039,7 @@
 									"    */\r",
 									"});\r",
 									"\r",
-									""
+									"pm.environment.set(\"visitId\", pm.response.json().id);"
 								],
 								"type": "text/javascript"
 							}
@@ -1066,6 +1065,58 @@
 							"path": [
 								"api",
 								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Visit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete pet visit Status code is 204\",() => pm.response.to.have.status(204));\r",
+									"\r",
+									"var url = pm.environment.get(\"url\") + \"/api\"+ \"/visits/\" +  pm.environment.get(\"visitId\");\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Visit Response Should Be Not Found', function () {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Visit Response Code 404\", function() {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    })\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/visits/{{visitId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"visits",
+								"{{visitId}}"
 							]
 						}
 					},
