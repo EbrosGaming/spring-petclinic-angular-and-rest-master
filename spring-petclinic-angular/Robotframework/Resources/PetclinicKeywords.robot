@@ -21,6 +21,7 @@ Verify Page Loaded
 All Owners
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
+    Wait until page contains                         Owners
 
 Select A Owner From The List
     Wait until page contains                         Owners
@@ -69,6 +70,7 @@ Verify Pet Added To Invalid Owner
 
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a/span[2]
+    Wait until page contains                         Owners
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
     ${link_text}                                    Get Title
     Should Not Be Equal                             ${Verify_Pet_Added_1}                  ${link_text}
