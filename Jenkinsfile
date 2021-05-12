@@ -59,7 +59,7 @@ pipeline {
                     	subject: "PASSED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                         body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                         		<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-                        	to: "jenkins.iths.mailer@gmail.com"
+                        	to: "jonnahagberg@gmail.com"
                     )
                 )
              }
@@ -71,7 +71,7 @@ pipeline {
                     	subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                         body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                         		<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-                        to: "jenkins.iths.mailer@gmail.com"
+                        to: "jonnahagberg@gmail.com"
                     )
                 )
             }
