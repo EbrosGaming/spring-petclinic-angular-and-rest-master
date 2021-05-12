@@ -22,13 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Jenkinsfile with Stagefor sending e-mail">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    <list default="true" id="4b4efe24-22f2-4a11-b483-62641d1bc52d" name="Default Changelist" comment="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
       <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Resources/PetclinicKeywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/spring-petclinic-angular/Robotframework/Tests/Results/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,13 +104,7 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-      <workItem from="1620826774981" duration="3695000" />
-    </task>
-    <task id="LOCAL−00058" summary="Update Jenkinsfile">
-      <created>1619074467476</created>
-      <option name="number" value="LOCAL−00058" />
-      <option name="presentableId" value="LOCAL−00058" />
-      <updated>1619074467476</updated>
+      <workItem from="1620826774981" duration="4004000" />
     </task>
     <task id="LOCAL−00059" summary="Update Jenkinsfile">
       <created>1619074513619</created>
@@ -409,7 +398,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1620733127719</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620830542433</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1620830542434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,6 +437,7 @@
     <MESSAGE value="Updated pet.robot file and PetKeywords file" />
     <MESSAGE value="Add Pet Visit.robot file" />
     <MESSAGE value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkinsfile so that it keeps running even if the previous build fails." />
+    <MESSAGE value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step." />
   </component>
 </project>

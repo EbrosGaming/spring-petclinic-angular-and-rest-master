@@ -423,7 +423,7 @@ User Edit's A Pet Type
         TearDown After Verifying
 
 User Verifies Edited Pet Added
-
+       Wait until page contains                         Pet Types
        ${Edited_PetType_Updated}                        Get Text                               xpath://*[@id="3"]
        Should Contain                                   ${New_Edited_PetType_Name}              ${Edited_PetType_Updated}
 
