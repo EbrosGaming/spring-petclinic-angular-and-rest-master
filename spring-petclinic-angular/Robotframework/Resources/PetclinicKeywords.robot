@@ -24,8 +24,9 @@ All Owners
     Wait until page contains                         Owners
 
 Select A Owner From The List
-    Wait until page contains                         Owners
+    Wait until page contains element                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
+
 
 Add New Pet
      Wait until page contains                        Owner Information
@@ -481,6 +482,7 @@ User Back To Home Page
       Page should Contain                                ${Welcome_Message}
 
 User Clicks On Edit Vet
+       Wait until page contains                         Veterinarians
        Click Element                                    xpath://*[@id="vets"]/tbody/tr[5]/td[3]/button[1]
        #Page should Contain Element                      xpath://*[@id="vet_form"]/div[5]/div/button[2]
        Wait until page contains                         Edit Veterinarian
