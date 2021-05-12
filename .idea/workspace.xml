@@ -102,13 +102,7 @@
       <workItem from="1620198529932" duration="12434000" />
       <workItem from="1620301108899" duration="2095000" />
       <workItem from="1620375493131" duration="326000" />
-      <workItem from="1620826774981" duration="8932000" />
-    </task>
-    <task id="LOCAL−00067" summary="Update Jenkinsfile">
-      <created>1619120231866</created>
-      <option name="number" value="LOCAL−00067" />
-      <option name="presentableId" value="LOCAL−00067" />
-      <updated>1619120231866</updated>
+      <workItem from="1620826774981" duration="9201000" />
     </task>
     <task id="LOCAL−00068" summary="Update Jenkinsfile">
       <created>1619120477418</created>
@@ -402,7 +396,13 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1620848467189</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="Updated Robot tests with Home button for Owners. Cut down testtime for all Robot tests and updated Jenkinsfile e-mail step.">
+      <created>1620849121624</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1620849121624</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

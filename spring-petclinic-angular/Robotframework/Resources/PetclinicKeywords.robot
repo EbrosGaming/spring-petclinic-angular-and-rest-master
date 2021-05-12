@@ -466,16 +466,17 @@ TearDown Second Edited PetType After Verifying
 
 User Clicks On Veterinarians Page
         Go To Web Page
-        Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
 User Selects All Veterinarians
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
 
 User Is At Veterinarians Page
-        Page Should Contain button                       Home
+        Page Should Contain button                      Home
 
 User Can Go Back To Home Page
-        Wait until page contains                         Veterinarians
+        Wait until page contains                        Veterinarians
+        Sleep                                           0.1 s
         Click Button                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
 
 User Back To Home Page
