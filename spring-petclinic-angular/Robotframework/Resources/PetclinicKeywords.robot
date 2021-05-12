@@ -461,7 +461,6 @@ TearDown Second Edited PetType After Verifying
 #Home Button From Veterinarians
 
 User Clicks On Veterinarians Page
-
         Go To Web Page
         Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
 User Selects All Veterinarians
@@ -482,6 +481,7 @@ User Back To Home Page
 User Clicks On Edit Vet
        Click Element                                    xpath://*[@id="vets"]/tbody/tr[5]/td[3]/button[1]
        #Page should Contain Element                      xpath://*[@id="vet_form"]/div[5]/div/button[2]
+       Wait until page contains                         Edit Veterinarian
        Page Should Not Contain Button                   Home
        Click Element                                    xpath://*[@id="vet_form"]/div[5]/div/button[2]
        User Can Go Back To Home Page
@@ -489,6 +489,7 @@ User Clicks On Edit Vet
 User Clicks On Add New
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+        Wait until page contains                        New Veterinarian
         Page Should Not Contain Button                  Home
         Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[1]
 
