@@ -17,7 +17,7 @@
         stage('Postman') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-            		sh 'newman run PostmanFiles1/Spring_PetClinic.postman_collection.json -e PostmanFiles1/PetClinic_Environment.postman_environment.json -- reporters junit'
+            		sh 'newman run PostmanFiles1/Sprint2/Spring_PetClinic.postman_collection.json -e PostmanFiles1/Sprint2/PetClinic_Environment.postman_environment.json -- reporters junit'
             	}
             }
         }
