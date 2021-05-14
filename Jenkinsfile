@@ -50,7 +50,7 @@
         }
     }
 
-  /*  post{
+   post{
         success{
         	emailext (
             	subject: "PASSED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
@@ -68,6 +68,6 @@
             )
 
         }
-	*/
+	
     }
 }
