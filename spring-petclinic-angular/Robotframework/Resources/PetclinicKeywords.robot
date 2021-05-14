@@ -691,6 +691,74 @@ user should be back on Home Page
 user clicks on an owner and clicks the Home button
   Check each owner if there is a Home button
 
+#------------------------------------------------------------------------------------------------------------------------------------
+#Performance Task
+
+User Adds An Owner
+        Go To Web Page
+        A User Creates A New Owner
+        Wait Until Page Contains                        ${Firstname}
+        User Verifies Owner Added
+User Verifies Owner Added
+        Page Should Contain Element                     xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+
+User Adds Two Pets To The Owner
+         Click Element                                  xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+         Add New Pet
+         Input New Pet Detalis
+         Pet Details                                    ${Give_New_PetName_1}                ${NewPet_BirthDate}
+         Wait Until Page Contains                         Owner Information
+         Add New Pet
+         Input New Pet Detalis
+         Pet Details                                    ${Give_New_PetName_2}                ${NewPet_BirthDate}
+         Wait Until Page Contains                       Owner Information
+         User Verifies Two Pets Adedd To The owner
+User Verifies Two Pets Adedd To The owner
+        ${pet_1_added}                                   get text                           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
+        Should Contain                                   ${Verify_pet_1_Added}              ${pet_1_added}
+        ${pet_2_added}                                   get text                            xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[1]
+        Should Be Equal                                  ${Verify_Pet_2_Added}               ${pet_2_added}
+
+User Removes A Pet
+        Wait Until Page Contains                         Owner Information
+        Click Element                                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
+        #Tear Down 2nd Pet
+        User Verifies Pet Removed
+
+User Verifies Pet Removed
+        Page Should Not Contain button                   ${Give_New_PetName_1}
+Tear Down 2nd Pet
+        Click Element                                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[2]
+
+User Changes The Last Name Of The Owner
+        Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[2]
+        Click Element                                   id=lastName
+        Input Text                                      id=lastName                          ${Updated_Last_Name}
+        Click Element                                   xpath:/html/body/app-root/app-owner-edit/div/div/form/div[7]/div/button[2]
+        Wait Until Page Contains                        Owner Information
+        User Verifies Updated Last Name
+User Verifies Updated Last Name
+       ${Link_Text}                                     Get Text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
+       Should Contain                                   ${Verify_Last_Name}                  ${Link_Text}
+
+The Owner Has One Pet And Updated LastName
+        Page Should Contain                             ${Give_New_PetName_2}                  ${Updated_Last_Name}
+
+User Adds A New PetType
+        Go to Pet Types
+        Verify on the right page
+        Add a new Pet Type
+User Verifies PetType Added
+        Verify added Pet Type
+
+User Deletes The PetType
+       Wait until page contains                          ${Expected_Pettypes_Page}
+       Click Element                                     xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+       Wait until page contains                          ${Expected_Pettypes_Page}
+PetType Is Removed From The List
+      Wait until page contains                           ${Expected_Pettypes_Page}
+      Page Should Not Contain Element                    xpath://*[@id="6"]
+
 
 End Web Test
     close browser
