@@ -758,6 +758,86 @@ User Deletes The PetType
 PetType Is Removed From The List
       Wait until page contains                           ${Expected_Pettypes_Page}
       Page Should Not Contain Element                    xpath://*[@id="6"]
+     
+
+#------------------------------------
+
+#Add visit to a pet  -- Swetha
+User selects an owner
+     Go To Web Page
+     All Owners
+     #Set Selenium speed                          .25
+     Click Element                                xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
+     Set Selenium speed                          .25
+     Wait Until Page Contains                     Betty Davis
+Click Add Visit button
+     Click Button                                 xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
+     Wait Until Page Contains                     New Visit
+Pet Visit details
+     [Arguments]                                   ${Pet_Visit_Date}        ${Pet_Visit_Description}
+     Visit Date                                    ${Pet_VisitDate}
+     Description                                   ${PetVisit_Description}
+     #Set Selenium Speed                           .5
+Visit Date
+     [Arguments]                                  ${Pet_VisitDate}
+     Input Text                                   xpath://*[@id="visit"]/div[1]/div[1]/div/input       ${Pet_VisitDate}
+Description
+     [Arguments]                                  ${PetVisit_Description}
+     Input Text                                   xpath://*[@id="description"]     ${PetVisit_Description}
+#Click on Add Visit Button
+     Click Button                                  xpath://*[@id="visit"]/div[2]/div/button[2]
+Verify visit added to a pet
+     #Sleep                                   0.5 s
+     ${Verify_Pet_Visit_Date_Added}          get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[1]
+
+     ${Verify_Pet_Visit_Description_Added}   get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[2]
+     #Sleep                                   0.5 s
+     Table should contain                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table     ${Verify_Pet_Visit_Date_Added}  ${Verify_Pet_Visit_Description_Added}
+Teardown added pet visit
+     Click button                             xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+     Sleep                                    0.1 s
+#take path of complete row or visit date added
+     Page should not contain element          ${Row_Path1}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verify able to add multiple pet visits
+     #Sleep                                         0.5 s
+     ${Verify_Pet_Visit_Date2_Added}              get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[1]
+     ${Verify_Pet_Visit_Description2_Added}       get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[2]
+     ${Verify_Pet_Visit_Date3_Added}              get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
+     ${Verify_Pet_Visit_Description3_Added}       get text        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[2]
+     Table should contain                         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date2_Added} ${Verify_Pet_Visit_Description2_Added}
+     Table should contain                         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table      ${Verify_Pet_Visit_Date3_Added} ${Verify_Pet_Visit_Description3_Added}
+Teardown added multiple visits
+     Click button                                  xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+     Click button                                  xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+     Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[1]/td[1]
+     Page should not contain element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
+
+#---------------------------------------------------------------------------------
+# Delete PetType -Swetha
+
+Select the Pet Type to delete
+     wait until page contains element              xpath://*[@id="6"]
+     Page should contain element                   xpath://*[@id="6"]
+Delete the added Pet Type
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+Verify Pet Type is deleted
+     wait until page contains                      Pet Types
+     Page should not contain element               xpath://*[@id="6"]
+--------------------------------------------------------------------------------------------------------------------------------------
+# Deleting multiple PetTypes - Swetha
+Delete multiple Pet Types
+     wait until page contains element              xpath://*[@id="7"]
+     Page should contain element                   xpath://*[@id="7"]
+     Select the pettype to delete
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[8]/td[2]/button[2]
+     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+Verify multiple Pet Types are deleted
+     wait until page contains                      Pet Types
+     Page should not contain element               xpath://*[@id="7"]
+     Page should not contain element               xpath://*[@id="6"]
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 End Web Test
