@@ -836,6 +836,58 @@ Verify multiple Pet Types are deleted
      Page should not contain element               xpath://*[@id="7"]
      Page should not contain element               xpath://*[@id="6"]
 ---------------------------------------------------------------------------------------------------------------------------------------------
+#Swetha EDIT VETERINARIAN
+Going to Veterinarians page
+     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+Add New Veterinarian
+     Input Text                               xpath://*[@id="firstName"]     ${New_Vet_Firstname}
+     Input Text                               xpath://*[@id="lastName"]      ${New_Vet_Lastname}
+     Select from list by label                id:specialties    ${Vet_Type}
+     Click Button                             xpath://*[@id="vet"]/div[5]/div/button[2]
+Select the Veterinarian to Edit
+     Set selenium speed                       0.5s
+     wait until page contains element         xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+     Page should contain element              xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+Edit added veterinarian
+     Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[1]
+     Input Text                               xpath://*[@id="firstName"]     ${Edited_Vet_Firstname}
+     Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
+Verify veterinarian edited
+     ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+     ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
+     Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
+Teardown after veterinarian added and edited
+      Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
+      Page should not contain                  xpath://*[@id="vets"]/tbody/tr[7]/td[1]
 
-End Web Test
+---------------------------------------------------------------------------------------
+#Edit multiple veterinarians
+Edit multiple veterinarians
+   Add New Veterinarian
+   Click Button                             xpath:/html/body/app-root/app-vet-list/div/div/div/button[2]
+   Add New Veterinarian
+   wait until page contains element         xpath://*[@id="vets"]/tbody/tr[8]/td[1]
+   Page should contain element              xpath://*[@id="vets"]/tbody/tr[8]/td[1]
+   sleep                                    0.2s
+   Select the Veterinarian to Edit
+    #edit button
+   Click Button                             xpath://*[@id="vets"]/tbody/tr[8]/td[3]/button[1]
+   Input Text                               xpath://*[@id="firstName"]     ${Edited_Vet_Firstname}
+   #save
+   Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
+   Edit added veterinarian
+Verify multiple Veterinarians edited
+    ${Actual_Vet_Name2_edited}               get text   xpath://*[@id="vets"]/tbody/tr[8]/td[1]
+    ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+    ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
+    Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}      ${Actual_Vet_Name2_edited}
+    Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
+Teardown after multiple Veterinarians added and edited
+    Set Selenium speed                     0.5s
+    Click Button                           xpath://*[@id="vets"]/tbody/tr[8]/td[3]/button[2]
+    Click Button                           xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
+    Page should not contain                xpath://*[@id="vets"]/tbody/tr[8]/td[1]
+    Page should not contain                xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+End WebTest
     close browser
