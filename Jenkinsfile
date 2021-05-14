@@ -25,7 +25,7 @@
         stage('Robot') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                	sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests'
+                	sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/RenuRobot/Tests/Results spring-petclinic-angular/RenuRobot/Tests'
                 }
             }
             post {
