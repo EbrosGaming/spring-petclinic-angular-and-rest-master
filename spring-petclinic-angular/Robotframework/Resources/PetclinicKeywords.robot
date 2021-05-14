@@ -6,77 +6,73 @@ Begin WebTest
 
     OPEN BROWSER                                       about:blank                         ${BROWSER}
     #Maximize Browser Window
-    Set Selenium Speed                                0.2
 
 Go To Web Page
-
      Load Page
      Verify Page Loaded
 
 Load Page
-
      Go to                                            ${URL}
 
 Verify Page Loaded
-
     ${actualTerm}                                     get text                          xpath:/html/body/app-root/app-welcome/h1
     Should Be Equal                                   ${Welcome_Message}                ${actualTerm}
 
 All Owners
-
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
+    Wait until page contains                         Owners
 
 Select A Owner From The List
-
+    Wait until page contains element                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
 
-Add New Pet
 
+Add New Pet
+     Wait until page contains                        Owner Information
      Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[3]
 
 Input New Pet Detalis
-
+    Wait until page contains                         Add Pet
     Click Element                                    id=name
 
 Pet Details
-
     [Arguments]                                      ${Pet_Name}                          ${Birth_Date}
     Name                                             ${Pet_Name}
     Birth Date                                       ${Birth_Date}
     Click Element                                    id=type
     Click Element                                    xpath://*[@id="type"]/option[2]
     Click Element                                    xpath:/html/body/app-root/app-pet-add/div/div/form/div[6]/div/button[2]
-    Set Selenium Speed                                .5
+    Wait until page contains                         Owner Information
 
 Name
-
     [Arguments]                                       ${Pet_Name}
     Input Text                                        id=name                             ${Pet_Name}
 
 Birth Date
-
     [Arguments]                                       ${Birth_Date}
     Input Text                                        xpath:/html/body/app-root/app-pet-add/div/div/form/div[4]/div/input          ${Birth_Date}
 
 #-----------------------------------------
 
 Verify Pet Adedd To owner
-
+   Wait until page contains                          Owner Information
    ${pet_added}                                      get text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
    Should Contain                                    ${Verify_Pet_Added_1}                 ${pet_added}
    Delete Pet After Verifying
 
 Delete Pet After Verifying
-
-    Click Element                                     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
+    Wait until page contains                         Owner Information
+    Click Element                                    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
 
 #------------------------------------
 
 Verify Pet Added To Invalid Owner
-
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-    Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a/span[2]
+    #Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a/span[2]
+    Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
+    Wait until page contains                         Owners
+    Sleep                                            0.1 s
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
     ${link_text}                                    Get Title
     Should Not Be Equal                             ${Verify_Pet_Added_1}                  ${link_text}
@@ -86,6 +82,7 @@ Delete Pet After Verifying in Invalid Owner
 
     All Owners
     Select A Owner From The List
+    Wait until page contains                        Owner Information
     Delete Pet After Verifying
 
 #--------------------------------
@@ -96,18 +93,18 @@ Verifying Pet Can Add Multiple Times
     Delete Pet After Adding multiple Times And Verifying
 
 Delete Pet After Adding multiple Times And Verifying
-
+    Wait until page contains                        Owner Information
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
     #Click Back Button
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[1]
 
     Select A Owner From The List
-
+    Wait until page contains                        Owners
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[3]/table/tr/td[1]/dl/button[2]
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
 
 Deleting A Newly Added pet
-
+    Wait until page contains                        Owner Information
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
     Verify Pet deleted
 
@@ -119,57 +116,52 @@ Verify Pet deleted
 #-------------------------------------------------------------------------------------------------------------------------
 
 Edit Owner
-
+    Wait until page contains                        Owner Information
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/button[2]
 
 Owner New Detalis
-
     [Arguments]                                    ${OwnerNew_Adress}                    ${OwnerNew_City}                    ${OwnerNew_Telephone}
+    Wait until page contains                       Edit Owner
     Adress                                         ${OwnerNew_Adress}
     City                                           ${OwnerNew_City}
     Telephone                                      ${OwnerNew_Telephone}
     Click Element                                  xpath:/html/body/app-root/app-owner-edit/div/div/form/div[7]/div/button[2]
 
 Adress
-
     [Arguments]                                    ${OwnerNew_Adress}
     Input Text                                     id=address                             ${OwnerNew_Adress}
 
 City
-
     [Arguments]                                    ${OwnerNew_City}
     Input Text                                     id=city                               ${OwnerNew_City}
 
 Telephone
-
     [Arguments]                                    ${OwnerNew_Telephone}
     Input Text                                     id=telephone                          ${OwnerNew_Telephone}
 
 Verify Owner New Detalis Added
-
+    Wait until page contains                       Owner Information
     ${OwnerNew_Details_Added}                      get text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[2]/td
     Should Be Equal                                ${New_Adress}                        ${OwnerNew_Details_Added}
 
 Verify Erorr Message Displayed Or Not
-
    ${Invalid_PhoneNo}                              get text                              xpath:/html/body/app-root/app-owner-edit/div/div/form/div[6]/div/span[2]
     Should Contain                                 ${ErorrMessage_AcceptsDigits}         ${Invalid_PhoneNo}
 
 #--------------------------------------
 
 Owner Detalis With Empty Box
-
-    Press Keys                                     xpath://*[@id="address"]               CTRL+a+BACKSPACE
+    Clear element text                             xpath://*[@id="address"]
+    Click element                                  xpath://*[@id="address"]
+    Press Keys                                     xpath://*[@id="address"]               a    BACKSPACE
     [Arguments]                                    ${OwnerNew_Telephone}
     Only TelephoneNo                               ${OwnerNew_Telephone}
 
 Only TelephoneNo
-
     [Arguments]                                    ${OwnerNew_Telephone}
     Input Text                                     id=telephone                          ${OwnerNew_Telephone}
 
 Verify Erorr Messages With Red Box
-
    ${Required_message}                             get text                              xpath:/html/body/app-root/app-owner-edit/div/div/form/div[4]/div/span[2]
     Should Match                                 ${ErorrMessge_Required}                 ${Required_message}
 
@@ -293,65 +285,59 @@ the new owner should be created
 #------------------------------------------------------------------------------------------------------------------------
 
 Select an owner
-
+     Wait until page contains                      Owners
      ${Expecting_Owner1}                           Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[1]/a
      ${Expecting_Pet1}                             Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[5]/tr
      Click element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[1]/a
 
 Inspect same owner and pet but click on different owner
 
-     Sleep                                         .5
      ${Expecting_Owner1}                           Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[1]/a
      ${Expecting_Pet1}                             Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[8]/td[5]/tr
 
 Click on different owner
-
+     Wait until page contains                      Owners
      Click element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[7]/td[1]/a
 
 Inspect on one owner and other's pet but click on same owner
-
-     Sleep                                         .5
+     Wait until page contains                      Owners
      ${Expecting_Owner2}                           Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[9]/td[1]/a
      ${Expecting_Pet2}                             Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[5]/td[5]/tr
      Click element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[4]/td[1]/a
 
 Select an owner with 2 pets
-
+     Wait until page contains                    Owners
      ${Expecting_Owner3}                         Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
      ${Expecting_PetA}                           Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[5]/tr[1]
      ${Expecting_PetB}                           Get Text    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[5]/tr[2]
      Click element                               xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
 
 Verify selected Owner is with rightful pet 1
-
+     Wait until page contains                      Owner Information
      ${Actual_Pet1}                                Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
      ${Actual_Owner1}                              Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
      Should Be Equal                               ${Expecting_Owner1}${Expecting_Pet1}    ${Actual_Owner1}${Actual_Pet1}
-     Sleep                                         .5
 
 Verify selected Owner is not with rightful pet 1 or test case fails
-
+     Wait until page contains                      Owner Information
      ${Actual_Pet1}                                 Get Text      xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
      ${Actual_Owner1}                               Get Text       xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
      #Should Be Equal                                ${Expecting_Owner1}${Expecting_Pet1}    ${Actual_Owner1}${Actual_Pet1}
      Should Not Be Equal                            ${Expecting_Owner1}${Expecting_Pet1}    ${Actual_Owner1}${Actual_Pet1}
-     Sleep                                          .5
 
 Verify selected Owner is not with rightful pet 2 or testcase fails
-
+     Wait until page contains                      Owner Information
      ${Actual_Pet2}                                 Get Text       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
      ${Actual_Owner2}                               Get Text       xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
     #Should Be Equal(testcase fails)                ${Expecting_Owner2}${Expecting_Pet2}    ${Actual_Owner2} ${Actual_Pet2}
      Should Not Be Equal                            ${Expecting_Owner2}${Expecting_Pet2}    ${Actual_Owner2} ${Actual_Pet2}
-     Sleep                                          .5
 
 Verify whether selected Owner is with rightful pet(2 pets)
-
+     Wait until page contains                      Owner Information
      ${Actual_PetA}                              Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[1]
      ${Actual_PetB}                              Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
      ${Actual_Owner3}                            Get Text     xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
      Should Be Equal                             ${Expecting_Owner3}${Expecting_PetA}${Expecting_PetB}     ${Actual_Owner3}${Actual_PetA}${Actual_PetB}
-     Sleep                                       .5
 
 #------------------------------------
 #Add Pet Type - Jonna
@@ -383,6 +369,7 @@ Verify added Pet Type
 Teardown Add New Pet Type
 
     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+    Wait until page contains                      Pet Types
     Page should not contain element               xpath://*[@id="6"]
 
 #Gherkin Syntax for Add New Pet Type:
@@ -429,43 +416,39 @@ a user should see two fields with the same Pet Type
 
 User Clicks On PetTypes
         Go To Web Page
-        Sleep                                           .10
         Click Element                                    xpath://html/body/app-root/div[1]/nav/div/ul/li[4]/a
 
 User Edit's A Pet Type
-
-        Sleep                                            .5
-        Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Wait until page contains                         Pet Types
+        Click element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
+        Wait until page contains                         Edit Pet Type
         Input Text                                       id=name                              ${New_Edited_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
         TearDown After Verifying
 
 User Verifies Edited Pet Added
-
-       Sleep                                            .2
+       Wait until page contains                         Pet Types
        ${Edited_PetType_Updated}                        Get Text                               xpath://*[@id="3"]
        Should Contain                                   ${New_Edited_PetType_Name}              ${Edited_PetType_Updated}
 
 TearDown After Verifying
-
-        Sleep                                            .2
+        Wait until page contains                         Pet Types
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
         Input Text                                       id=name                              ${Actual_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 
 User Edit's PetTypes with Same Name
-
-        Sleep                                            .2
+        Wait until page contains                         Pet Types
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[4]/td[2]/button[1]
         Input Text                                       id=name                              ${New_Edited_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
+        Wait until page contains                         Pet Types
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
         Input Text                                       id=name                              ${New_Edited_PetType_Name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
 
 User Verifies Same Pet Type Name Can Add Multiple Times
-
-        Sleep                                            .2
+        Wait until page contains                         Pet Types
         User Verifies Edited Pet Added
         ${link_text}                                    Get Value                            xpath://*[@id="5"]
         Should Not Be Equal                             ${Verify_Old_PetType_existed}        ${link_text}
@@ -473,8 +456,7 @@ User Verifies Same Pet Type Name Can Add Multiple Times
         TearDown Second Edited PetType After Verifying
 
 TearDown Second Edited PetType After Verifying
-
-        Sleep                                            .2
+        Wait until page contains                         Pet Types
         Click Element                                    xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[1]
         Input Text                                       id=name                              ${Second_petType_Acutal_name}
         Click Element                                    xpath://*[@id="pettype"]/div[2]/div/button[1]
@@ -483,46 +465,38 @@ TearDown Second Edited PetType After Verifying
 #Home Button From Veterinarians
 
 User Clicks On Veterinarians Page
-
         Go To Web Page
-        Sleep                                           .5
-        Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
 User Selects All Veterinarians
-
-        Sleep                                           .2
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
-User Is At Veterinarians Page
 
-        Sleep                                            .2
-        Page Should Contain button                       Home
+User Is At Veterinarians Page
+        Page Should Contain button                      Home
 
 User Can Go Back To Home Page
-
-        Sleep                                           .2
-        Click Element                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
+        Wait until page contains                        Veterinarians
+        Sleep                                           0.1 s
+        Click Button                                    xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]
 
 User Back To Home Page
-
+      Wait until page contains                           ${Welcome_Message}
       Page should Contain                                ${Welcome_Message}
 
 User Clicks On Edit Vet
-
-       Sleep                                            .2
+       Wait until page contains                         Veterinarians
        Click Element                                    xpath://*[@id="vets"]/tbody/tr[5]/td[3]/button[1]
        #Page should Contain Element                      xpath://*[@id="vet_form"]/div[5]/div/button[2]
+       Wait until page contains                         Edit Veterinarian
        Page Should Not Contain Button                   Home
-       Sleep                                            .2
        Click Element                                    xpath://*[@id="vet_form"]/div[5]/div/button[2]
        User Can Go Back To Home Page
 
 User Clicks On Add New
-
-        Sleep                                           .2
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+        Wait until page contains                        New Veterinarian
         Page Should Not Contain Button                  Home
-        Sleep                                           .2
         Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[1]
 
 #-----------------------------------------------------------------------------------
@@ -535,7 +509,7 @@ Go to list of owners
 
 Click on a owner
 
-    Sleep                                           1s
+    Wait until page contains                        Owners
     Click Element                                   xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[1]/td[1]/a
     ${EXPECTED_OWNER}                               Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[1]/tr[1]/td/b
     Should Be Equal                                 ${EXPECTED_OWNER}   ${CONFIGURED_OWNER}
@@ -559,25 +533,21 @@ Edit infomation on the pet
     Click Element                                   xpath:/html/body/app-root/app-pet-edit/div/div/form/div[6]/div/button[2]
 
 Verify that all information has been edited
-
-    Sleep                                           1s
+    Wait until page contains                        Owner Information
     ${EXPECTED_PET}                                 Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
     Should Be Equal                                 ${EXPECTED_PET}     ${CONFIGURED_PET}
     ${EXPECTED_DATE}                                Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[2]
     Should Be Equal                                 ${EXPECTED_DATE}    ${CONFIGURED_DATE}
     ${EXPECTED_PET2}                                Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[3]
     Should Be Equal                                 ${EXPECTED_PET2}    ${CONFIGURED_PET2}
-
-
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Specialty HOME Button
+#Specialty HOME Button by Renu
 
 User Is On Specialities Page
     Go To Web Page
     Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     Page Should Contain Element     xpath://*[@id="specialties"]
-    sleep                           .25
 
 User Is On Edit Specialities Page
     User Is On Specialities Page
@@ -588,103 +558,93 @@ User Is On Edit Specialities Page
     Page Should Not Contain Button   Home
     #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
     Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
-    sleep                           .25
 
 Clicks on Home Button
     page should contain button       Home
     click button                     Home
-    sleep                           .25
 
 Comes back to the Home Page
     Page Should Contain             ${WELCOME_MESSAGE}
     Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
-    sleep                           .25
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Remove Pet Visit
+#Remove Pet Visit by Renu
 
 User Clicks Owners
     Go To Web Page
     Wait Until Element Is Visible               xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
     Element Should Be Visible                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a         # Owners Tab
     Click Element                               xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-     Sleep                                         .25
+
 Clicks All Owners
-    Element Should Be Visible                   //*[@routerlink="/owners"]
-    Click Element                               //*[@routerlink="/owners"]
+    Element Should Be Visible                   xpath://*[@routerlink="/owners"]
+    Click Element                               xpath://*[@routerlink="/owners"]
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-list/div/div/h2               #Owners List
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/h2
-     Sleep                                         .25
-    Page Should Contain Element         //*[@class="table table-striped"]
-    Element Should Be Visible           //*[@class="table table-striped"]
-     Sleep                                         .25
+    Page Should Contain Element         xpath://*[@class="table table-striped"]
+    Element Should Be Visible           xpath://*[@class="table table-striped"]
+
 Visit is Added To The Pet
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
     Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
-     Sleep                                         .25
+
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Click Element                       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Input Text                          //*[@id="visit"]/div[1]/div[1]/div/input    ${VISIT_DATE}
     Input Text                          //*[@id="description"]    ${VISIT_DESCRIPTION}
     Click Button                        //*[@id="visit"]/div[2]/div/button[2]
-     Sleep                                          .25
     Wait Until Page Contains Element    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
     Element Should Be VIsible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
-     Sleep                                         .25
+
 
 Deletes Pet Visit
     Wait Until Page Contains Element   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Element Should Be Visible          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Click Element                      xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-     Sleep                                         .25
+
 Verify Visit is Deleted
      Wait Until Element Is Not Visible     ${VISIT_DATE}
      Element Should Not Be Visible         ${VISIT_DATE}
      Wait Until Element Is Not Visible     ${VISIT_DESCRIPTION}
      Element Should Not Be Visible         ${VISIT_DESCRIPTION}
-      Sleep                                         .25
-User Selects Owner 6
 
+User Selects Owner 6
     User Clicks Owners
-    Click Element                               //*[@routerlink="/owners"]
+    Click Element                               xpath://*[@routerlink="/owners"]
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-list/div/div/h2               #Owners List
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/h2
-     Sleep                                         .25
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
     Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
-      Sleep                                         .25
-
 
 Selects Pet Samantha
+    Wait until page contains            Owner Information
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-detail/div/div/h2[2]
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
-      Sleep                                         .25
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[2]
     #Element Should Be Visible        ${SVISIT_DATE}
     #Element Should Be Visible        ${SVISIT_DESCRIPTION}
-      Sleep                                          .25
 
 Deletes Visit For Rabies Shot
     Page Should Contain Element         xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
+
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
     Click Button                        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
-      Sleep                                          .25
+
 Verify Visit is Deleted For Rabies Shot
     Wait Until Element Is Not Visible     ${SVISIT_DATE}
     Element Should Not Be Visible         ${SVISIT_DATE}
     Wait Until Element Is Not Visible     ${SVISIT_DESCRIPTION}
     Element Should Not Be Visible         ${SVISIT_DESCRIPTION}
-     Sleep                                         .5
     Click Button                        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/button[3]
-    Input Text                          //*[@id="visit"]/div[1]/div[1]/div/input    ${SVISIT_DATE}
-    Input Text                          //*[@id="description"]                      ${SVISIT_DESCRIPTION}
-    Click Button                        //*[@id="visit"]/div[2]/div/button[2]
+    Input Text                          xpath://*[@id="visit"]/div[1]/div[1]/div/input    ${SVISIT_DATE}
+    Input Text                          xpath://*[@id="description"]                      ${SVISIT_DESCRIPTION}
+    Click Button                        xpath://*[@id="visit"]/div[2]/div/button[2]
    
  #--------------------------------------------------------------------------------------------------------------------------------------------------
  #Add New Specialty
