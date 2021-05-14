@@ -649,15 +649,15 @@ Verify Visit is Deleted For Rabies Shot
  #--------------------------------------------------------------------------------------------------------------------------------------------------
  #Add New Specialty
  
- user is on the Specialties page
+user is on the Specialties page
     Go to Specialties
 
 Go to Specialties
     Go To Web Page
     Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
-    Verify User is on the Specialties page
+    Verify User is on the Correct page
 
-Verify User on the Specialties page
+Verify User is on the Correct page
     ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
     Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
 
