@@ -77,7 +77,7 @@
 										"exec": [
 											"pm.test(\"Delete pet visit Status code is 204\",() => pm.response.to.have.status(204));\r",
 											"\r",
-											"var url = pm.environment.get(\"url\") + \"/visits/\" +  pm.globals.get(\"visitId\");\r",
+											"var url = pm.environment.get(\"url\") + \"/visits/\" +  pm.environment.get(\"visitId\");\r",
 											"\r",
 											"const getRequest = {\r",
 											"        url: url,\r",
@@ -120,6 +120,73 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "PCVets",
+			"item": [
+				{
+					"name": "Add Vet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"vetId\", jsonData.id);\r",
+									"\r",
+									"pm.test(\"Successfully Created Vet / Status Code 201 \", () => pm.response.to.have.status(201));\r",
+									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
+									" \r",
+									"pm.test(\"Verify if Created Vet is added in the Database\", function () {\r",
+									"     pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"     });\r",
+									"\r",
+									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.firstName).to.be.a(\"string\");\r",
+									"  pm.expect(jsonData.lastName).to.be.a(\"string\");\r",
+									"  pm.expect(jsonData.specialties).to.be.an(\"array\");\r",
+									" });\r",
+									"\r",
+									" pm.test(\"Verify Information of New Vet Added\", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"VetFirstNameP\"));\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"VetLastNameP\"));\r",
+									"    pm.expect(jsonData.specialties[0].id).to.eql(parseInt(pm.environment.get(\"SpecialityId\")));\r",
+									"    pm.expect(jsonData.specialties[0].name).to.eql(pm.environment.get(\"SpecialityName\"));\r",
+									"    \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\": \"{{VetFirstNameP}}\",\r\n    \"lastName\": \"{{VetLastNameP}}\",\r\n    \"specialties\": [\r\n      {\r\n        \"id\": {{SpecialityId}},\r\n        \"name\": \"{{SpecialityName}}\"\r\n      }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vets"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
