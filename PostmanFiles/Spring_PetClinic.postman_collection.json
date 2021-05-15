@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "4db66673-b6c6-4cd8-bb3b-9f56835f2591",
-		"name": "Spring_PetClinic Copy",
+		"_postman_id": "8742e039-4d00-4480-83d3-abe444033481",
+		"name": "Sprint2PC Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -73,11 +73,9 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									" \r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"const response = pm.response.json();\r",
-									"console.log(response);\r",
-									"console.log(response.length);\r",
-									"console.log(response['response.lenth']);\r",
 									"\r",
 									"pm.test(\"Verify Owners List is Displayed in Response \" , () => console.log(response));\r",
 									"\r",
@@ -121,17 +119,15 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"\r",
-									"var jsonData = JSON.parse(responseBody);\r",
-									"pm.globals.set(\"ownerID\", jsonData.id);\r",
-									"\r",
-									"\r",
 									"pm.test(\"Successfully Created Owner / Status Code 201 \", function () {\r",
 									"   pm.response.to.have.status(201);\r",
 									"   pm.environment.set(\"results\", parseInt(environment.results) + 1);\r",
-									"});  \r",
-									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(10000));\r",
-									"\r",
+									"});\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.globals.set(\"ownerID\", jsonData.id);\r",
+									"  \r",
 									"pm.test(\"Verify if Created Owner is added in the Database\", function () {\r",
 									"     pm.expect(pm.response.text()).to.include(\"id\");\r",
 									"     });\r",
@@ -208,7 +204,8 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
 									"pm.test(\"Owner is updated\", () => {\r",
 									"  const expectedObject = {\r",
 									"    \"created\": true,\r",
@@ -269,7 +266,8 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
 									"pm.globals.get(\"ownerID\", pm.response.json().id);\r",
 									"pm.test(\"Verify that the Owner Information is not empty\", function () {\r",
 									"    pm.expect(jsonData.owners).to.not.eql(\"\");\r",
@@ -324,11 +322,7 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"pm.environment.set(\"XFNameU\",\"Neil\");\r",
-									"pm.environment.set(\"XLNameU\",\"Armstrong\");\r",
-									"pm.environment.set(\"XAddressU\",\"60 Friendly St.\");\r",
-									"pm.environment.set(\"XCityU\",\"Kuwait\");\r",
-									"pm.environment.set(\"XTelephoneU\",\"asdfghhj\");"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -366,14 +360,9 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									" \r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"const response = pm.response.json();\r",
-									"console.log(response);\r",
-									"console.log(response.length);\r",
-									"console.log(response['response.lenth']);\r",
-									"\r",
-									"pm.test(\"Verify Owners List is Displayed in Response \" , () => console.log(response));\r",
-									"\r",
 									"pm.test(\"Total No of Pets Displayed  : \" +response.length , function () {\r",
 									"    var jsonData = pm.response.json();\r",
 									"    pm.expect(jsonData.length).to.eql(response.length);\r",
@@ -409,7 +398,8 @@
 									"pm.test(\"Successfully Created Pet / Status Code 201Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
 									"});\r",
-									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(10000));\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"\r",
 									"pm.test(\"Verify if Created Pet is added in the pets Database \", function () {\r",
 									"     pm.expect(pm.response.text()).to.include(\"id\");\r",
@@ -519,7 +509,8 @@
 									"    pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"pm.test(\"Pet is updated\", () => {\r",
 									"  const expectedObject = {\r",
 									"    \"created\": true,\r",
@@ -581,7 +572,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"var jsonData = pm.response.json();\r",
 									"\r",
 									"pm.test(\"Verify that the Pets Information is not empty\", function () {\r",
@@ -660,16 +652,15 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									" \r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));  \r",
 									"pm.globals.set(\"amountOfPetTypesIds\", jsonData.length); \r",
 									"console.log(pm.globals.get(\"amountOfPetTypesIds\"));\r",
 									"\r",
 									"const response = pm.response.json();\r",
-									"console.log(response);\r",
-									"console.log(response.length);\r",
-									"console.log(response['response.lenth']);\r",
 									"\r",
-									"pm.test(\"Verify Owners List is Displayed in Response \" , () => console.log(response));\r",
+									"\r",
+									"pm.test(\"Verify Pettypes List is Displayed in Response \" , () => console.log(response));\r",
 									"\r",
 									"pm.test(\"Total No of Owners Displayed  : \" +response.length , function () {\r",
 									"    var jsonData = pm.response.json();\r",
@@ -724,7 +715,8 @@
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
 									"});\r",
-									"\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"pm.test(\"Verify Created Pet is not Empty\", () => pm.expect(jsonData.pettypes).to.not.eql(null));\r",
 									"/*\r",
 									"pm.test(\"Check if petTypes increase by 1\", function () {\r",
@@ -785,6 +777,7 @@
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
 									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"pm.test(\"PetType is updated\", () => {\r",
 									"  const expectedObject = {\r",
 									"    \"created\": true,\r",
@@ -792,7 +785,6 @@
 									"  };\r",
 									"\r",
 									"});\r",
-									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -843,29 +835,20 @@
 								"exec": [
 									"var jsonData = pm.response.json();\r",
 									" \r",
-									"\r",
+									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									" \r",
+									"pm.globals.get(\"petTypeIdP\", pm.response.json().id);\r",
 									"pm.test(\"Verify that the Pettype Information is not empty\", function () {\r",
-									"    pm.expect(jsonData.pettypes).to.not.eql(\"\");\r",
+									"    pm.expect(jsonData.owners).to.not.eql(\"\");\r",
 									"});\r",
 									" \r",
 									"pm.test(\"Check the contents of Pettype Data are not empty\", function () {\r",
 									"    pm.expect(pm.response.text()).to.not.include(null);\r",
 									"});\r",
-									" \r",
-									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) );\r",
-									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
-									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
-									"  pm.expect(jsonData).to.be.an(\"object\");\r",
-									"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
-									"});\r",
 									"\r",
-									"pm.test(\"Check Pettype which is Updated is Correct\", function () {\r",
-									"    pm.expect(jsonData.id).to.eql(pm.globals.get(\"petTypeID\"));\r",
-									"    pm.expect(jsonData.name).to.eql(pm.environment.get(\"petTypeNameU\"));\r",
-									"});\r",
-									"pm.test(\"Check Pettype which is Updated is overwritten\", function () {\r",
-									"    pm.expect(jsonData.name).to.not.eql(pm.environment.get(\"petTypeNameP\"));\r",
-									"});\r",
+									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -878,65 +861,6 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"pettypes",
-								"{{petTypeID}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete PetType",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 204\", function () {\r",
-									"    pm.response.to.have.status(204);\r",
-									"});\r",
-									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
-									"var url = pm.environment.get(\"url\") + \"/api\" + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
-									"\r",
-									"const getRequest = {\r",
-									"        url: url,\r",
-									"        method: 'GET'\r",
-									"};\r",
-									"pm.sendRequest(getRequest, function (err, res) {\r",
-									"    if (err) { \r",
-									"        console.log(err);\r",
-									"    }\r",
-									"     console.log(res);\r",
-									"    \r",
-									"    pm.test('Response should be Not Found', function () {\r",
-									"        pm.expect(res.status).to.include(\"Not Found\");\r",
-									"    });\r",
-									"    \r",
-									"    pm.test(\"Response code 404\", function() {\r",
-									"        pm.expect(res.code).to.equal(404);\r",
-									"    })\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Cookie",
-								"value": "name={{admin_name}}",
-								"type": "text"
-							}
-						],
 						"url": {
 							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
 							"host": [
@@ -965,9 +889,11 @@
 								"exec": [
 									"var jsonData = pm.response.json();\r",
 									"\r",
-									"pm.test(\"Successfully Added Visit / Status Code 201 \", () => pm.response.to.have.status(201));\r",
+									"pm.globals.set(\"visitId\", pm.response.json().id);\r",
 									"\r",
-									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));\r",
+									"pm.test(\"Successfully Created Visit / Status Code 201 \", () => pm.response.to.have.status(201));\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"\r",
 									"pm.test(\"That all variables are labled correctly in the responsBody\", () => {\r",
 									"    pm.expect(pm.response.text()).to.include(\"id\");\r",
@@ -1032,14 +958,16 @@
 									"    pm.expect(jsonData.pet.owner.address).to.eql(pm.environment.get(\"petOwnerAddressP\"));\r",
 									"    pm.expect(jsonData.pet.owner.city).to.eql(pm.environment.get(\"petOwnerCityP\"));\r",
 									"    pm.expect(jsonData.pet.owner.telephone).to.eql(pm.environment.get(\"petOwnerTelephoneP\"));\r",
-									"    pm.expect(jsonData.pet.owner.id).to.eql(parseInt(1));\r",
-									"   // pm.expect(jsonData.pet.owner.id).to.eql(parseInt(pm.environment.get(\"OwnerIdP\")));\r",
+									"    //pm.expect(jsonData.pet.owner.id).to.eql(parseInt(1));\r",
+									"    pm.expect(jsonData.pet.owner.id).to.eql(parseInt(pm.environment.get(\"petOwnerIdP\")));\r",
 									"    /* \r",
 									"           When i try to do this generic there is a bug claiming my variable is a NaN(Not a Number). Works hardcoded though.. not sure why. \r",
 									"    */\r",
 									"});\r",
 									"\r",
-									"pm.environment.set(\"visitId\", pm.response.json().id);"
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1050,7 +978,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"id\": {{visitId}},\r\n        \"date\": \"{{visitDate}}\",\r\n        \"description\": \"{{visitDescription}}\",\r\n        \"pet\": {\r\n            \"id\": {{petIdU}},\r\n            \"name\": \"{{petNameP}}\",\r\n            \"birthDate\": \"{{petBirthDateP}}\",\r\n            \"type\": {\r\n                \"id\": {{petTypeIdP}},\r\n                \"name\": \"{{petTypeNameP}}\"\r\n            },\r\n            \"owner\": {\r\n                \"id\": {{ownerIdP}},\r\n                \"firstName\": \"{{petOwnerFirstNameP}}\",\r\n                \"lastName\": \"{{petOwnerLastNameP}}\",\r\n                \"address\": \"{{petOwnerAddressP}}\",\r\n                \"city\": \"{{petOwnerCityP}}\",\r\n                \"telephone\": \"{{petOwnerTelephoneP}}\"\r\n            }\r\n        }\r\n    }",
+							"raw": "    {\r\n        \"id\": 0,\r\n        \"date\": \"{{visitDate}}\",\r\n        \"description\": \"{{visitDescription}}\",\r\n        \"pet\": {\r\n            \"id\": {{petIdU}},\r\n            \"name\": \"{{petNameP}}\",\r\n            \"birthDate\": \"{{petBirthDateP}}\",\r\n            \"type\": {\r\n                \"id\": {{petTypeIdP}},\r\n                \"name\": \"{{petTypeNameP}}\"\r\n            },\r\n            \"owner\": {\r\n                \"id\": {{petOwnerIdP}},\r\n                \"firstName\": \"{{petOwnerFirstNameP}}\",\r\n                \"lastName\": \"{{petOwnerLastNameP}}\",\r\n                \"address\": \"{{petOwnerAddressP}}\",\r\n                \"city\": \"{{petOwnerCityP}}\",\r\n                \"telephone\": \"{{petOwnerTelephoneP}}\"\r\n            }\r\n        }\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1078,8 +1006,10 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Delete pet visit Status code is 204\",() => pm.response.to.have.status(204));\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"\r",
-									"var url = pm.environment.get(\"url\") + \"/api\"+ \"/visits/\" +  pm.environment.get(\"visitId\");\r",
+									"var url = pm.environment.get(\"url\") + \"/visits/\" +  pm.globals.get(\"visitId\");\r",
 									"\r",
 									"const getRequest = {\r",
 									"        url: url,\r",
@@ -1098,8 +1028,7 @@
 									"    pm.test(\"Visit Response Code 404\", function() {\r",
 									"        pm.expect(res.code).to.equal(404);\r",
 									"    })\r",
-									"});\r",
-									""
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -1125,6 +1054,238 @@
 			]
 		},
 		{
+			"name": "PCVets",
+			"item": [
+				{
+					"name": "Add Vet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successfully Created Vet / Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.globals.set(\"vetID\", jsonData.id);\r",
+									"pm.test(\"Verify if Response time Should be below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(10000));\r",
+									"pm.test(\"Verify if Created Pet is added in the pets Database \", function () {\r",
+									"     pm.expect(pm.response.text()).to.include(\"id\");\r",
+									"     });\r",
+									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.firstName).to.be.a(\"string\");\r",
+									"  pm.expect(jsonData.lastName).to.be.a(\"string\"); \r",
+									"  pm.expect(jsonData.specialties).to.be.an(\"array\");    \r",
+									"});\r",
+									"pm.test(\"Verify Information of New Vet Added\", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"vetFirstnameP\"));\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"vetLastnameP\"));\r",
+									"    pm.expect(jsonData.specialties).to.not.eql(null);\r",
+									"    pm.expect(jsonData.specialties[0].id).to.eql(parseInt(pm.environment.get(\"vetSpecialtyId\")));\r",
+									"    pm.expect(jsonData.specialties[0].name).to.eql(pm.environment.get(\"vetSpecialtyName\"));\r",
+									"}); "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"firstName\": \"{{vetFirstnameP}}\",\r\n  \"lastName\": \"{{vetLastnameP}}\",\r\n  \"specialties\": [\r\n\r\n      {\r\n                \"id\": {{vetSpecialtyId}},\r\n                \"name\": \"{{vetSpecialtyName}}\"\r\n      }\r\n\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vets",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vet Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"pm.test(\"Vet is updated\", () => {\r",
+									"  const expectedObject = {\r",
+									"    \"created\": true,\r",
+									"    \"errors\": []\r",
+									"  };\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"firstName\": \"{{vetFirstnameU}}\",\r\n  \"lastName\": \"{{vetLastnameU}}\",\r\n  \"specialties\": [\r\n\r\n      {\r\n                \"id\": {{vetSpecialtyId}},\r\n                \"name\": \"{{vetSpecialtyName}}\"\r\n      }\r\n\r\n  ]\r\n}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/vets/{{vetID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vets",
+								"{{vetID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Updated Vet Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", () => pm.expect(responseCode.code).to.equal(200) ); \r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"\r",
+									"pm.test(\"Verify that the Vet Information is not empty\", () => {\r",
+									"    pm.expect(jsonData.vets).to.not.eql(null);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check the contents of Vet Data are not empty\", () => {\r",
+									"    pm.expect(pm.response.text()).to.not.include(null);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify Information of Updated Vet\", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.environment.get(\"vetFirstnameU\"));\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.environment.get(\"vetLastnameU\"));\r",
+									"    pm.expect(jsonData.specialties[0].id).to.eql(parseInt(pm.environment.get(\"vetSpecialtyId\")));\r",
+									"    pm.expect(jsonData.specialties[0].name).to.eql(pm.environment.get(\"vetSpecialtyName\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Assert that the old data is overwritten with the new data\", () => {\r",
+									"  pm.expect(jsonData.firstName).to.not.eql(\"{{vetFristnameP\");\r",
+									"  pm.expect(jsonData.lastName).to.not.eql(\"vetLastnameP\"); \r",
+									" \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Assert that the correct type of data is stored in the new object\", () => {\r",
+									"  pm.expect(jsonData).to.be.an(\"object\");\r",
+									"  pm.expect(jsonData.firstName).to.be.a(\"string\");\r",
+									"  pm.expect(jsonData.lastName).to.be.a(\"string\"); \r",
+									"  pm.expect(jsonData.specialties).to.be.an(\"array\");   \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vets/{{vetID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vets",
+								"{{vetID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete Vet Status code is 204\",() => pm.response.to.have.status(204));\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"\r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/vet/\" +  pm.globals.get(\"visitvetID\");\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Visit Response Should Be Not Found', function () {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Visit Response Code 404\", function() {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    })\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/vets/{{vetID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"vets",
+								"{{vetID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Teardown",
 			"item": [
 				{
@@ -1137,8 +1298,9 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"var url = pm.environment.get(\"url\") + \"/owners/\" +  pm.globals.get(\"ownerID\");\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/owners/\" +  pm.globals.get(\"ownerID\");\r",
 									"\r",
 									"const getRequest = {\r",
 									"        url: url,\r",
@@ -1196,8 +1358,9 @@
 									"pm.test(\"Status code is 204\", function () {\r",
 									"    pm.response.to.have.status(204);\r",
 									"});\r",
-									"\r",
-									"var url = pm.environment.get(\"url\") + \"/pets/\" +  pm.globals.get(\"petID\");\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/pets/\" +  pm.globals.get(\"petID\");\r",
 									"\r",
 									"const getRequest = {\r",
 									"        url: url,\r",
@@ -1234,6 +1397,67 @@
 								"api",
 								"pets",
 								"{{petID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete PetType",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", () => {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
+									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/pettypes/\" +  pm.globals.get(\"petTypeID\");\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest,  (err, res) => {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Response should be Not Found', () => {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Response code 404\", () => {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    });\r",
+									"\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "name={{admin_name}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/pettypes/{{petTypeID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"pettypes",
+								"{{petTypeID}}"
 							]
 						}
 					},
