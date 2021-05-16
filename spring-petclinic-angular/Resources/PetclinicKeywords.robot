@@ -469,6 +469,7 @@ User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
 
 User Selects All Veterinarians
+        Set Selenium Speed                              .25
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
 
