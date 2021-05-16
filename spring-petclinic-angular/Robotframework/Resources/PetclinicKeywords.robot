@@ -703,7 +703,51 @@ Verify added existing Specialty
     Should be equal                               ${Actual_New_Specialty_Name}    ${Existing_Specialty_Name}
 
 
-    
+#-----------------------------------------------------------------------------------------------------------------------
+#Edit Specialty
+
+
+
+user edits A Specialty Name
+    #wait until page contains element                xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
+    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
+    Input Text                                      id=name                              ${New_Edited_Specialty_Name}
+    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
+
+
+user Verifies Specialty Is Updated
+    sleep                                           .2
+    ${Edited_Specialty_Updated}                     Get Text                               xpath://*[@id="0"]
+    Should Contain                                  ${New_Edited_Specialty_Name}           ${Edited_Specialty_Updated}
+    TearDown After Verifying Updated Specialty
+
+TearDown After Verifying Updated Specialty
+    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
+    Input Text                                      id=name                              ${Actual_Specialty_Name}
+    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
+
+user edits Specialties Names with Same Name
+    user edits A Specialty Name
+    sleep                                           .1
+    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Input Text                                      id=name                              ${New_Edited_Specialty_Name}
+    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
+
+user Verifies Same Specialty Name Can Be Added Multiple Times
+
+    Sleep                                           .2
+    user Verifies Specialty Is Updated
+    Sleep                                           .2
+    ${link_text}                                    Get Value                            xpath://*[@id="1"]
+    Should Not Be Equal                             ${Verify_Old_Specialty_existed}        ${link_text}
+    TearDown Second Edited Specialty After Verifying
+
+TearDown Second Edited Specialty After Verifying
+
+    sleep                                           .2
+    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Input Text                                      id=name                              ${Second_Specialty_Acutal_name}
+    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]    
 
 
 
