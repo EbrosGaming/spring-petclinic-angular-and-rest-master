@@ -13,13 +13,12 @@ ${VISIT_DATE}                2021/05/07
 ${VISIT_DESCRIPTION}         checkup
 ${SVISIT_DATE}               2013/01/01
 ${SVISIT_DESCRIPTION}        rabies shot
-
 *** Test Cases ***
 Remove Pet Visit
     [Documentation]     Delete Visit For a Pet
     [Tags]              Delete Pet Visit
     Given User Clicks Owners
-    And Clicks All Owners
+    When Clicks All Owners
     And Visit is Added To The Pet
     And Deletes Pet Visit
     Then Verify Visit is Deleted
@@ -27,6 +26,6 @@ Remove Visit For Specific Owner and Specific Pet From Visits List
     [Documentation]     Delete Pet Visit For Specific Owner and Specific Pet From Visits List
     [Tags]              Delete Pet Visit
     Given User Selects Owner 6
-    And Selects Pet Samantha
+    When Selects Pet Samantha
     And Deletes Visit For Rabies Shot
     Then Verify Visit is Deleted For Rabies Shot
