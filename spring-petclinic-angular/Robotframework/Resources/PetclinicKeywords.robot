@@ -666,8 +666,7 @@ User Selects Owner 6
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/h2
     Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
     Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
-    Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
-    
+    Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a 
     
 #----------------------------------------------------------------------------
 #Click on Home button from Owners section - Jonna
