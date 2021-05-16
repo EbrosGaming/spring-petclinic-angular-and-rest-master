@@ -12,32 +12,14 @@
 					"name": "visits",
 					"item": [
 						{
-							"name": "Get Visits",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/api/visits",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"visits"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Add Visits",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
-											"//var jsonData=pm.response.json();\r",
-											"//pm.globals.set(\"visitId\",jsonData.id);"
+											"var jsonData=pm.response.json();\r",
+											"pm.environment.set(\"visitId\",jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
