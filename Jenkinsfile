@@ -31,8 +31,10 @@ pipeline {
         stage('Postman') {
             steps {
                 sleep(20)
+		 catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                 sh 'newman run PostManReviewFiles/PetClinic_Swagger.postman_collection.json -e PostManReviewFiles/PetClinic_Swagger.postman_environment.json -- reporters junit'
             }
+	    }
 
         
         post {
@@ -48,6 +50,7 @@ pipeline {
         stage('Robot') {
             steps {
                 sleep(20)
+		 
                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Results spring-petclinic-angular/Tests'
             }
             post {
