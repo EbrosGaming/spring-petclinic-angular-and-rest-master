@@ -1,6 +1,6 @@
 *** Settings ***
-Documentation        Test to Add, Edit & Delete Visit for a Pet
-...                  Test to check all Actions for Visits of a Pet
+Documentation        Test to Remove Visit for a Pet
+...                  Test to remove Visit of a Pet
 Resource             ../Resources/PetclinicKeywords.robot
 Library              SeleniumLibrary
 Test Setup           Begin WebTest
