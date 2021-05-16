@@ -1241,7 +1241,7 @@
 									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
 									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
 									"\r",
-									"var url = pm.environment.get(\"url\") + \"/api\" + \"/vet/\" +  pm.globals.get(\"visitvetID\");\r",
+									"var url = pm.environment.get(\"url\") + \"/api\" + \"/vets/\" +  pm.globals.get(\"vetID\");\r",
 									"\r",
 									"const getRequest = {\r",
 									"        url: url,\r",
