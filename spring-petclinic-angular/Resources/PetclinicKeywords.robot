@@ -467,6 +467,7 @@ TearDown Second Edited PetType After Verifying
 User Clicks On Veterinarians Page
         Go To Web Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+
 User Selects All Veterinarians
         User Clicks On Veterinarians Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
