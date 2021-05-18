@@ -539,7 +539,40 @@ Verify that all information has been edited
     Should Be Equal                                 ${EXPECTED_DATE}    ${CONFIGURED_DATE}
     ${EXPECTED_PET2}                                Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[3]
     Should Be Equal                                 ${EXPECTED_PET2}    ${CONFIGURED_PET2}
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------
+#Add Vet: Isac
+
+Go to vet add page
+
+    User Selects All Veterinarians
+    Sleep                                           1s
+
+Click on add vet
+
+    Click Element                                   xpath:/html/body/app-root/app-vet-list/div/div/div/button[2]
+    Sleep                                           1s
+
+Add a new vet
+
+    Input Text                                      id=firstName    ${FIRST_NAME}
+    Input Text                                      id=lastName     ${LAST_NAME}
+    Click Element                                   xpath://*[@id="specialties"]/option[2]
+    Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[2]
+
+Verify that vet has been added
+
+    ${EXPECTED_VET}                                 Get Text    xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+    Should Be Equal                                 ${EXPECTED_VET}    ${FULL_NAME}
+    ${EXPECTED_SPECIALTIES}                         Get Text    xpath://*[@id="vets"]/tbody/tr[7]/td[2]
+    Should Be Equal                                 ${EXPECTED_SPECIALTIES}    ${SPECIALTIES}
+
+Delete newly added vet
+
+    Click Element                                   xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
+
+#---------------------------------------------------------------------------------------------------------------------
+
 #Specialty HOME Button by Renu
 
 User Is On Specialities Page
@@ -780,7 +813,15 @@ PetType Is Removed From The List
 
 #-----------------------------------------------------------------------------------
 
+
+
+
+
+#-----------------------------------------------------------------------------------
+
 #Test below have problems with speed - fix at some point
+
+#-----------------------------------------------------------------------------------
 
 #Add visit to a pet  -- Swetha
 
