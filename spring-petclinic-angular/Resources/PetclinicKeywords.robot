@@ -760,6 +760,57 @@ User Deletes The PetType
 PetType Is Removed From The List
       Wait until page contains                           ${Expected_Pettypes_Page}
       Page Should Not Contain Element                    xpath://*[@id="6"]
+#--------------------------------------------------------------------------------------------------------------------------------------
+#Delete Speciality By Pravalika
+
+User Is On The Specialties Page
+    Go to Specialties
+Go to Specialties
+    Go To Web Page
+    Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
+    Verify on the Correct page
+Verify on the Correct page
+    ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
+    Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
+
+User Has Removed A Specialty
+    Click Element                                    xpath://*[@id="specialties"]/tbody/tr[3]/td[2]/button[2]
+User Should Be Able To See Specialty in the list
+    Page Should Contain Element                      xpath://*[@id="2"]
+
+
+a user have added a new Specialty
+    Add a new Specialty
+a user should be able to see the new Specialty in the list
+    Verify added Specialty
+    Teardown Add a New Specialty
+Add a new Specialty
+    Click button                                  xpath:/html/body/app-root/app-specialty-list/div/div/div/button[2]
+    Wait until page contains                      New Specialty
+    Click element                                 id:name
+    Input Text                                    id:name           ${New_Specialty_Name}
+    Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
+Verify added Specialty
+    ${Actual_Specialty_Name}                      Get Value     xpath://*[@id="3"]
+    Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
+Teardown Add a New Specialty
+    Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
+    Wait until page contains                      Specialties
+    Page should not contain element               xpath://*[@id="3"]
+
+
+User Removes A Newly Added Specialty
+    Add a new Specialty
+    Verify added Specialty
+    Deletes Newly Added specialty
+Deletes Newly Added specialty
+     Teardown Add a New Specialty
+User Should Be Able To See Newly Added Specialty Has Been Removed
+     Wait until page contains                      Specialties
+     Page should not contain element               xpath://*[@id="3"]
+
 
 End Web Test
-    close browser
+    Close Browser
+
+
