@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation                                  This is some basic  info about the whole test suite
-Resource                                       PetclinicKeywords.robot
+Resource                                       ../Resources/PetclinicKeywords.robot
 Library                                        SeleniumLibrary
 Test Setup                                     Begin Web Test
 Test Teardown                                  End Web Test
