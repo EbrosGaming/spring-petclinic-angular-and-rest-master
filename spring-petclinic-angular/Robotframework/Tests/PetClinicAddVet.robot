@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation                Testar Selenium och RobotFramework
-Resource                     PetclinicKeywords_main_old.robot
+Resource                     PetclinicKeywords.robot
 Library                      SeleniumLibrary
 Test Setup                   Begin Web Test
 Test Teardown                End Web Test
