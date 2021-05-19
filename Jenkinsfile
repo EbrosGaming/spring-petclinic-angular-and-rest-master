@@ -1,3 +1,4 @@
+  
  pipeline {
     agent any
     stages {
@@ -13,19 +14,6 @@
 
             }
         }
-	    
-	stage('Test') {
-            steps {
-                sh "mvn test"
-            }
-            post {
-                always {
-                    junit '**/TEST*.xml'
-                }
-            }
-
-        }
-        	    
          
         stage('Postman') {
             steps {
@@ -33,14 +21,7 @@
             		sh 'newman run PostmanFiles1/Sprint2/Spring_PetClinic.postman_collection.json -e PostmanFiles1/Sprint2/PetClinic_Environment.postman_environment.json -- reporters junit'
             	}
             }
-		
-        post {
-		 always {
-			junit '**/*xml'
-			}
-	     }		
-        		
-        
+        }
 
         stage('Robot') {
             steps {
@@ -68,8 +49,27 @@
                 }
             }
         }
-    } //End Of Stages
+    }
 
-	
-    
-}
+    post{
+        success{
+        	emailext (
+            	subject: "PASSED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                		<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                to: "renu.ghumare@iths.se"
+            )
+        }
+        failure{
+        	emailext (
+            	subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+            	body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+            			<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+            	to: "renu.ghumare@iths.se"
+            )
+
+        }
+    }
+}	    
+         
+        
