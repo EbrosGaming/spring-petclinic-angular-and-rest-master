@@ -537,14 +537,14 @@ Verify that all information has been edited
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Specialty HOME Button by Renu
 
-User Is On Specialities Page
+User Is On Specialties Page
     Go To Web Page
     Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
     Page Should Contain Element     xpath://*[@id="specialties"]
 
-User Is On Edit Specialities Page
-    User Is On Specialities Page
+User Is On Edit Specialties Page
+    User Is On Specialties Page
     Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
     Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
     Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
@@ -797,16 +797,8 @@ Teardown deleted Visit For Samantha
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Add Specialty
-user is on the Specialties page
-    Go to Specialties
-Go to Specialties
-    Go To Web Page
-    Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
-    Verify on the Correct page
-Verify on the Correct page
-    ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
-    Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
-a user have added a new Specialty
+
+a user has added a new Specialty
     Add a new Specialty
 a user should be able to see the new Specialty in the list
     Verify added Specialty
@@ -841,6 +833,7 @@ Verify added existing Specialty
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Edit Specialty
+
 user edits A Specialty Name
     wait until element is visible                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
     Click Element                                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
