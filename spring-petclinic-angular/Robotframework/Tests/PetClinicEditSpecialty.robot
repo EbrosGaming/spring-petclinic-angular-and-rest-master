@@ -17,13 +17,13 @@ ${Verify_Old_Specialty_existed}               surgery
 Editing A Specialty
   [Documentation]                          Testing Editing Specialty and verifying
   [Tags]                                   Editing A Specialty
-    Given user is on the Specialties page
+    Given User Is On Specialties Page
     When user edits A Specialty Name
     Then user Verifies Specialty Is Updated
 *** Test Cases ***
 Editing Same Specialty Name Multiple Times
   [Documentation]                          Testing Editing Same Name to Multiple Specialties
   [Tags]                                   Same Specialty Name For Multiles Times
-    Given user is on the Specialties page
+    Given User Is On Specialties Page
     When user edits Specialties Names with Same Name
     Then user Verifies Same Specialty Name Can Be Added Multiple Times
