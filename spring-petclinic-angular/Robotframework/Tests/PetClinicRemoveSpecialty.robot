@@ -15,14 +15,14 @@ ${Existing_Specialty_Name}                  Get Value     xpath://*[@id="0"]
 Test Remove A Specialty
     [Documentation]                    Delete Specialty
     [Tags]                             Remove Specialty
-    Given user is on the Specialties page
+    Given User Is On Specialties Page
     When User Has Removed A Specialty
     Then User Should Be Able To See Specialty in the list
 *** Test Cases ***
 Test To Add And Remove A Specialty
     [Documentation]                    Delete New Added Specialty
     [Tags]                             Remove Specialty
-    Given user is on the Specialties page
+    Given User Is On Specialties Page
     When User Removes A Newly Added Specialty
     Then User Should Be Able To See Newly Added Specialty Has Been Removed
 
