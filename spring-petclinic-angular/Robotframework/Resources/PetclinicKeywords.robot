@@ -535,8 +535,10 @@ Verify that all information has been edited
     ${EXPECTED_PET2}                                Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[3]
     Should Be Equal                                 ${EXPECTED_PET2}    ${CONFIGURED_PET2}
 
-#Add Vet: Isac
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------------
+#Add Vet: Isac
+
 Go to vet add page
 
     User Selects All Veterinarians
@@ -594,84 +596,69 @@ Comes back to the Home Page
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Remove Pet Visit by Renu
+#Remove Pet Visit Renu
+User Selects a Pet and Owner
+    #Go To Web Page
+    User Selects an Owner
+User Selects Visit For The Pet
 
-User Clicks Owners
-    Go To Web Page
-    Wait Until Element Is Visible               xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-    Element Should Be Visible                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a         # Owners Tab
-    Click Element                               xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/a
-
-Clicks All Owners
-    Element Should Be Visible                   xpath://*[@routerlink="/owners"]
-    Click Element                               xpath://*[@routerlink="/owners"]
-    Page Should Contain Element                 xpath:/html/body/app-root/app-owner-list/div/div/h2               #Owners List
-    Element Should Be Visible                   xpath:/html/body/app-root/app-owner-list/div/div/h2
-    Page Should Contain Element                 xpath://*[@class="table table-striped"]
-    Element Should Be Visible                   xpath://*[@class="table table-striped"]
-
-Visit is Added To The Pet
-    Wait Until Element Is Visible               xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
-    Element Should Be Visible                   xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
-    Click Element                               xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[2]/td[1]/a
-
-    Wait Until Element Is Visible               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
-    Element Should Be Visible                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
-    Click Element                               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
-    Input Text                                  //*[@id="visit"]/div[1]/div[1]/div/input    ${VISIT_DATE}
-    Input Text                                 //*[@id="description"]    ${VISIT_DESCRIPTION}
-    Click Button                               //*[@id="visit"]/div[2]/div/button[2]
-    Wait Until Page Contains Element           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
-    Element Should Be VIsible                  xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
+    Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
+    Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
+    Click Button                        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
+    Input Text                          //*[@id="visit"]/div[1]/div[1]/div/input    ${VISIT_DATE}
+    Input Text                          //*[@id="description"]    ${VISIT_DESCRIPTION}
+    Click Button                        //*[@id="visit"]/div[2]/div/button[2]
+    Wait Until Page Contains Element    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
+    Element Should Be VIsible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/dd[2]
 
 
 Deletes Pet Visit
-    Wait Until Page Contains Element          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-    Element Should Be Visible                 xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
-    Click Element                             xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+    Wait Until Page Contains Element   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+    Element Should Be Visible          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+    Click Element                      xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
 
 Verify Visit is Deleted
-     Wait Until Element Is Not Visible        ${VISIT_DATE}
-     Element Should Not Be Visible            ${VISIT_DATE}
-     Wait Until Element Is Not Visible        ${VISIT_DESCRIPTION}
-     Element Should Not Be Visible            ${VISIT_DESCRIPTION}
+     Wait Until Element Is Not Visible     ${VISIT_DATE}
+     Element Should Not Be Visible         ${VISIT_DATE}
+     Wait Until Element Is Not Visible     ${VISIT_DESCRIPTION}
+     Element Should Not Be Visible         ${VISIT_DESCRIPTION}
 
 User Selects Owner 6
-    User Clicks Owners
-    Click Element                             xpath://*[@routerlink="/owners"]
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-list/div/div/h2               #Owners List
-    Element Should Be Visible                 xpath:/html/body/app-root/app-owner-list/div/div/h2
-    Wait Until Element Is Visible             xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
-    Element Should Be Visible                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
-    Click Element                             xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
+    Go To Web Page
+    All Owners
+    wait until element is visible       xpath://*[@class="table table-striped"]
+    Element Should Be Visible           xpath://*[@class="table table-striped"]
+    Wait Until Element Is Visible       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
+    Element Should Be Visible           xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
+    Click Element                       xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[6]/td[1]/a
 
-Selects Pet Samantha
-    Wait until page contains                  Owner Information
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-detail/div/div/h2[2]
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
-    Element Should Be Visible                 xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[1]
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[2]
-    #Element Should Be Visible                ${SVISIT_DATE}
-    #Element Should Be Visible                ${SVISIT_DESCRIPTION}
+
+Selects Visit For Pet Samantha
+    Page Should Contain                  Pets and Visits
+    Wait Until Element IS Visible        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/thead/tr/th[3]
+    Element Should Be Visible            xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/thead/tr/th[3]
+
 
 Deletes Visit For Rabies Shot
-    Page Should Contain Element               xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
-
-    Element Should Be Visible                 xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
-    Click Button                              xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
+    Wait Until Element IS Visible       xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
+    Element Should Be Visible           xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
+    Click Button                        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[2]/app-visit-list/table/tr[2]/td[3]/button[2]
 
 Verify Visit is Deleted For Rabies Shot
-    Wait Until Element Is Not Visible        ${SVISIT_DATE}
-    Element Should Not Be Visible            ${SVISIT_DATE}
-    Wait Until Element Is Not Visible       ${SVISIT_DESCRIPTION}
-    Element Should Not Be Visible           ${SVISIT_DESCRIPTION}
-    Click Button                            xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/button[3]
-    Input Text                              xpath://*[@id="visit"]/div[1]/div[1]/div/input    ${SVISIT_DATE}
-    Input Text                              xpath://*[@id="description"]                      ${SVISIT_DESCRIPTION}
-    Click Button                            xpath://*[@id="visit"]/div[2]/div/button[2]
+    Wait Until Element Is Not Visible     ${SVISIT_DATE}
+    Element Should Not Be Visible         ${SVISIT_DATE}
+    Wait Until Element Is Not Visible     ${SVISIT_DESCRIPTION}
+    Element Should Not Be Visible         ${SVISIT_DESCRIPTION}
+    Teardown deleted Visit For Samantha
 
-#------------------------------------
+Teardown deleted Visit For Samantha
+    Click Button                        xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[1]/table/tr/td[1]/dl/button[3]
+    Input Text                          xpath://*[@id="visit"]/div[1]/div[1]/div/input    ${SVISIT_DATE}
+    Input Text                          xpath://*[@id="description"]                      ${SVISIT_DESCRIPTION}
+    Click Button                        xpath://*[@id="visit"]/div[2]/div/button[2]
+
+
+#------------------------------------------------------------------------------------------------
 #Click on Home button from Owners section - Jonna
 
 Check if button exist                       # BUG CONFIRMED // Remove when Home button exists
