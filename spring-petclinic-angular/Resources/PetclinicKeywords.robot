@@ -457,22 +457,12 @@ Added PetType Is Deleted From The List
 #Home Button From Veterinarians by Pravalika
 
 User Selects All Veterinarians
-        #Set Selenium Speed                              .01
         Go To Web Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
-        #User Clicks On Veterinarians Page
         Wait until page contains                        All
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
-        Wait until page contains                        dentistry
+        Wait until page contains Element                xpath://*[@id="vets"]/tbody/tr[1]/td[3]/button[1]           #EditVet
         
-#User Selects All Veterinarians
-        #Set Selenium Speed                              .01
-        #User Clicks On Veterinarians Page
-        #Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
-User Clicks On Veterinarians Page
-        Go To Web Page
-        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
-
 User Is At Veterinarians Page
         Page Should Contain button                      Home
 User Can Go Back To Home Page
