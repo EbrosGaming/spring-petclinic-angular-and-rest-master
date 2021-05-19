@@ -877,6 +877,7 @@ Add a new Specialty
     Input Text                                    id:name           ${New_Specialty_Name}
     Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
 Verify added Specialty
+    Sleep                                         0.1
     ${Actual_Specialty_Name}                      Get Value     xpath://*[@id="3"]
     Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
 Teardown Add a New Specialty
