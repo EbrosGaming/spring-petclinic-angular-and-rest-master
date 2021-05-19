@@ -534,32 +534,6 @@ Verify that all information has been edited
     Should Be Equal                                 ${EXPECTED_DATE}    ${CONFIGURED_DATE}
     ${EXPECTED_PET2}                                Get Text    xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[3]
     Should Be Equal                                 ${EXPECTED_PET2}    ${CONFIGURED_PET2}
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Specialty HOME Button by Renu
-
-User Is On Specialties Page
-    Go To Web Page
-    Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    Page Should Contain Element     xpath://*[@id="specialties"]
-
-User Is On Edit Specialties Page
-    User Is On Specialties Page
-    Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Element Should Be Visible       xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Page Should Not Contain Button   Home
-    #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
-    Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
-
-Clicks on Home Button
-    page should contain button       Home
-    click button                     Home
-
-Comes back to the Home Page
-    Page Should Contain             ${WELCOME_MESSAGE}
-    Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
 
 #------------------------------------
 #Click on Home button from Owners section - Jonna
@@ -794,10 +768,41 @@ Teardown deleted Visit For Samantha
     Input Text                          xpath://*[@id="description"]                      ${SVISIT_DESCRIPTION}
     Click Button                        xpath://*[@id="visit"]/div[2]/div/button[2]
 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Specialty HOME Button by Renu
+
+
+User Is On Specialties Page
+    Go To Web Page
+    Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    Page Should Contain Element     xpath://*[@id="specialties"]
+
+User Is On Edit Specialties Page
+    User Is On Specialties Page
+    Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Element Should Be Visible       xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Page Should Not Contain Button   Home
+    #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
+    Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
+
+Clicks on Home Button
+    page should contain button       Home
+    click button                     Home
+
+Comes back to the Home Page
+    Page Should Contain             ${WELCOME_MESSAGE}
+    Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
+
+
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Add Specialty
 
+user is on the Specialties Page
+    User Is On Specialties Page
 a user has added a new Specialty
     Add a new Specialty
 a user should be able to see the new Specialty in the list
