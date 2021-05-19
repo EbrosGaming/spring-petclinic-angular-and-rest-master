@@ -936,6 +936,23 @@ Deletes Newly Added specialty
 User Should Be Able To See Newly Added Specialty Has Been Removed
      Wait until page contains                      ${Expected_Specialties_Page}
      Page should not contain element               xpath://*[@id="3"]
+     
+     
+     
+User Is On Specialties Page
+    Go To Web Page
+    Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
+    Page Should Contain Element     xpath://*[@id="specialties"]
+User Is On Edit Specialties Page
+    User Is On Specialties Page
+    Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
+    Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Element Should Be Visible       xpath:/html/body/app-root/app-specialty-edit/div/div/h2
+    Page Should Not Contain Button   Home
+    #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
+    Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
 
 End Web Test
     Close Browser
