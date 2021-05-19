@@ -845,10 +845,27 @@ User Deletes The PetType
 PetType Is Removed From The List
       Wait until page contains                           ${Expected_Pettypes_Page}
       Page Should Not Contain Element                    xpath://*[@id="6"]
-#-----------------------------------------------------------------------------------------------------------------------
-#Add Specialty
+#--------------------------------------------------------------------------------------------------------------------------------------
+#Delete Speciality By Pravalika
 
-a user has added a new Specialty
+User Is On The Specialties Page
+    Go to Specialties
+Go to Specialties
+    Go To Web Page
+    Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
+    Verify on the Correct page
+Verify on the Correct page
+    ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
+    Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
+
+User Has Removed A Specialty
+    Click Element                                    xpath://*[@id="specialties"]/tbody/tr[3]/td[2]/button[2]
+#Bug Confirmed as Specialty is not deleting so verified with should contain
+User Should Be Able To See Specialty in the list
+    Page Should Contain Element                      xpath://*[@id="2"]
+
+
+a user have added a new Specialty
     Add a new Specialty
 a user should be able to see the new Specialty in the list
     Verify added Specialty
@@ -857,102 +874,19 @@ Add a new Specialty
     Click button                                  xpath:/html/body/app-root/app-specialty-list/div/div/div/button[2]
     Wait until page contains                      New Specialty
     Click element                                 id:name
-    Input Text                                    id:name           ${New_Specialty_Name}
+    Input Text                                    id:name                     ${New_Specialty_Name}
     Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
 Verify added Specialty
-    ${Actual_Specialty_Name}                      Get Value     xpath://*[@id="3"]
+    sleep                                         0.3
+    ${Actual_Specialty_Name}                      Get Value                   xpath://*[@id="3"]
     Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
 Teardown Add a New Specialty
     Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
-    Wait until page contains                      Specialties
+    Wait until page contains                      ${Expected_Specialties_Page}
     Page should not contain element               xpath://*[@id="3"]
-a user has added a new Specialty that already exists
-    Add existing Specialty
-Add existing Specialty
-    Click button                                  xpath:/html/body/app-root/app-specialty-list/div/div/div/button[2]
-    Wait until page contains                      New Specialty
-    Click element                                 id:name
-    Input Text                                    id:name           ${Existing_Specialty_Name}
-    Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
-a user should see two fields with the same Specialty
-  Verify added existing Specialty
-  Teardown Add a New Specialty
-Verify added existing Specialty
-    ${Actual_New_Specialty_Name}                  Get Value     xpath://*[@id="3"]
-    Should be equal                               ${Actual_New_Specialty_Name}    ${Existing_Specialty_Name}
-#-----------------------------------------------------------------------------------------------------------------------
-#Edit Specialty
 
-user edits A Specialty Name
-    wait until element is visible                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
-    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
-    Input Text                                      id=name                              ${New_Edited_Specialty_Name}
-    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
-user Verifies Specialty Is Updated
-    #sleep                                           .05
-    wait until element is visible                   xpath://*[@id="0"]
-    ${Edited_Specialty_Updated}                     Get Text                               xpath://*[@id="0"]
-    Should Contain                                  ${New_Edited_Specialty_Name}           ${Edited_Specialty_Updated}
-    TearDown After Verifying Updated Specialty
-TearDown After Verifying Updated Specialty
-    Wait Until Element Is Visible                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
-    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[1]/td[2]/button[1]
-    Input Text                                      id=name                              ${Actual_Specialty_Name}
-    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
-user edits Specialties Names with Same Name
-    user edits A Specialty Name
-    wait until element is visible                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Input Text                                      id=name                              ${New_Edited_Specialty_Name}
-    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
-user Verifies Same Specialty Name Can Be Added Multiple Times
-    user Verifies Specialty Is Updated
-    wait until element is visible                   xpath://*[@id="1"]
-    ${link_text}                                    Get Value                            xpath://*[@id="1"]
-    Should Not Be Equal                             ${Verify_Old_Specialty_existed}        ${link_text}
-    TearDown Second Edited Specialty After Verifying
-TearDown Second Edited Specialty After Verifying
-    sleep                                           .02
-    #wait until element is visible                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Click Element                                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Input Text                                      id=name                              ${Second_Specialty_Acutal_name}
-    Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
-#--------------------------------------------------------------------------------------------------------------------------------------
-#Delete Speciality By Pravalika
 
-User Has Removed A Specialty
-    Click Element                                    xpath://*[@id="specialties"]/tbody/tr[3]/td[2]/button[2]
-    
-#Bug Confirmed as Specialty is not deleting so verified with should contain
-User Should Be Able To See Specialty in the list
-    Wait Until Element Is Visible                    xpath://*[@id="2"]
-    Page Should Contain Element                      xpath://*[@id="2"]
-User Removes A Newly Added Specialty
-    Add a new Specialty
-    Verify added Specialty
-    Deletes Newly Added specialty
-Deletes Newly Added specialty
-     Teardown Add a New Specialty
-User Should Be Able To See Newly Added Specialty Has Been Removed
-     Wait until page contains                      ${Expected_Specialties_Page}
-     Page should not contain element               xpath://*[@id="3"]
-     
-     
-     
-User Is On Specialties Page
-    Go To Web Page
-    Wait Until Element Is Visible   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    click element                   xpath://html/body/app-root/div[1]/nav/div/ul/li[5]/a
-    Page Should Contain Element     xpath://*[@id="specialties"]
-User Is On Edit Specialties Page
-    User Is On Specialties Page
-    Page Should Contain Element     xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Click Button                    xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
-    Page Should Contain Element     xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Element Should Be Visible       xpath:/html/body/app-root/app-specialty-edit/div/div/h2
-    Page Should Not Contain Button   Home
-    #Click Element                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[1]/a/span[2]
-    Click Button                    xpath://*[@id="specialty"]/div[2]/div/button[1]
+
 
 End Web Test
     Close Browser
