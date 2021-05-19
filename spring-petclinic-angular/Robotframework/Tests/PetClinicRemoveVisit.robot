@@ -1,28 +1,30 @@
 *** Settings ***
-Documentation                               Infotiv Petclinic Test Functionality
-Resource                                    ../Resources/PetclinicKeywords.robot
-Library                                     SeleniumLibrary
-Test Setup                                  Begin WebTest
-Test Teardown                               End Web Test
+Documentation        Test to Delete Visit for a Pet
+Resource             ../Resources/PetclinicKeywords.robot
+Library              SeleniumLibrary
+Test Setup           Begin WebTest
+Test Teardown        End Web Test
 *** Variables ***
-${BROWSER}                                  chrome
-${URL}                                      http://localhost:4200/
-${Welcome_Message}                          Welcome to Petclinic
-${Expected_Specialties_Page}                Specialties
-${New_Specialty_Name}                       Opthalmology
-${Existing_Specialty_Name}                  Get Value     xpath://*[@id="0"]
-*** Test Cases ***
-Test Remove A Specialty
-    [Documentation]                    Test Delete an Existing Specialty
-    [Tags]                             Existing Specialty removed 
-    Given User Is On Specialties Page
-    When User Has Removed A Specialty
-    Then User Should Be Able To See Specialty in the list
-*** Test Cases ***
-Test To Add And Remove A Specialty
-    [Documentation]                    Test Delete New Added Specialty
-    [Tags]                             Newly Added Specialty removed
-    Given User Is On Specialties Page
-    When User Removes A Newly Added Specialty
-    Then User Should Be Able To See Newly Added Specialty Has Been Removed
+${BROWSER}                   chrome
+${URL}                       http://localhost:4200
+${WELCOME_MESSAGE}           Welcome to Petclinic
+${VISIT_DATE}                2021/05/07
+${VISIT_DESCRIPTION}         Checkup
+${SVISIT_DATE}               2013/01/01
+${SVISIT_DESCRIPTION}        rabies shot
 
+*** Test Cases ***
+Delete Visit For a Pet
+    [Documentation]     Delete Visit
+    [Tags]              Delete Pet Visit
+    Given User Selects a Pet and Owner
+    When User Selects Visit For The Pet
+    And Deletes Pet Visit
+    Then Verify Visit is Deleted
+Delete Pet Visit For Specific Owner and Specific Pet From Visits List
+    [Documentation]     Delete Visit For Specific Owner and Specific Pet From Visits List
+    [Tags]              Delete Specific Visit
+    Given User Selects Owner 6
+    And Selects Visit For Pet Samantha
+    And Deletes Visit For Rabies Shot
+    Then Verify Visit is Deleted For Rabies Shot
