@@ -5,7 +5,7 @@ Library              SeleniumLibrary
 Test Setup           Begin WebTest
 Test Teardown        End Web Test
 *** Variables ***
-${BROWSER}                   headlesschrome
+${BROWSER}                   chrome
 ${URL}                       http://localhost:4200
 ${WELCOME_MESSAGE}           Welcome to Petclinic
 ${VISIT_DATE1}                2021/05/07
