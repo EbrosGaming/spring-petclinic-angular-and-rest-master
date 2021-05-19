@@ -66,8 +66,8 @@ Verify Pet Added To Invalid Owner
     Click Element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[2]/ul/li[1]/a
     Wait until page contains                         Owners
     Click Element                                    xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[3]/td[1]/a
-    ${link_text}                                    Get Text          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
-    Should Not Be Equal                             ${Verify_Pet_Added_1}                  ${link_text}
+    ${link_text}                                     Get Text          xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/dd[1]
+    Should Not Be Equal                              ${Verify_Pet_Added_1}                  ${link_text}
     Delete Pet After Verifying in Invalid Owner
 Delete Pet After Verifying in Invalid Owner
 
@@ -860,7 +860,7 @@ user is on the Veterinarian Page
   Go To Web Page
   Click element                                      xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
   Click element                                      xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
-  Wait until page contains                           Veterinarians
+  Wait until page contains                           ${Expected_Vets_Page}
 
 user clicks on delete vet
   Click on Delete Vet
