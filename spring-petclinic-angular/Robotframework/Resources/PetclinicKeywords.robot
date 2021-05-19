@@ -891,7 +891,9 @@ User Removes A Newly Added Specialty
     Deletes Newly Added specialty
 
 Deletes Newly Added specialty
-     Teardown Add a New Specialty
+    Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
+    Wait until page contains                      ${Expected_Specialties_Page}
+    Page should not contain element               xpath://*[@id="3"]
 
 User Should Be Able To See Newly Added Specialty Has Been Removed
      Wait until page contains                      ${Expected_Specialties_Page}
