@@ -17,13 +17,16 @@ ${SVISIT_DESCRIPTION}        rabies shot
 Delete Visit For a Pet
     [Documentation]     Delete Visit
     [Tags]              Delete Pet Visit
+
     Given User Selects a Pet and Owner
     When User Selects Visit For The Pet
     And Deletes Pet Visit
     Then Verify Visit is Deleted
+
 Delete Pet Visit For Specific Owner and Specific Pet From Visits List
     [Documentation]     Delete Visit For Specific Owner and Specific Pet From Visits List
     [Tags]              Delete Specific Visit
+
     Given User Selects Owner 6
     And Selects Visit For Pet Samantha
     And Deletes Visit For Rabies Shot
