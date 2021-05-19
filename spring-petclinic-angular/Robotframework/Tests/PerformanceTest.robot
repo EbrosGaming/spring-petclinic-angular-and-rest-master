@@ -25,7 +25,7 @@ ${Verify_Last_Name}                         Anna Jackson
 #${Expected_Name}                            Bunny
 ${Expected_Pettypes_Page}                   Pet Types
 ${New_Pettype_Name}                         bunny
-${Existing_Pettype_Name}                    Get Value     xpath://*[@id="0"]
+#${Existing_Pettype_Name}                    Get Value     xpath://*[@id="0"]
 
 *** Test Cases ***
 Test To AddOwner->Add2Pets->DeletePet->ChangeLastName
