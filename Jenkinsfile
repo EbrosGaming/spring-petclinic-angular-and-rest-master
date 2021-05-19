@@ -40,7 +40,7 @@
 			}
 	     }		
         		
-        }
+        
 
         stage('Robot') {
             steps {
@@ -68,7 +68,7 @@
                 }
             }
         }
-    }
+    } //End Of Stages
 
    post{
         success{
@@ -89,5 +89,5 @@
 
         }
 	
-    }
+    
 }
