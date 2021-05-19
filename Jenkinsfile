@@ -53,7 +53,7 @@
     post{
         success{
         	emailext (
-            	subject: "PASSED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+            	subject: "BUILD PASSED: Job ""${env.JOB_NAME} [${env.BUILD_NUMBER}]"",
                 body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
                 		<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
                 to: "jonnahagberg@gmail.com"
@@ -61,7 +61,7 @@
         }
         failure{
         	emailext (
-            	subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+            	subject: "BUILD FAILED: Job ""${env.JOB_NAME} [${env.BUILD_NUMBER}]"",
             	body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
             			<p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
             	to: "jonnahagberg@gmail.com"
