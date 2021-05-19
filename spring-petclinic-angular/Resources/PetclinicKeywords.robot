@@ -762,6 +762,8 @@ Edit added veterinarian
      Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
      Wait Until Page Contains                 ${Veterinarian_Page}
 Verify veterinarian edited
+     Wait Until Page Contains                 ${Veterinarian_Page}
+     Sleep                                    0.1
      ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
      ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
      Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
