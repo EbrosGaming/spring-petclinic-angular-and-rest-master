@@ -456,9 +456,14 @@ Added PetType Is Deleted From The List
 #-------------------------------------------------------------------------------------------------------------------------------------------
 #Home Button From Veterinarians by Pravalika
 
-User Clicks On Veterinarians Page
+User Selects All Veterinarians
+        #Set Selenium Speed                              .01
         Go To Web Page
         Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+        #User Clicks On Veterinarians Page
+        Wait until page contains                        All
+        Click Element                                   xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
+        Wait until page contains                        dentistry
 User Selects All Veterinarians
         Set Selenium Speed                              .01
         User Clicks On Veterinarians Page
