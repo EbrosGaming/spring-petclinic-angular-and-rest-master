@@ -27,12 +27,7 @@ Edit Already Existed Veterinarian
     Given An User Is On Veterinarians Page
     When User Selects A Veterinarian To Edit
     Then Veterinarian Details Changed On the List
-Edit Newly Added Veterinarian
-    [Documentation]                               Editing Nely Added Veterinarian
-    [Tags]                                        Edit Veterinarian
-    Given An User Is On Veterinarians Page
-    When User Adds A Veterinarian And Edits Same Veterinarian
-    Then Newly Added Vet Edited
+
 Edit Veterinarian With Empty Field
     [Documentation]                               Editing With Empty Field
     [Tags]                                        Edit Veterinarian
