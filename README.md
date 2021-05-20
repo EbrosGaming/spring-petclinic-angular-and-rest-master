@@ -72,7 +72,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 ### Installation av **Insticksmoduler** i Jenkins
 
-1. Fösts så startar du Jenkins och sen logga in.
+1. Först så startar du Jenkins och sen logga in.
 
 2. Klicka nu på **Hantera Jenkins.**
 
@@ -84,11 +84,11 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
    (Du behöver nog starta om Jenkins efter du har installerat dem)
 
 6. Du behöver också installera **NodeJS.** Det gör du här https://nodejs.org/en/download/current/ och så väljer du den 
-   versiones som passar ditt operativsystem.
+   versionen som passar ditt operativsystem.
    
 7. Gå sedan igenom den installationen.
 
-8. Efter du har installerat NodeJS så öppnar du en valfri kommandotolk. (Jag rekommendera att du anväder NodeJS egna)
+8. Efter du har installerat NodeJS så öppnar du en valfri kommandotolk. (Jag rekommenderar att du anväder NodeJS egna)
 
 9. Nu behöver du bara skriva in ```npm install -g newman``` för att installera **Newman** som andvänds för att köra Postman tester i Jenkins.
    För att se om det installerades korrekt så kan du skriva ```newman run -v``` då borde det stå villken version du har.
@@ -105,8 +105,8 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 5. Om allt blir grönt så har alla testerna gått igenom som de ska och du är nu klar. Om någonting blir rött så fortsätt läsa.
 
-6. Om något blir rött så har det testet inte gått igenom som det ska. Då kan du klicka på den röda rutan och klicka på **Logs.**
-   Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du gå klicka på siffran under **Build History** sen klickar du på **Console Output.**
+6. Om något blir rött så har det testet inte gått igenom som det ska. Då kan du klicka på den röda rutan och klicka på **Logs** och sen trycker du på den röda rutan 
+   som det står **Shell Script.** Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du gå klicka på siffran under **Build History** sen klickar du på **Console Output.**
    Här kan du se allt som har körts och sen vad som gick fel.)
 
 7. Om det var Robot testet som blev rött så kan du klicka på siffran under **Build History** och sen klickar du på **Robot Results.** Sen under **Results** så finns det
