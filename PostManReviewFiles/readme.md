@@ -32,7 +32,7 @@
 ### maven spring-boot:run
 
 ### Verify Swagger File:
-	Launch a browser and access the following URL [http://localhost:9966/petclinic/](http://localhost:9966/petclinic/)
+	Launch a browser and access the following URL [http://localhost:9966/petclinic/]
 	
 
 ## Postman configuration
