@@ -806,10 +806,8 @@ user is on the Specialties Page
 Go to Specialties
     Go To Web Page
     Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
-    Verify on the right page
-Verify on the right page
-    ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
-    Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
+    Wait Until Element IS Visible                    xpath:/html/body/app-root/app-specialty-list/div/div/h2
+    Element Should Be Visible                        xpath:/html/body/app-root/app-specialty-list/div/div/h2
 
 a user has added a new Specialty
     Add a new Specialty
