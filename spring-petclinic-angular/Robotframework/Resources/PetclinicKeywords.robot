@@ -911,7 +911,7 @@ TearDown Second Edited Specialty After Verifying
     
     
 #--------------------------------------------------------------------------------------------------------------------------------------
-#Delete Speciality By Pravalika
+#Delete Specialty By Pravalika
 
 User Has Removed A Specialty
     Click Element                                    xpath://*[@id="specialties"]/tbody/tr[3]/td[2]/button[2]
