@@ -931,7 +931,81 @@ User Should Be Able To See Newly Added Specialty Has Been Removed
      Page should not contain element               xpath://*[@id="3"]
 
     
+#---------------------------------------------------------------------------------------------------------------------
+#Edit Veterinarian
+#Gherkin
+An User Is On Veterinarians Page
+      User Selects All Veterinarians
+User Selects A Veterinarian To Edit
+      Click Element                           xpath://*[@id="vets"]/tbody/tr[1]/td[3]/button[1]
+      Wait Until Page Contains                ${Edit_Veterinarian_Page}
+      Input Text                              id=firstName                       ${Edited_Vet_Firstname}
+      Input Text                              id=lastName                        ${Edited_Vet_Lastname}
+      Click Element                           xpath://*[@id="vet_form"]/div[5]/div/button[2]
+      Wait Until Page Contains                ${Edited_Vet_Lastname}
+      Wait Until Page Contains                ${Veterinarian_Page}
+Veterinarian Details Changed On the List
+      Wait Until Page Contains                ${Veterinarian_Page}
+      Page Should Contain Element              xpath://*[@id="vets"]/tbody/tr[1]/td[1]
+      Tear Down Back To Original Veterinarian
+Tear Down Back To Original Veterinarian
+      Click Element                           xpath://*[@id="vets"]/tbody/tr[1]/td[3]/button[1]
+      Wait Until Page Contains                ${Edit_Veterinarian_Page}
+      Input Text                              id=firstName                       ${Original_Owner_FirstName}
+      Input Text                              id=lastName                        ${Original_Owner_LastName}
+      Click Element                           xpath://*[@id="vet_form"]/div[5]/div/button[2]
+      Wait Until Page Contains                ${Veterinarian_Page}
 
+User Selects A Veterinarian And Edits With Empty Field
+      Click Element                           xpath://*[@id="vets"]/tbody/tr[1]/td[3]/button[1]
+      Wait Until Page Contains                ${Edit_Veterinarian_Page}
+      Input Text                              id=firstName                       ${Edited_Vet_Firstname}
+      Clear element text                      xpath://*[@id="lastName"]
+      Click element                           xpath://*[@id="lastName"]
+      Press Keys                              xpath://*[@id="lastName"]               a    BACKSPACE
+User Should See An Erorr Message
+      Wait Until Page Contains                ${LastName_Required_Message}
+      Page Should Contain Element             xpath://*[@id="vet_form"]/div[3]/div/span[2]
+
+On Veterinarians page
+     Go To Web Page
+     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
+     Wait Until Page Contains                 New Veterinarian
+New Veterinarian is Added
+     Input Text                               xpath://*[@id="firstName"]     ${New_Vet_Firstname}
+     Input Text                               xpath://*[@id="lastName"]      ${New_Vet_Lastname}
+     Select from list by label                id:specialties                 ${Vet_Type}
+     Click Button                             xpath://*[@id="vet"]/div[5]/div/button[2]
+     Wait Until Page Contains                 ${Veterinarian_Page}
+Select the Veterinarian to Edit
+     wait until page contains element         xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+     Page should contain element              xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+Edit added veterinarian
+     Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[1]
+     Wait Until Page Contains                 ${Edit_Veterinarian_Page}
+     Input Text                               xpath://*[@id="firstName"]     ${Edited_Vet_Firstname}
+     Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
+     Wait Until Page Contains                 ${Veterinarian_Page}
+Verify veterinarian edited
+     Wait Until Page Contains                 ${Veterinarian_Page}
+     ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+     ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
+     Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
+Teardown after added veterinarian is edited
+      Wait Until Page Contains                 ${Veterinarian_Page}
+      Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
+      Page should not contain                  xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+#Gherkin
+User Adds A Veterinarian And Edits Same Veterinarian
+     On Veterinarians page
+     New Veterinarian is Added
+     Select the Veterinarian to Edit
+     Edit added veterinarian
+Newly Added Vet Edited
+     Verify veterinarian edited
+     Teardown after added veterinarian is edited
+     
 
 
 #-----------------------------------------------------------------------------------
@@ -972,65 +1046,6 @@ Verify multiple Pet Types are deleted
     wait until page contains                        Pet Types
     Page should not contain element                 xpath://*[@id="7"]
     Page should not contain element                 xpath://*[@id="6"]
-
-#-----------------------------------------------------------------------------------
-#Edit Veterinarian ---Swetha
-On Veterinarians page
-     Go To Web Page
-     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
-     Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
-New Veterinarian is Added
-     Input Text                               xpath://*[@id="firstName"]     ${New_Vet_Firstname}
-     Input Text                               xpath://*[@id="lastName"]      ${New_Vet_Lastname}
-     Select from list by label                id:specialties    ${Vet_Type}
-     Click Button                             xpath://*[@id="vet"]/div[5]/div/button[2]
-Select the Veterinarian to Edit
-     Set selenium speed                       0.5s
-     wait until page contains element         xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-     Page should contain element              xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-Edit added veterinarian
-     Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[1]
-     Input Text                               xpath://*[@id="firstName"]     ${Edited_Vet_Firstname}
-     Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
-Verify veterinarian edited
-     ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-     ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
-     Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
-Teardown after added veterinarian is edited
-      Click Button                             xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
-      Page should not contain                  xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-
-#---------------------------------------------------------------------------------------
-#Edit multiple veterinarians -- Swetha
-Edit multiple veterinarians
-   New Veterinarian is Added
-   Click Button                             xpath:/html/body/app-root/app-vet-list/div/div/div/button[2]
-   New Veterinarian is Added
-   wait until page contains element         xpath://*[@id="vets"]/tbody/tr[8]/td[1]
-   Page should contain element              xpath://*[@id="vets"]/tbody/tr[8]/td[1]
-   sleep                                    0.2s
-   Select the Veterinarian to Edit
-    #edit button
-   Click Button                             xpath://*[@id="vets"]/tbody/tr[8]/td[3]/button[1]
-   Input Text                               xpath://*[@id="firstName"]     ${Edited_Vet_Firstname}
-   #save
-   Click Button                             xpath://*[@id="vet_form"]/div[5]/div/button[2]
-   Edit added veterinarian
-Verify multiple Veterinarians edited
-    ${Actual_Vet_Name2_edited}               get text   xpath://*[@id="vets"]/tbody/tr[8]/td[1]
-    ${Actual_Vet_Name_edited}                get text   xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-    ${Actual_Specialties_added}              get text   xpath://*[@id="vets"]/tbody/tr[7]/td[2]/div
-    Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}      ${Actual_Vet_Name2_edited}
-    Should be equal                          ${Edited_Vet_Firstname} ${New_Vet_Lastname}     ${Actual_Vet_Name_edited}
-Teardown after multiple Veterinarians added and edited
-    Set Selenium speed                     0.5s
-    Click Button                           xpath://*[@id="vets"]/tbody/tr[8]/td[3]/button[2]
-    Click Button                           xpath://*[@id="vets"]/tbody/tr[7]/td[3]/button[2]
-    Page should not contain                xpath://*[@id="vets"]/tbody/tr[8]/td[1]
-    Page should not contain                xpath://*[@id="vets"]/tbody/tr[7]/td[1]
-
-
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
