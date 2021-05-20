@@ -9,8 +9,7 @@ typen innehåller de kompilerade javaklasser som utgör en webapplikation. I fil
 Jenkins också en så kallad servlet container och därmed allt som behövs för att köra systemet.
 
 ### Installation av Jenkin
-1. Ladda ner filen jenkins.war från https://jenkins.io/download/ (klicka inte på Download utan
-   leta efter Generic Java Package under LTS)
+1. Ladda ner filen jenkins.war från https://jenkins.io/download/ (Leta efter Generic Java Package under LTS)
    
 2. Starta ett skal eller en kommandotolk och ställ dig i samma katalog som filen jenkins.war
    ligger i
@@ -51,7 +50,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
    
 ### Skapa ett pipelinejobb i Jenkins
 
-1. Först så starta du Jenkins och sen logga in.
+1. Först så startar du Jenkins och sen logga in.
 
 2. Sen klickar du på **Skapa nytt item.**
 
@@ -67,7 +66,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 8. Sen under **SCM** så väljer du **Git.**
 
-9. Sen under **Repositories URL** så skriver du in ```https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git```
+9. Sen under **Repository URL** så skriver du in ```https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git```
 
 10. Sen under **Branch Specifier** så ska det stå **main.** Sen klickar du på spara.
 
@@ -96,7 +95,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
    
 ### Testa att köra Pipelinejobbet
 
-1. Först så starta du Jenkins och sen logga in.
+1. Först så startar du Jenkins och sen logga in.
 
 2. Gå sedan in på Pipelinjobbet som du skapade innan.
 
@@ -136,7 +135,7 @@ Det är mycket lättare att använda en dedikerad Jenkins server om man redan ha
 
 8. Sen under **SCM** så väljer du **Git.**
 
-9. Sen under **Repositories URL** så skriver du in ```https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git```
+9. Sen under **Repository URL** så skriver du in ```https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git```
 
 10. Sen under **Branch Specifier** så ska det stå **main.** Sen klickar du på spara.
 
