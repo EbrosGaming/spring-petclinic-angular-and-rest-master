@@ -106,7 +106,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 5. Om allt blir grönt så har alla testerna gått igenom som de ska och du är nu klar. Om någonting blir rött så fortsätt läsa.
 
 6. Om något blir rött så har det testet inte gått igenom som det ska. Då kan du klicka på den röda rutan och klicka på **Logs** och sen trycker du på den röda rutan 
-   som det står **Shell Script.** Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du gå klicka på siffran under **Build History** sen klickar du på **Console Output.**
+   som det står **Shell Script.** Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du klicka på siffran under **Build History** sen klickar du på **Console Output.**
    Här kan du se allt som har körts och sen vad som gick fel.)
 
 7. Om det var Robot testet som blev rött så kan du klicka på siffran under **Build History** och sen klickar du på **Robot Results.** Sen under **Results** så finns det
@@ -119,7 +119,7 @@ Det är mycket lättare att använda en dedikerad Jenkins server om man redan ha
 
 ### Skapa ett pipelinejobb i Jenkins
 
-1. Först så går du in på sidan är din server kör Jenkins och sen logga in.
+1. Först så startar du Jenkins och sen logga in.
 
 2. Sen klickar du på **Skapa nytt item.**
 
@@ -141,7 +141,7 @@ Det är mycket lättare att använda en dedikerad Jenkins server om man redan ha
 
 ### Testa att köra Pipelinejobbet
 
-1. Först så går du in på sidan är din server kör Jenkins och sen logga in.
+1. Först så startar du Jenkins och sen logga in.
 
 2. Gå sedan in på Pipelinjobbet som du skapade innan.
 
@@ -151,8 +151,8 @@ Det är mycket lättare att använda en dedikerad Jenkins server om man redan ha
 
 5. Om allt blir grönt så har alla testerna gått igenom som de ska och du är nu klar. Om någonting blir rött så fortsätt läsa.
 
-6. Om något blir rött så har det testet inte gått igenom som det ska. Då kan du klicka på den röda rutan och klicka på **Logs.**
-   Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du gå klicka på siffran under **Build History** sen klickar du på **Console Output.**
+6. Om något blir rött så har det testet inte gått igenom som det ska. Då kan du klicka på den röda rutan och klicka på **Logs** och sen trycker du på den röda rutan 
+   som det står **Shell Script.** Här kan du se vad som gick fel. (Om det är mer en ett fel så kan du klicka på siffran under **Build History** sen klickar du på **Console Output.**
    Här kan du se allt som har körts och sen vad som gick fel.)
 
 7. Om det var Robot testet som blev rött så kan du klicka på siffran under **Build History** och sen klickar du på **Robot Results.** Sen under **Results** så finns det
