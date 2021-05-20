@@ -1014,44 +1014,33 @@ Newly Added Vet Edited
 
 #-----------------------------------------------------------------------------------
 
-#Test below have problems with speed - fix at some point
+#Delete PetType
 
+An User Is On PetType Page
+    Go to Pet Types
+User Deletes Already Existed PetType
+    Wait until page contains                      ${Expected_Pettypes_Page}
+    Click Element                                 xpath://*[@id="pettypes"]/tbody/tr[6]/td[2]/button[2]
+PetType Deleted From The List
+    Verify PetType Deleted
+    Teardown Adding Back To PetType
+Verify PetType Deleted
+    Wait until page contains                     ${Expected_Pettypes_Page}
+    Page Should Not Contain                      ${Deleted_PetType}
+Teardown Adding Back To PetType
+    Click Element                                xpath://html/body/app-root/app-pettype-list/div/div/div/button[2]
+    Input Text                                   id=name                            ${Deleted_PetType}
+    Click Element                                xpath://*[@id="pettype"]/div[2]/div/button
+    Wait until page contains                    ${Expected_Pettypes_Page}
+    Page Should Contain Element                  xpath://*[@id="5"]
 
-#---------------------------------------------------------------------------------
-# Delete PetType -Swetha
-
-Select the Pet Type to delete
-
-    wait until page contains element                xpath://*[@id="6"]
-    Page should contain element                     xpath://*[@id="6"]
-
-Delete the added Pet Type
-
-    Click button                                    xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
-
-Verify Pet Type is deleted
-
-    wait until page contains                        Pet Types
-    Page should not contain element                 xpath://*[@id="6"]
-
-#--------------------------------------------------------------------------------
-# Deleting multiple PetTypes - Swetha
-
-Delete multiple Pet Types
-
-    wait until page contains element                xpath://*[@id="7"]
-    Page should contain element                     xpath://*[@id="7"]
-    Select the pettype to delete
-    Click button                                    xpath://*[@id="pettypes"]/tbody/tr[8]/td[2]/button[2]
-    Click button                                    xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
-
-Verify multiple Pet Types are deleted
-
-    wait until page contains                        Pet Types
-    Page should not contain element                 xpath://*[@id="7"]
-    Page should not contain element                 xpath://*[@id="6"]
-
-
-
+User Deletes Newly Added PetType
+    Add a new Pet Type
+    Verify added Pet Type
+    Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+    Wait until page contains                      ${Expected_Pettypes_Page}
+Added PetType Is Deleted From The List
+    Wait until page contains                      ${Expected_Pettypes_Page}
+    Page should not contain element               xpath://*[@id="6"]
 End Web Test
     close browser
