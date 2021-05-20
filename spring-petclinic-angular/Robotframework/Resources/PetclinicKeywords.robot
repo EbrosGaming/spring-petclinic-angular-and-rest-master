@@ -891,6 +891,7 @@ User Removes A Newly Added Specialty
     Deletes Newly Added specialty
 
 Deletes Newly Added specialty
+    Wait Until Element Is Visible                 xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
     Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
     
 User Should Be Able To See Newly Added Specialty Has Been Removed
