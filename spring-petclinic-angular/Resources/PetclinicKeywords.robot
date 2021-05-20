@@ -932,6 +932,7 @@ User Should Be Able To See Newly Added Specialty Has Been Removed
 
     
 #---------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------
 #Edit Veterinarian
 #Gherkin
 An User Is On Veterinarians Page
@@ -968,6 +969,7 @@ User Should See An Erorr Message
       Page Should Contain Element             xpath://*[@id="vet_form"]/div[3]/div/span[2]
 
 On Veterinarians page
+     #Set Selenium speed                       0.15
      Go To Web Page
      Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
      Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
@@ -976,6 +978,7 @@ New Veterinarian is Added
      Input Text                               xpath://*[@id="firstName"]     ${New_Vet_Firstname}
      Input Text                               xpath://*[@id="lastName"]      ${New_Vet_Lastname}
      Select from list by label                id:specialties                 ${Vet_Type}
+     Wait Until Page Contains                 ${Vet_Type}
      Click Button                             xpath://*[@id="vet"]/div[5]/div/button[2]
      Wait Until Page Contains                 ${Veterinarian_Page}
 Select the Veterinarian to Edit
