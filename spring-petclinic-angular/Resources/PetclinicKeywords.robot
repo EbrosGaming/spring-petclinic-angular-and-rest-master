@@ -559,6 +559,7 @@ Add a new vet
     Input Text                                      id=lastName     ${LAST_NAME}
     Click Element                                   xpath://*[@id="specialties"]/option[2]
     Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[2]
+    Wait Until Page Contains                        ${FULL_NAME}
 
 Verify that vet has been added
 
