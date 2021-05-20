@@ -1,6 +1,6 @@
 # Spring-petclinic-angular-and-rest-master
 
-Man kan antingen köra Jenkins **lokalt** eller om man har en **dedikerad server** så kan man använda den. 
+Man kan antingen köra Jenkins **lokalt** eller så kan man använda en **dedikerad server.** 
 
 ## Hur man kör alla testmiljöer **lokalt** i Jenkins
 Det finns flera sätt att köra Jenkins. Nedan redgörs för hur man startar systemet genom att som
