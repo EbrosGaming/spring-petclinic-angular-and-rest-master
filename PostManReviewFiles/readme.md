@@ -8,11 +8,11 @@
 	  This collection file consists all postman test scripts for PetClinic APIs.
 
 
-//Source code
+### //Source code
 ### **Prerequiste**:
 	  GIT should be installed and configured.
 
-###**Steps to clone the source:**
+### Steps to clone the source:
 	 Start command prompt
 	 Set the location in command to clone the source (cd <source_location>)
 	 Execute the following command
