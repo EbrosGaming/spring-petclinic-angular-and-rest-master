@@ -1,28 +1,35 @@
 *** Settings ***
-Documentation                               Infotiv Petclinic Performance Test
-Resource                                    ../Resources/PetclinicKeywords.robot
-Library                                     SeleniumLibrary
-Test Setup                                  Begin WebTest
-Test Teardown                               End Web Test
+Documentation                                     Infotiv Petclinic Test Functionality
+Resource                                          ../Resources/PetclinicKeywords.robot
+Library                                           SeleniumLibrary
+Test Setup                                        Begin WebTest
+Test Teardown                                     End Web Test
 
 *** Variables ***
-${BROWSER}                                  chrome
-${URL}                                      http://localhost:4200/
-${Welcome_Message}                          Welcome to Petclinic
-${Expected_Pettypes_Page}                   Pet Types
-${New_Pettype_Name}                         bunny
-${Deleted_PetType}                          hamster
+${BROWSER}                                        chrome
+${URL}                                            http://localhost:4200/
+${Welcome_Message}                                Welcome to Petclinic
+${Expected_Pettypes_Page}                         Pet Types
+${New_Pettype_Name}                               bunny
 *** Test Cases ***
-Delete Already Existed Pet Type
-    [Documentation]                               Deleting Existed PetType
-    [Tags]                                        Delete PetType
-    Given An User Is On PetType Page
-    When User Deletes Already Existed PetType
-    Then PetType Deleted From The List
+Test PetType is deleted
+    [Documentation]                               Deleting Pet Type
+    [Tags]                                        Delete Pet Type
+    Given Go To Pet Types
+    And Add a new Pet Type
+    And Verify added Pet Type
+    And Select the Pet Type to delete
+    And Delete the added Pet Type
+    Then Verify Pet Type is deleted
 
-Delete Nely Added Pet Type
-    [Documentation]                               Deleting Newly Added PetType
-    [Tags]                                        Delete PetType
-    Given An User Is On PetType Page
-    When User Deletes Newly Added PetType
-    Then Added PetType Is Deleted From The List
+Test multiple PetTypes are deleting
+    [Documentation]                               Deleting Multiple Pet Types#                                 Delete Multiple Pet Types
+    [Tags]                                        Delete Pet Type
+    Given Go To Pet Types
+    And Add a new Pet Type
+    And Verify added Pet Type
+    And Add a new Pet Type
+    And Verify added Pet Type
+    And Delete multiple Pet Types
+    Then Verify multiple Pet Types are deleted
+

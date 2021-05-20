@@ -15,7 +15,6 @@ ${New_Edited_PetType_Name}                  rabbit
 ${Verify_Old_PetType_existed}               hamster
 
 
-
 *** Test Cases ***
 Editing A Pet Type
   [Documentation]                          Testing Editing Pet type and verifying
@@ -25,9 +24,9 @@ Editing A Pet Type
     Then User Verifies Edited Pet Added
 
 *** Test Cases ***
-Editing Same Pet Type Name
+Editing Same Pet Type Name Multiple Times
   [Documentation]                          Testing Editing Same Name to Diffrent Pet Types
-  [Tags]                                   Same PetType name For Multiles Times
+  [Tags]                                   Same PetType Name For Multiles Times
     Given User Clicks On PetTypes
     When User Edit's PetTypes with Same Name
     Then User Verifies Same Pet Type Name Can Add Multiple Times
