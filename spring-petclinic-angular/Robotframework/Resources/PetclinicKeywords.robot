@@ -802,7 +802,15 @@ Comes back to the Home Page
 #Add Specialty
 
 user is on the Specialties Page
-    User Is On Specialties Page
+    Go to Specialties
+Go to Specialties
+    Go To Web Page
+    Click element                                    xpath:/html/body/app-root/div[1]/nav/div/ul/li[5]/a/span[2]
+    Verify on the right page
+Verify on the right page
+    ${Actual_Specialties_Page}                       Get Text    xpath:/html/body/app-root/app-specialty-list/div/div/h2
+    Should be equal                                  ${Actual_Specialties_Page}   ${Expected_Specialties_Page}
+
 a user has added a new Specialty
     Add a new Specialty
 a user should be able to see the new Specialty in the list
@@ -815,8 +823,10 @@ Add a new Specialty
     Input Text                                    id:name           ${New_Specialty_Name}
     Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
 Verify added Specialty
-    ${Actual_Specialty_Name}                      Get Value     xpath://*[@id="3"]
-    Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
+    Wait Until Element is Visible                 xpath://*[@id="3"]
+    Page Should Contain                           ${New_Specialty_Name}
+    #${Actual_Specialty_Name}                     Get Value     xpath://*[@id="3"]
+    #Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
 Teardown Add a New Specialty
     Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
     Wait until page contains                      Specialties
