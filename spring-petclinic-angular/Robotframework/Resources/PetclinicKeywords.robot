@@ -821,8 +821,8 @@ Add a new Specialty
     Input Text                                    id:name           ${New_Specialty_Name}
     Click element                                 xpath://*[@id="specialty"]/div[2]/div/button
 Verify added Specialty
-    ${Actual_Specialty_Name}                      Get Value     xpath://*[@id="3"]
-    Should be equal                               ${Actual_Specialty_Name}    ${New_Specialty_Name}
+    Wait Until Element Is Visible                 xpath://*[@id="3"]
+    Element Should Be Visible                     xpath://*[@id="3"]
 Teardown Add a New Specialty
     Click button                                  xpath://*[@id="specialties"]/tbody/tr[4]/td[2]/button[2]
     Wait until page contains                      Specialties
@@ -839,8 +839,7 @@ a user should see two fields with the same Specialty
   Verify added existing Specialty
   Teardown Add a New Specialty
 Verify added existing Specialty
-    ${Actual_New_Specialty_Name}                  Get Value     xpath://*[@id="3"]
-    Should be equal                               ${Actual_New_Specialty_Name}    ${Existing_Specialty_Name}
+   Verify added Specialty
 
 #-----------------------------------------------------------------------------------------------------------------------
 #Edit Specialty
@@ -905,8 +904,12 @@ User Should Be Able To See Newly Added Specialty Has Been Removed
      Wait until page contains                      ${Expected_Specialties_Page}
      Page should not contain element               xpath://*[@id="3"]
 
-#-----------------------------------------------------------------------------------
 
+
+
+
+
+#-----------------------------------------------------------------------------------
 
 End Web Test
     close browser
