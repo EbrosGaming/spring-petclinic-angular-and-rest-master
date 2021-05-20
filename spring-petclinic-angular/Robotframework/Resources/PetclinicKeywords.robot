@@ -559,12 +559,13 @@ Add a new vet
     Input Text                                      id=lastName     ${LAST_NAME}
     Click Element                                   xpath://*[@id="specialties"]/option[2]
     Click Element                                   xpath://*[@id="vet"]/div[5]/div/button[2]
+    Wait Until Page Contains                        ${FULL_NAME}
 
 Verify that vet has been added
 
-    ${EXPECTED_VET}                                 Get Text    xpath://*[@id="vets"]/tbody/tr[7]/td[1]
+    ${EXPECTED_VET}                                 Get Text           xpath://*[@id="vets"]/tbody/tr[7]/td[1]
     Should Be Equal                                 ${EXPECTED_VET}    ${FULL_NAME}
-    ${EXPECTED_SPECIALTIES}                         Get Text    xpath://*[@id="vets"]/tbody/tr[7]/td[2]
+    ${EXPECTED_SPECIALTIES}                         Get Text           xpath://*[@id="vets"]/tbody/tr[7]/td[2]
     Should Be Equal                                 ${EXPECTED_SPECIALTIES}    ${SPECIALTIES}
 
 Delete newly added vet
@@ -933,6 +934,7 @@ User Should Be Able To See Newly Added Specialty Has Been Removed
     
 #---------------------------------------------------------------------------------------------------------------------
 #Edit Veterinarian
+
 #Gherkin
 An User Is On Veterinarians Page
       User Selects All Veterinarians
@@ -968,6 +970,7 @@ User Should See An Erorr Message
       Page Should Contain Element             xpath://*[@id="vet_form"]/div[3]/div/span[2]
 
 On Veterinarians page
+     #Set Selenium speed                       0.15
      Go To Web Page
      Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
      Click Element                            xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[2]/a/span[2]
