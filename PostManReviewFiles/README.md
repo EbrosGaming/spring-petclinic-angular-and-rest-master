@@ -34,7 +34,7 @@
 
 ### Verify Swagger File:
 	Launch a browser and access the following URL : [http://localhost:9966/petclinic/](http://localhost:9966/petclinic/)
-	![image](https://user-images.githubusercontent.com/77210719/119103695-be07d600-ba1b-11eb-9593-1a036eeea06d.png)
+	
 
 	
 
@@ -57,3 +57,7 @@
 
 ## Add new test scenario to collection
          //To Be Decided
+	 
+	
+
+
