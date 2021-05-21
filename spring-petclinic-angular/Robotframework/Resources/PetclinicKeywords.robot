@@ -1021,7 +1021,6 @@ Newly Added Vet Edited
 
 Select the Pet Type to delete
     Wait until page contains                        ${Expected_Pettypes_Page}
-    Should contain element                          xpath://*[@id="6"]
 
 Delete the added Pet Type
     Wait until page contains                        ${Expected_Pettypes_Page}
