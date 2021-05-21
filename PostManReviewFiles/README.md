@@ -46,7 +46,9 @@ Launch a browser and access the following URL :
 
  http://localhost:9966/petclinic/
  
- ![Swgger_url](git-res/SwaggerImage.PNG)
+ ![Swagger_url](git_res/Swagger_Image.PNG)
+ 
+ 
 	
 
 	
