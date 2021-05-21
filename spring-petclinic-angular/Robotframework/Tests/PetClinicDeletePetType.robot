@@ -11,11 +11,12 @@ ${URL}                                            http://localhost:4200/
 ${Welcome_Message}                                Welcome to Petclinic
 ${Expected_Pettypes_Page}                         Pet Types
 ${New_Pettype_Name}                               bunny
+
 *** Test Cases ***
 Test PetType is deleted
     [Documentation]                               Deleting Pet Type
     [Tags]                                        Delete Pet Type
-    Given Go To Pet Types
+    Given Go to Pet Types
     And Add a new Pet Type
     And Verify added Pet Type
     And Select the Pet Type to delete
@@ -27,9 +28,8 @@ Test multiple PetTypes are deleting
     [Tags]                                        Delete Pet Type
     Given Go To Pet Types
     And Add a new Pet Type
-    And Verify added Pet Type
+    Verify added Pet Type
     And Add a new Pet Type
-    And Verify added Pet Type
     And Delete multiple Pet Types
     Then Verify multiple Pet Types are deleted
 
