@@ -9,55 +9,6 @@
 			"name": "PCOwners",
 			"item": [
 				{
-					"name": "Get Owners",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
-									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
-									"const response = pm.response.json();\r",
-									"\r",
-									"pm.test(\"Verify Owners List is Displayed in Response \" , () => console.log(response));\r",
-									"\r",
-									"pm.test(\"Total No of Owners Displayed  : \" +response.length , function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.length).to.eql(response.length);\r",
-									"});\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/api/owners",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"owners"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Add Owner",
 					"event": [
 						{
@@ -295,44 +246,6 @@
 		{
 			"name": "PCPets",
 			"item": [
-				{
-					"name": "Get Pets",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
-									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000)); \r",
-									"const response = pm.response.json();\r",
-									"pm.test(\"Total No of Pets Displayed  : \" +response.length , function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.length).to.eql(response.length);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/api/pets",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"pets"
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "Add Pet to the Owner",
 					"event": [
@@ -585,68 +498,6 @@
 		{
 			"name": "PCPetTypes",
 			"item": [
-				{
-					"name": "Get PetTypes",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var jsonData = pm.response.json();\r",
-									"\r",
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});\r",
-									"pm.test(\"Response time is  \"+pm.response.responseTime + \"ms\");  \r",
-									"pm.test(\"Verify if Response time is below 1s\",() => pm.expect(pm.response.responseTime).to.be.below(1000));  \r",
-									"pm.globals.set(\"amountOfPetTypesIds\", jsonData.length); \r",
-									"console.log(pm.globals.get(\"amountOfPetTypesIds\"));\r",
-									"\r",
-									"const response = pm.response.json();\r",
-									"\r",
-									"\r",
-									"pm.test(\"Verify Pettypes List is Displayed in Response \" , () => console.log(response));\r",
-									"\r",
-									"pm.test(\"Total No of Owners Displayed  : \" +response.length , function () {\r",
-									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.length).to.eql(response.length);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/api/pettypes",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"pettypes"
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "Add PetType",
 					"event": [
