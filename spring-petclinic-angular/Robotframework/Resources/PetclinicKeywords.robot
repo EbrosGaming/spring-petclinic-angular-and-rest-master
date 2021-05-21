@@ -390,6 +390,7 @@ a user should be able to see the new Pet Type in the list
 #Add existing Pet Type - Jonna
 
 Add existing pet
+   Wait until page contains                      ${Expected_Pettypes_Page}
    ${Existing_Pettype_Name}                      Get Value      xpath://*[@id="0"]
    Click button                                  xpath:/html/body/app-root/app-pettype-list/div/div/div/button[2]
    Wait until page contains                      New Pet Type
@@ -398,6 +399,8 @@ Add existing pet
    Click element                                 xpath://*[@id="pettype"]/div[2]/div/button
 
 Verify added existing Pet Type
+   ${Existing_Pettype_Name}                      Get Value      xpath://*[@id="0"]
+   Wait until page contains                      ${Expected_Pettypes_Page}
    ${Actual_New_Pettype_Name}                    Get Value     xpath://*[@id="6"]
    Should be equal                               ${Actual_New_Pettype_Name}    ${Existing_Pettype_Name}
 
@@ -705,8 +708,8 @@ PetType Is Removed From The List
 
     Wait until page contains                        ${Expected_Pettypes_Page}
     Page Should Not Contain Element                 xpath://*[@id="6"]
-    
-    
+
+
 #-----------------------------------------------------------------------------------------------------------------------
 #Add Visit by Swetha
 User Selects an Owner
@@ -829,7 +832,7 @@ Clicks on Home Button
 Comes back to the Home Page
     Page Should Contain             ${WELCOME_MESSAGE}
     Element Should Be Visible       xpath:/html/body/app-root/app-welcome/div/div/div/div/img
-    
+
 #-----------------------------------------------------------------------------------------------------------------------
 #Add Specialty by Renu
 
@@ -871,7 +874,7 @@ a user should see two fields with the same Specialty
   Teardown Add a New Specialty
 Verify added existing Specialty
    Verify added Specialty
-   
+
 #-----------------------------------------------------------------------------------------------------------------------
 #Edit Specialty by Renu
 
@@ -909,8 +912,8 @@ TearDown Second Edited Specialty After Verifying
     Click Element                                   xpath://*[@id="specialties"]/tbody/tr[2]/td[2]/button[1]
     Input Text                                      id=name                              ${Second_Specialty_Acutal_name}
     Click Element                                   xpath://*[@id="specialty"]/div[2]/div/button[1]
-    
-    
+
+
 #--------------------------------------------------------------------------------------------------------------------------------------
 #Delete Specialty By Pravalika
 
@@ -931,7 +934,7 @@ User Should Be Able To See Newly Added Specialty Has Been Removed
      Wait until page contains                      ${Expected_Specialties_Page}
      Page should not contain element               xpath://*[@id="3"]
 
-    
+
 #---------------------------------------------------------------------------------------------------------------------
 #Edit Veterinarian
 
@@ -1008,7 +1011,7 @@ User Adds A Veterinarian And Edits Same Veterinarian
 Newly Added Vet Edited
      Verify veterinarian edited
      Teardown after added veterinarian is edited
-     
+
 
 
 #-----------------------------------------------------------------------------------
@@ -1047,7 +1050,7 @@ Verify multiple Pet Types are deleted
     sleep                                           0.01 s
     Page should not contain element                 xpath://*[@id="7"]
     Page should not contain element                 xpath://*[@id="6"]
-    
+
 #-----------------------------------------------------------------------------------
 
 #Remove Vets from website - Jonna
@@ -1084,7 +1087,7 @@ user clicks on delete vet
 the deleted vet should no longer exist
   Verify Vet is removed
   Reset/Teardown Deleting Vet
-  
+
 #-----------------------------------------------------------------------------------
 
 
