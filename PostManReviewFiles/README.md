@@ -19,9 +19,7 @@ GIT should be installed and configured.
 
 3. Execute the following command
 
-***git clone :*** 
-
-https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git
+		git clone https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git
 
 
 
