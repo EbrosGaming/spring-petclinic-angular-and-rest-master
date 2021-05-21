@@ -367,23 +367,20 @@ Verify added Pet Type
     Should be equal                               ${Actual_Pettype_Name}    ${New_Pettype_Name}
 
 Teardown Add New Pet Type
-
+    Wait until page contains                      ${Expected_Pettypes_Page}
     Click button                                  xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
-    Wait until page contains                      Pet Types
+    Wait until page contains                      ${Expected_Pettypes_Page}
     Page should not contain element               xpath://*[@id="6"]
 
 #Gherkin Syntax for Add New Pet Type:
 
 user is on the Pet Types page
-
   Go to Pet Types
 
 a user have added a new Pet Type
-
   Add a new Pet Type
 
 a user should be able to see the new Pet Type in the list
-
   Verify added Pet Type
   Teardown Add New Pet Type
 
