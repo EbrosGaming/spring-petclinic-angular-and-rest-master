@@ -1020,17 +1020,17 @@ Newly Added Vet Edited
 # Delete PetType -Swetha
 
 Select the Pet Type to delete
-
-    wait until page contains element                xpath://*[@id="6"]
-    Page should contain element                     xpath://*[@id="6"]
+    Wait until page contains                        ${Expected_Pettypes_Page}
+    ${Actual_Pettype_Name}                          Get Value     xpath://*[@id="6"]
+    Should be equal                                 ${Actual_Pettype_Name}    ${New_Pettype_Name}
 
 Delete the added Pet Type
-
+    Wait until page contains                        ${Expected_Pettypes_Page}
     Click button                                    xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
+    Wait until page contains                        ${Expected_Pettypes_Page}
 
 Verify Pet Type is deleted
-
-    wait until page contains                        Pet Types
+    Wait until page contains                        ${Expected_Pettypes_Page}
     Page should not contain element                 xpath://*[@id="6"]
 
 #--------------------------------------------------------------------------------
