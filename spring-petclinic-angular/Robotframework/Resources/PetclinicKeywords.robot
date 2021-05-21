@@ -1034,19 +1034,18 @@ Verify Pet Type is deleted
     Page should not contain element                 xpath://*[@id="6"]
 
 #--------------------------------------------------------------------------------
+
 # Deleting multiple PetTypes - Swetha
 
 Delete multiple Pet Types
-
-    wait until page contains element                xpath://*[@id="7"]
-    Page should contain element                     xpath://*[@id="7"]
-    Select the pettype to delete
+    Wait until page contains                        ${Expected_Pettypes_Page}
     Click button                                    xpath://*[@id="pettypes"]/tbody/tr[8]/td[2]/button[2]
+    Wait until page contains                        ${Expected_Pettypes_Page}
     Click button                                    xpath://*[@id="pettypes"]/tbody/tr[7]/td[2]/button[2]
 
 Verify multiple Pet Types are deleted
-
-    wait until page contains                        Pet Types
+    Wait until page contains                        ${Expected_Pettypes_Page}
+    sleep                                           0.01 s
     Page should not contain element                 xpath://*[@id="7"]
     Page should not contain element                 xpath://*[@id="6"]
     
@@ -1086,7 +1085,8 @@ user clicks on delete vet
 the deleted vet should no longer exist
   Verify Vet is removed
   Reset/Teardown Deleting Vet
-
+  
+#-----------------------------------------------------------------------------------
 
 
 End Web Test
