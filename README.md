@@ -10,6 +10,7 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 ### Installation av Jenkin
 1. Ladda ner filen jenkins.war från https://jenkins.io/download/ (Leta efter Generic Java Package under LTS)
+   ![jenkins download](git-res/www.jenkins.png)
    
 2. Starta ett skal eller en kommandotolk och ställ dig i samma katalog som filen jenkins.war
    ligger i
@@ -36,7 +37,8 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 1. Navigera till https://maven.apache.org/download.cgi och ladda ner någon av filerna märkt
    Binary archive.
-   
+   ![maven download](git-res/maven.apache.png)
+
 2. Packa upp filen på en plats i ditt filsystem där du önskar ha den.
 
 3. (Valfritt) Låt din PATH innehålla sökvägen till bin-katalogen i den uppackade
@@ -83,8 +85,9 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 5. Sen får du söka efter **Robot Framework plugin** och sen **Maven Release Plug-in Plug-in** och installera dem.
    (Du behöver nog starta om Jenkins efter du har installerat dem)
 
-6. Du behöver också installera **NodeJS.** Det gör du här https://nodejs.org/en/download/current/ och så väljer du den 
+6. Du behöver också installera **NodeJS.** Det gör du här https://nodejs.org/en/download/ och så väljer du den 
    versionen som passar ditt operativsystem.
+   ![nodejs download](git-res/nodejs.png)
    
 7. Gå sedan igenom den installationen.
 
