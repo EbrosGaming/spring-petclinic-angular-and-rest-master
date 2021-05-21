@@ -45,6 +45,8 @@ https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git
 Launch a browser and access the following URL :
 
  http://localhost:9966/petclinic/
+ 
+ ![Swgger_url](git-res/SwaggerImage.PNG)
 	
 
 	
@@ -71,9 +73,7 @@ Postman App or extension should be installed.
 
 
 
-## Add new test scenario to collection
-         //To Be Decided
-	 
+
 	
 
 
