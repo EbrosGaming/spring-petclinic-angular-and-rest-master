@@ -1021,8 +1021,7 @@ Newly Added Vet Edited
 
 Select the Pet Type to delete
     Wait until page contains                        ${Expected_Pettypes_Page}
-    ${Actual_Pettype_Name}                          Get Value     xpath://*[@id="6"]
-    Should be equal                                 ${Actual_Pettype_Name}    ${New_Pettype_Name}
+    Should contain element                          xpath://*[@id="6"]
 
 Delete the added Pet Type
     Wait until page contains                        ${Expected_Pettypes_Page}
