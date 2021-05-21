@@ -1049,6 +1049,43 @@ Verify multiple Pet Types are deleted
     wait until page contains                        Pet Types
     Page should not contain element                 xpath://*[@id="7"]
     Page should not contain element                 xpath://*[@id="6"]
+    
+#-----------------------------------------------------------------------------------
+
+#Remove Vets from website - Jonna
+
+Click on Delete Vet
+  Wait until page contains                           ${Expected_Vets_Page}
+  Click button                                       xpath://*[@id="vets"]/tbody/tr[6]/td[3]/button[2]
+  Wait until page contains                           ${Expected_Vets_Page}
+
+Verify Vet is removed
+  Page should contain                                ${Expected_Vets_Page}
+  Page should not contain                            ${Reset_Firstname} ${Reset_Lastname}
+
+Reset/Teardown Deleting Vet
+  Page should contain                                ${Expected_Vets_Page}
+  Click button                                       Add Vet
+  Input text                                         id=firstName     ${Reset_Firstname}
+  Input text                                         id=lastName      ${Reset_Lastname}
+  Click button                                       Save Vet
+  Wait until page contains                           ${Expected_Vets_Page}
+  Page should contain                                ${Reset_Firstname} ${Reset_Lastname}
+
+#Gherkin
+
+user is on the Veterinarian Page
+  Go To Web Page
+  Click element                                      xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/a
+  Click element                                      xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]/ul/li[1]/a
+  Wait until page contains                           ${Expected_Vets_Page}
+
+user clicks on delete vet
+  Click on Delete Vet
+
+the deleted vet should no longer exist
+  Verify Vet is removed
+  Reset/Teardown Deleting Vet
 
 
 
