@@ -23,5 +23,3 @@ Test Delete Vet
     Given user is on the Veterinarian Page
     When user clicks on delete vet
     Then the deleted vet should no longer exist
-
-
