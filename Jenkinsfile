@@ -20,11 +20,10 @@ pipeline {
                   steps {
                        sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
                         }
-                   post {
-                      always {
-                      junit '**/target/surefire-reports/TEST*.xml'
-		     }
-	          }
+                   post {               
+		       success{ gerritReview score:1}
+		       failure{ gerritReview score:-1}
+           	  }
 	     }
 	         
 	       
