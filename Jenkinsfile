@@ -1,7 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Build Rest-API') {
+	       stage ('Build') {
+                   steps {
+                        sh 'cd spring-petclinic-rest && mvn compile'
+                         }
+                }
+	    
+                stage('Build Rest-API') {
                     steps {
                         sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
                         
