@@ -11,14 +11,14 @@ pipeline {
 	    
 	     stage ('Junit_Build') {
                    steps {
-                        sh 'spring-petclinic-rest-master/spring-petclinic-rest-master && mvn compile'
+                        sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn compile'
                          }
                 }
 	    
 	    
 	     stage('Test') {
                   steps {
-                       sh 'cd spring-petclinic-rest && mvn test'
+                       sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
                         }
                   post {
                        always {
