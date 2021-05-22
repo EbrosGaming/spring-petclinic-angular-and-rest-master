@@ -1,18 +1,33 @@
 pipeline {
     agent any
     stages {
-	       stage ('Build') {
+	    stage('Build Rest-API') {
+                    steps {
+                        sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
+                        
+                          }
+                }
+	    
+	    
+	     stage ('Build') {
                    steps {
                         sh 'cd spring-petclinic-rest && mvn compile'
                          }
                 }
 	    
-                stage('Build Rest-API') {
-                    steps {
-                        sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
-                        
-                    }
-                }
+	    
+	     stage('Test') {
+                  steps {
+                       sh 'cd spring-petclinic-rest && mvn test'
+                        }
+                  post {
+                       always {
+                       junit '**/TEST*.xml'
+                              }
+                       }
+		 }
+	         
+	       
 
                 stage('Build Angular-Front End') {
                       steps {
@@ -20,35 +35,23 @@ pipeline {
                       }
                 }
         
-        stage('Test') {
-            steps {
-                 sh 'cd spring-petclinic-rest && mvn test'
-            }
-            post {
-                always {
-                    junit '**/TEST*.xml'
-                }
-            }
-
-        }
+       
         
         
         
         stage('Postman') {
             steps {
                 sleep(20)
-		 catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+		      catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
                 sh 'newman run PostManReviewFiles/PetClinic_Swagger.postman_collection.json -e PostManReviewFiles/PetClinic_Swagger.postman_environment.json -- reporters junit'
-            }
-	    }
-
-        
-        post {
-			 always {
-				junit '**/*xml'
-					}
-				}
-        }
+                      }
+	        }
+		post {
+		       always {
+		         junit '**/*xml'
+			 }
+			}
+         }
         
         
        
