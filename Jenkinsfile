@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+	    
 	    stage('Build Rest-API') {
                     steps {
                         sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &'
@@ -15,34 +16,17 @@ pipeline {
                          }
                 }
 	    
-	    stage('Code Review') {
-     steps {
-        sh "mvn test"
-        gerritReview labels: [Verified: 0]
-                echo 'Hello World'
-                gerritComment path:'path/to/file', line: 10, message: 'invalid syntax'
-     }
-      post {
-        success { gerritReview score:1 }
-        failure { gerritReview score:-1 }
-      always {
-        junit '**/target/surefire-reports/TEST*.xml'
-    }
-    }
-    
-  }
-	    
-	    
-	     stage('Test') {
+	   
+   	    stage('Test') {
                   steps {
                        sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
                         }
-                   post {
-      always {
-        junit '**/TEST*.xml'        
-      }
-     }
-	     }
+                      post {
+                         always {
+                            junit '**/TEST*.xml'        
+                                }
+                          }
+	   }
 	         
 	       
 
