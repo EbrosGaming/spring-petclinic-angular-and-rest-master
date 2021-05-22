@@ -9,9 +9,9 @@ pipeline {
                 }
 	    
 	    
-	     stage ('Build') {
+	     stage ('Junit_Build') {
                    steps {
-                        sh 'cd spring-petclinic-rest && mvn compile'
+                        sh 'spring-petclinic-rest-master/spring-petclinic-rest-master && mvn compile'
                          }
                 }
 	    
