@@ -25,7 +25,7 @@ public class NamedEntityTest {
         assertEquals("Donald", testName.getName());
     }
     @Test
-    @DisplayName("Test To string")
+    @DisplayName("Test To string to return Name"")
     public void testToString()
     {
         assertEquals("Peter", testName.toString());
