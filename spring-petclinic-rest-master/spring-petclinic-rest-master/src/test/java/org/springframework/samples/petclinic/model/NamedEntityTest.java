@@ -19,14 +19,14 @@ public class NamedEntityTest {
 
     @Test
     @DisplayName("Test set name")
-    public void testsetName() {
+    public void testSetName() {
 
         testName.setName("Donald");
         assertEquals("Donald", testName.getName());
     }
     @Test
     @DisplayName("Test To string")
-    public void toString_returnsEmptyString()
+    public void testToString()
     {
         assertEquals("Peter", testName.toString());
     }
