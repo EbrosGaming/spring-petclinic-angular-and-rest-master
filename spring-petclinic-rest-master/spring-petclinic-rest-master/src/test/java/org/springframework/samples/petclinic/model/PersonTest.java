@@ -31,24 +31,24 @@ public class PersonTest {
     }
 
     @Test
-    @DisplayName("Checking FirstName of Person")
+    @DisplayName("Test Get FirstName")
     public void getFirstNamePassTest() {
         Assertions.assertEquals("Vincent", personObject.getFirstName());
     }
     @Test
-    @DisplayName("Checking FirstName of Person")
+    @DisplayName("Test Set FirstName of Person")
     public void setFirstNamePassTest() {
         String firstName="Ellon";
         personObject.setFirstName(firstName);
         Assertions.assertEquals(firstName, personObject.getFirstName());
     }
     @Test
-    @DisplayName("Checking LastName of Person")
+    @DisplayName("Test Get LastName of Person")
     public void getLastNamePassTest() {
         Assertions.assertEquals("Adler", personObject.getLastName());
     }
     @Test
-    @DisplayName("Checking FirstName of Person")
+    @DisplayName("Test Set LastName of Person")
     public void setLastNamePassTest() {
         String lastName="Musk";
         personObject.setFirstName(lastName);
@@ -56,13 +56,13 @@ public class PersonTest {
     }
     //Testing with invalid values
     @Test
-    @DisplayName("Checking FirstName of Person")
+    @DisplayName("Test FirstName With Invalid")
     public void getFirstNameFailTest() {
         Assertions.assertNotEquals("Coco", personObject.getFirstName());
     }
 
     @Test
-    @DisplayName("Checking LastName of Person")
+    @DisplayName("Test LastName With Invalid")
     public void getLastNameFailTest() {
         Assertions.assertNotEquals("Melon", personObject.getLastName());
     }
