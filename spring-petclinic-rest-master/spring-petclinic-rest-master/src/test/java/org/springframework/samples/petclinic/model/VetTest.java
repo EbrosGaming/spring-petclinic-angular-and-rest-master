@@ -11,9 +11,10 @@ import java.util.Set;
 
 public class VetTest {
     Vet vetObject;
-    Specialty specialty1;
-    Specialty specialty2;
-    Specialty specialty3;
+    Specialty specialty1= new Specialty();
+    Specialty specialty2= new Specialty();
+    Specialty specialty3= new Specialty();
+
 
     public VetTest(){
         initVet();
@@ -21,25 +22,17 @@ public class VetTest {
     @BeforeEach
     void initVet() {
         vetObject = new Vet();
-        specialty1 = new Specialty();
-        specialty2 = new Specialty();
-        specialty3 = new Specialty();
-
-        specialty1.setName("EyeSpecialist");
-        specialty2.setName("Nutritionist");
-        specialty3.setName("Medicineist");
     }
     @AfterEach
     void teardown() {
         vetObject=null;
     }
 
-
-
     @Test
     @DisplayName("Test To Get No Of Specialties")
     public void getNrOfSpecialtiesTest() {
-        Assertions.assertEquals(0, vetObject.getNrOfSpecialties());
+        vetObject.addSpecialty(specialty1);
+        Assertions.assertEquals(1, vetObject.getNrOfSpecialties());
     }
     @Test
     @DisplayName("Test To Add Specialties")
@@ -59,19 +52,19 @@ public class VetTest {
     @Test
     @DisplayName("Test To Set Internal Specialties")
     public void setSpecialtiesInternalTest() {
-        Set<Specialty> specialties=new HashSet<> ();
-        specialties.add(specialty1);
-        specialties.add(specialty2);
-        vetObject.setSpecialtiesInternal(specialties);
+        Set<Specialty> specialtiesSet=new HashSet<> ();
+        specialtiesSet.add(specialty1);
+        specialtiesSet.add(specialty2);
+        vetObject.setSpecialtiesInternal(specialtiesSet);
         Assertions.assertEquals(2, vetObject.getSpecialtiesInternal().size());
         System.out.println(vetObject.getSpecialtiesInternal().size());
     }
     @Test
     @DisplayName("Test To Get Specialties Internal")
     public void getSpecialtiesInternalTest() {
-        Set<Specialty> specialties=new HashSet<> ();
-        specialties.add(specialty1);
-        vetObject.setSpecialtiesInternal(specialties);
+        Set<Specialty> specialtiesSet=new HashSet<> ();
+        specialtiesSet.add(specialty1);
+        vetObject.setSpecialtiesInternal(specialtiesSet);
         Assertions.assertEquals(1, vetObject.getSpecialtiesInternal().size());
         System.out.println(vetObject.getSpecialtiesInternal().size());
     }
