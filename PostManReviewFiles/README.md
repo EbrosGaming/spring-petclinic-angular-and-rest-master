@@ -44,6 +44,8 @@ Launch a browser and access the following URL :
 
  http://localhost:9966/petclinic/
  
+ ![Swagger](git_res/Swagger_url.PNG)
+ 
  
  
  
@@ -71,17 +73,20 @@ Postman App or extension should be installed.
  
  **3. Import following files into workspace**
  
+ **Files :** 
  
+	Spring_PetClinic.postman_collection.json
+	PetClinic_Environment.postman_environment.json
+	
+ 
+ ![Postman_collection_file](git_res/Petclinc_postman_collection.png)
  
  ![Postman_environment_file](git_res/Petclinc_postman_environment.png)
  
  
  **4. Location :<source_location>\PostmanFiles**
 
-**Files :** 
-	
-	PetClinic_Environment.postman_environment.json
-	Spring_PetClinic.postman_collection.json
+
 
 
 
