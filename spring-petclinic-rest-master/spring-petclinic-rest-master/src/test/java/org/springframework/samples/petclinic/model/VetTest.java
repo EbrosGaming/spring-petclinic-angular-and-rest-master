@@ -11,17 +11,20 @@ import java.util.Set;
 
 public class VetTest {
     Vet vetObject;
-    Specialty specialty1 = new Specialty();
-    Specialty specialty2 = new Specialty();
-    Specialty specialty3 = new Specialty();
-    
+    Specialty specialty1;
+    Specialty specialty2;
+    Specialty specialty3;
+
     public VetTest(){
         initVet();
     }
-
     @BeforeEach
     void initVet() {
         vetObject = new Vet();
+        specialty1 = new Specialty();
+        specialty2 = new Specialty();
+        specialty3 = new Specialty();
+
         specialty1.setName("EyeSpecialist");
         specialty2.setName("Nutritionist");
         specialty3.setName("Medicineist");
@@ -38,7 +41,6 @@ public class VetTest {
     public void getNrOfSpecialtiesTest() {
         Assertions.assertEquals(0, vetObject.getNrOfSpecialties());
     }
-
     @Test
     @DisplayName("Test To Add Specialties")
     public void addSpecialtiesTest() {
@@ -46,7 +48,6 @@ public class VetTest {
         vetObject.addSpecialty(specialty2);
         Assertions.assertEquals(2, vetObject.getNrOfSpecialties());
     }
-
     @Test
     @DisplayName("Test To ClearSpecialties")
     public void clearSpecialtiesTest() {
