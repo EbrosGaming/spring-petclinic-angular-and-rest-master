@@ -67,6 +67,7 @@ java -jar ./rawhttp.jar serve . -p 4200
 
 
 5	Now you have access to the keywords file that the whole team uses.
+
 6	Add your task to the Tests folder by creating a new file into it
 
 ![image](https://user-images.githubusercontent.com/77296147/119493294-570e5800-bd60-11eb-9ba7-e2f8b3781bf8.png)
@@ -81,8 +82,8 @@ java -jar ./rawhttp.jar serve . -p 4200
 
 
 10	Describe the testcase in documentation
-11	Use Tags för to easier get to/understand wich test it is
-12	Use gherkin syntex when writing the testcase
+11	Use Tags for to easier get to/understand which test it is
+12	Use gherkin syntax when writing the testcase
 
  ![image](https://user-images.githubusercontent.com/77296147/119493360-67bece00-bd60-11eb-9ca6-0d3c2dac5125.png)
 
@@ -90,13 +91,7 @@ java -jar ./rawhttp.jar serve . -p 4200
 
 1	When you have run your test in the terminal and it passes
 
-2	Then comit and push it to your branch
-
-# Jira
-
-1 Put your task in review on jira so somebody can go through it
-
-![image](https://user-images.githubusercontent.com/77296147/119493400-6f7e7280-bd60-11eb-9ee7-34a7e51d708a.png)
+2	Then commit and push it to your branch
 
  # Push to main branch
 1.If your test gets greenlight in the review then you can push it to the main branch
