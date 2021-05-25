@@ -37,7 +37,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -90,7 +89,7 @@ public class VetRestControllerTests {
     	vets.add(vet);
     }
 
-    /@Test
+    @Test
     @WithMockUser(roles="VET_ADMIN")
     public void testGetVetSuccess() throws Exception {
     	given(this.clinicService.findVetById(1)).willReturn(vets.get(0));
