@@ -57,13 +57,24 @@ Launch a browser and access the following URL :
 Postman App or extension should be installed.
 
 ### Steps to configure Postman:
-1. Launch Postman app
+**1. Launch Postman app**
 
-2. Create Postman workspace
+**2. Create Postman workspace**
 
-3. Import following files into workspace
+ **2.1 : Click New workspace**
+ 
+ ![Create_workspace](git_res/createWorkspace.png)
+ 
+ **2.2 : Provide details and create**
+ 
+ ![Create_workspace_Dailog](git_res/createWorkspaceDialog.png)
+ 
+ **3. Import following files into workspace**
+ 
 
-4. Location :<source_location>\PostmanFiles
+
+
+**4. Location :<source_location>\PostmanFiles**
 
 **Files :** 
 	
