@@ -15,12 +15,12 @@
 
         stage('Build JUnit') {
             steps {
-                sh 'cd spring-petclinic-rest-master && nohup mvn compile &'
+                sh 'cd spring-petclinic-rest-master && mvn compile'
 
             }
         }
 
-        stage('JUnit Tests') {
+        stage('JUnit') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
             		sh 'cd spring-petclinic-rest-master && mvn test'
@@ -28,7 +28,7 @@
             }
             post {
             	always {
-            		junit '**/TEST*.xml'
+            		junit '*/target/surefire-reports/TEST*.xml'
             	}
             }
         }
