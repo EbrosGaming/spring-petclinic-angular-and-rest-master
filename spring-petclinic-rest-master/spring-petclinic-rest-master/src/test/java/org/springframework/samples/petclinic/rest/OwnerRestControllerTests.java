@@ -135,7 +135,7 @@ public class OwnerRestControllerTests {
         return visit;
     }
 
-    /*@Test
+    @Test
     @WithMockUser(roles="OWNER_ADMIN")
     public void testGetOwnerSuccess() throws Exception {
     	given(this.clinicService.findOwnerById(1)).willReturn(owners.get(0));
@@ -145,7 +145,7 @@ public class OwnerRestControllerTests {
             .andExpect(content().contentType("application/json"))
             .andExpect(jsonPath("$.id").value(1))
             .andExpect(jsonPath("$.firstName").value("George"));
-    }*/
+    }
 
     @Test
     @WithMockUser(roles="OWNER_ADMIN")
