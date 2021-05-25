@@ -23,7 +23,7 @@
         stage('JUnit') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-            		sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master/src && mvn test'
+            		sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
             	}
             }
             post {
