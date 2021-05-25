@@ -22,18 +22,7 @@
             }
         }
 
-        stage('JUnit') {
-            steps {
-            	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-            		sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
-            	}
-            }
-            post {
-            	always {
-            		junit '**/target/surefire-reports/TEST*.xml'
-            	}
-            }
-        }    
+           
          
         stage('Postman') {
             steps {
@@ -70,7 +59,20 @@
             }
         }
     }
-
+	 
+ stage('JUnit Tests') {
+            steps {
+            	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
+            		sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
+            	}
+            }
+            post {
+            	always {
+            		junit '**/target/surefire-reports/TEST*.xml'
+            	}
+            }
+        }
+	 
     post{
         success{
         	emailext (
