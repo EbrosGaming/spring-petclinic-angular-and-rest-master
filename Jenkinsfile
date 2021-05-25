@@ -15,7 +15,7 @@
 
         stage('Build JUnit') {
             steps {
-                sh 'cd spring-petclinic-rest-master && mvn compile'
+                sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn compile'
 
             }
         }
@@ -23,7 +23,7 @@
         stage('JUnit') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-            		sh 'cd spring-petclinic-rest-master && mvn test'
+            		sh 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && mvn test'
             	}
             }
             post {
