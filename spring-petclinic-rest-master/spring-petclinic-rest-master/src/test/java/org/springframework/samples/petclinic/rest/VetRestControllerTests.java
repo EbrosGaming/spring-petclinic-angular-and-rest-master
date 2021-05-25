@@ -90,7 +90,7 @@ public class VetRestControllerTests {
     	vets.add(vet);
     }
 
-    /*@Test
+    /@Test
     @WithMockUser(roles="VET_ADMIN")
     public void testGetVetSuccess() throws Exception {
     	given(this.clinicService.findVetById(1)).willReturn(vets.get(0));
@@ -100,14 +100,14 @@ public class VetRestControllerTests {
             .andExpect(content().contentType("application/json"))
             .andExpect(jsonPath("$.id").value(1))
             .andExpect(jsonPath("$.firstName").value("James"));
-    }*/
+    }
 
 
-    @Test
+    /*@Test
     @WithMockUser(roles="VET_ADMIN")
     public void testMath() throws Exception {
         assertEquals(0*9, 1*5, "Black hole check: Make sure this code is running in a parallel universe with Math=OFF ");
-    }
+    }*/
 
 
     @Test
