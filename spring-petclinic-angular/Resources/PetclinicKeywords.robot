@@ -656,7 +656,7 @@ User Removes A Pet
 
     Wait Until Page Contains                        Owner Information
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
-    #Tear Down 2nd Pet
+    Tear Down 2nd Pet
     User Verifies Pet Removed
 
 User Verifies Pet Removed
@@ -1042,5 +1042,32 @@ User Deletes Newly Added PetType
 Added PetType Is Deleted From The List
     Wait until page contains                      ${Expected_Pettypes_Page}
     Page should not contain element               xpath://*[@id="6"]
+#------------------------------------------------------------------------------------------------------------------------------
+#Critical flow test
+
+#User Adds An Owner (This keyword already created in performance task)
+User Adds A Pet To The Owner
+    wait until page contains                      ${Owner_fullname}
+    Click Element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+    Click Element                                 xpath:/html/body/app-root/app-owner-detail/div/div/button[3]
+    Input New Pet Detalis
+    Pet Details                                   ${Give_New_PetName_1}               ${NewPet_BirthDate}
+    Wait until page contains                      ${Owner_Information_Page}
+    ${pet_added}                                  get text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
+    Should Contain                                ${Verify_pet_1_Added}                ${pet_added}
+User Adds A Visit To The Newly Added pet
+    Wait until page contains                      ${Give_New_PetName_1}
+    Click Element                                 Xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
+    Input Text                                    Xpath://*[@id="visit"]/div[1]/div[1]/div/input        ${Visit_Date}
+    Input Text                                    Xpath://*[@id="description"]                          ${Visit_Description}
+    Click Element                                 xpath://*[@id="visit"]/div[2]/div/button[2]
+    Wait until page contains                      ${Visit_Description}
+    Page Should Contain Element                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[2]
+    Teardown
+Teardown
+    Click Element                                    xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
+    Click Element                                    xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[2]
+
+
 End Web Test
     close browser
