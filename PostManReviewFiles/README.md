@@ -71,10 +71,12 @@ Postman App or extension should be installed.
  
  **3. Import following files into workspace**
  
-
-
-
-**4. Location :<source_location>\PostmanFiles**
+ 
+ 
+ ![Postman_environment_file](git_res/Petclinc_postman_environment.png)
+ 
+ 
+ **4. Location :<source_location>\PostmanFiles**
 
 **Files :** 
 	
