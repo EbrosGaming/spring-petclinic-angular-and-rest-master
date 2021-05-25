@@ -1,55 +1,9 @@
-# Spring-petclinic-angular-and-rest-master
+# Dokumentation för att köra alla testmiljöer i Jenkins
 
 Man kan antingen köra Jenkins **lokalt** eller så kan man använda en **dedikerad server.** 
 
 ## Hur man kör alla testmiljöer **lokalt** i Jenkins
-Det finns flera sätt att köra Jenkins. Nedan redgörs för hur man startar systemet genom att som
-vanlig användare köra en så kallad WAR-fil. WAR står för Web application archive och en fil av den
-typen innehåller de kompilerade javaklasser som utgör en webapplikation. I filen finns förutom själva
-Jenkins också en så kallad servlet container och därmed allt som behövs för att köra systemet.
 
-### Installation av Jenkin
-1. Ladda ner filen jenkins.war från https://jenkins.io/download/ (Leta efter Generic Java Package under LTS)
-   ![jenkins download](git-res/www.jenkins.png)
-   
-2. Starta ett skal eller en kommandotolk och ställ dig i samma katalog som filen jenkins.war
-   ligger i
-   
-3. Starta Jenkins med kommandot ```java –jar jenkins.war --httpPort=8080```  
-   (i) Siffran 8080 är den port som servern i vilken Jenkins kör skall lyssna på. Modifiera
-   kommandot efter eget tycke om du redan har en server som lyssnar på port 8080
-   eller av någon annan anledning vill bruka en annan port.
-   
-4. Starta en webläsare och navigera till adressen 127.0.0.1:8080
-   (i) Ersätt 8080 med rätt port om du startade Jenkins på någon annan port.
-   (ii) 127.0.0.1 är den så kallade loopback-adressen som alltid avser den lokala datorn.
-   Den lokala datorn är också åtkomlig genom namnet localhost.
-
-5. Följ instruktionerna som visas
-   (i) Första gången Jenkins startas kommer den be om ett lösenord. Detta lösenord finns
-   sparat i en fil på den lokala datorn och Jenkins talar om dess sökväg.
-   (ii) Tacka ja till att installera föreslagna plugins
-
-6. Notera att Jenkins skapar en katalog, .jenkins, i vilken systemet sparar konfiguration av sig
-   själv och jobb, plugins samt resultat av varje bygge.
-   
-### Installation av Maven
-
-1. Navigera till https://maven.apache.org/download.cgi och ladda ner någon av filerna märkt
-   Binary archive.
-   ![maven download](git-res/maven.apache.png)
-
-2. Packa upp filen på en plats i ditt filsystem där du önskar ha den.
-
-3. (Valfritt) Låt din PATH innehålla sökvägen till bin-katalogen i den uppackade
-   katalogstrukturen.
-
-4. (Obligatoriskt) Sätt JAVA_HOME.
-
-5. Verifiera att allt fungerar som det skall genom att köra programmet mvn i en kommandotolk
-   (i) Maven kommer förmodligen rapportera något om BUILD FAILURE och att No goals
-   have been specified for this build. Detta är i sin ordning eftersom något Mavenprojekt inte har skapats än.
-   
 ### Skapa ett pipelinejobb i Jenkins
 
 1. Först så startar du Jenkins och sen logga in.
@@ -71,30 +25,6 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 9. Sen under **Repository URL** så skriver du in ```https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master.git```
 
 10. Sen under **Branch Specifier** så ska det stå **main.** Sen klickar du på spara.
-
-### Installation av **Insticksmoduler** i Jenkins
-
-1. Först så startar du Jenkins och sen logga in.
-
-2. Klicka nu på **Hantera Jenkins.**
-
-3. Klicka på **Hantera insticksmoduler.**
-
-4. Sen klickar du på **Tillgängliga**
-
-5. Sen får du söka efter **Robot Framework plugin** och sen **Maven Release Plug-in Plug-in** och installera dem.
-   (Du behöver nog starta om Jenkins efter du har installerat dem)
-
-6. Du behöver också installera **NodeJS.** Det gör du här https://nodejs.org/en/download/ och så väljer du den 
-   versionen som passar ditt operativsystem.
-   ![nodejs download](git-res/nodejs.png)
-   
-7. Gå sedan igenom den installationen.
-
-8. Efter du har installerat NodeJS så öppnar du en valfri kommandotolk. (Jag rekommenderar att du anväder NodeJS egna)
-
-9. Nu behöver du bara skriva in ```npm install -g newman``` för att installera **Newman** som andvänds för att köra Postman tester i Jenkins.
-   För att se om det installerades korrekt så kan du skriva ```newman run -v``` då borde det stå villken version du har.
    
 ### Testa att köra Pipelinejobbet
 
@@ -117,8 +47,6 @@ Jenkins också en så kallad servlet container och därmed allt som behövs för
 
 
 ## Hur man kör alla testmiljöer på en **dedikerad Jenkins server**
-Det är mycket lättare att använda en dedikerad Jenkins server om man redan har en. 
-(Om man inte har en så kan man föllja denna guiden https://www.ewebguru.com/web-hosting-blog/how-to-connect-to-a-dedicated-server-using-jenkins/)
 
 ### Skapa ett pipelinejobb i Jenkins
 
