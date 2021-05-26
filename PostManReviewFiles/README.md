@@ -1,3 +1,6 @@
+
+
+
 # PetClinic API testing using POSTMAN
 
 ## PetClinic_Environment.postman_environment.json :
@@ -44,14 +47,17 @@ Launch a browser and access the following URL :
 
  http://localhost:9966/petclinic/
  
- ![Swagger](git_res/Swagger_url.PNG)
+ ![Swagger_url](https://user-images.githubusercontent.com/77210719/119680611-a24c6780-be41-11eb-9618-d83bcd4c7f05.PNG)
  
  
- 
- 
-	
 
-	
+
+
+
+
+
+
+
 
 ## Postman configuration
 
@@ -65,15 +71,15 @@ Postman App or extension should be installed.
 
  ### 2.1 : Click New workspace
  
- ![Create_workspace](git_res/createWorkspace.png)
+ ![createWorkspace](https://user-images.githubusercontent.com/77210719/119680760-c314bd00-be41-11eb-800c-d79cee19a5bf.png)
  
  ### 2.2 : Provide details and create 
  
- ![Create_workspace_Dailog](git_res/createWorkspaceDialog.png)
+ ![createWorkspaceDialog](https://user-images.githubusercontent.com/77210719/119680890-e2134f00-be41-11eb-99d8-a25f78e148f6.png)
  
  ### 3. Import following files into workspace
  
- ![Import_button](git_res/ImportFiles.png)
+ ![import_button_image](https://user-images.githubusercontent.com/77210719/119681099-0c650c80-be42-11eb-97c3-0ea7f1f3108e.PNG)
  
  ## Files : 
  
@@ -81,13 +87,15 @@ Postman App or extension should be installed.
 	PetClinic_Environment.postman_environment.json
 	
  
- ![Postman_collection_file](git_res/Petclinc_postman_collection.png)
+ ![Petclinc_postman_collection](https://user-images.githubusercontent.com/77210719/119681108-0f5ffd00-be42-11eb-8173-75cbd2dcf5a8.png)
  
- ![Postman_environment_file](git_res/Petclinc_postman_environment.png)
+ ![Petclinc_postman_environment](https://user-images.githubusercontent.com/77210719/119681118-1129c080-be42-11eb-9e67-e74d02241409.png)
+ 
+
  
  
  ### 4: Test Suite execution
- ![Run_Tests](git_res/executeTestsuite.png)
+![executeTestsuite](https://user-images.githubusercontent.com/77210719/119681091-0a02b280-be42-11eb-9b83-762776af894d.png)
  
  
 
