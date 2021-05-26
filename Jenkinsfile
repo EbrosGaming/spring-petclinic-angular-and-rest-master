@@ -27,24 +27,24 @@ pipeline {
            }
 
            post {
-               always {
-                   script {
-                       step(
-                           [
+                always {
+                    script {
+                        step(
+                            [
                                $class                  :   'RobotPublisher',
-                               outputPath              :   'spring-petclinic-angular/CriticalFlow/Tests/Results',
-                               outputFileName          :   '**/output.xml',
-                               reportFileName          :   '**/report.html',
-                               logFileName             :   '**/log.html',
-                               disableArchiveOutput    :   false,
-                               passThreshold           :   50,
-                               unstableThreshold       :   40,
-                               otherFiles              :   "**/*.png,**/*.jpg",
-                           ]
-                       )
-                   }
-               }
-           }
+                                outputPath              :   'spring-petclinic-angular/CriticalFlow/Results',
+                                outputFileName          :   '**/output.xml',
+                                reportFileName          :   '**/report.html',
+                                logFileName             :   '**/log.html',
+                                disableArchiveOutput    :   false,
+                                passThreshold           :   50,
+                                unstableThreshold       :   40,
+                                otherFiles              :   "**/*.png,**/*.jpg",
+                            ]
+                        )
+                    }
+                }
+            }
 
        }
 
