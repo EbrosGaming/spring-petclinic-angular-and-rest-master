@@ -3,7 +3,7 @@ Documentation                               Infotiv Petclinic Performance Test
 Resource                                    ../Resources/CriticalFlowKeywords.robot
 Library                                     SeleniumLibrary
 Test Setup                                  Begin WebTest
-#Test Teardown                               End Web Test
+Test Teardown                               End Web Test
 
 *** Variables ***
 ${BROWSER}                                  chrome
