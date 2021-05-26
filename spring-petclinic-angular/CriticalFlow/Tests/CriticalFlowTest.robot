@@ -10,16 +10,16 @@ ${BROWSER}                                  chrome
 ${URL}                                      http://localhost:4200/
 ${Welcome_Message}                          Welcome to Petclinic
 ${Add_Owner_page}                           New Owner
-${Firstname}                                Donald
-${Lastname}                                 Duck
-${Owner_fullname}                           Donald Duck
+${Firstname}                                ABC
+${Lastname}                                 DEF
+${Owner_fullname}                           ABC DEF
 ${Adress}                                   DisneyLand
 ${City}                                     LasAngeles
 ${Mobile}                                   123456789
 ${New_ownerPage}                            New Owner
 ${Owners_List_Page}                         Owners
 ${Add_PetPage}                              Add Pet
-${Give_New_PetName}                         Venus
+${New_PetName}                              Venus
 ${NewPet_BirthDate}                         2021/05/19
 ${Verify_pet_1_Added}                       Venus
 ${Owner_Information_Page}                   Owner Information
