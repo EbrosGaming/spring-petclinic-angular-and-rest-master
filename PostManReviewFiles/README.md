@@ -73,6 +73,8 @@ Postman App or extension should be installed.
  
  **3. Import following files into workspace**
  
+ ![Import_button](git_res/ImportFiles.png)
+ 
  **Files :** 
  
 	Spring_PetClinic.postman_collection.json
@@ -83,6 +85,9 @@ Postman App or extension should be installed.
  
  ![Postman_environment_file](git_res/Petclinc_postman_environment.png)
  
+ 
+ **4: Test Suite execution**
+ ![Run_Tests](git_res/executeTestsuite.png)
  
  
 
