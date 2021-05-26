@@ -656,7 +656,7 @@ User Removes A Pet
 
     Wait Until Page Contains                        Owner Information
     Click Element                                   xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list[2]/table/tr/td[1]/dl/button[2]
-    Tear Down 2nd Pet
+    #Tear Down 2nd Pet
     User Verifies Pet Removed
 
 User Verifies Pet Removed
