@@ -2,6 +2,34 @@
 
 Man kan antingen köra Jenkins **lokalt** eller så kan man använda en **dedikerad server.** 
 
+## Hur Jenkinsfile funkar
+
+Våran Jenkinsfile har 6 stages 
+
+* Stage 1. Bygga upp Rest-API
+
+  API:n gör så att vi kan hämta och spara information på hemsidan.
+
+* Stage 2. Bygga upp Angular-Front End
+
+  Anggular-Front är hemsidan PetClinic.
+
+* Stage 3. Bygga upp jUnit test
+
+  jUnit är enhetstester för olika enheter t.ex. Pet.java eller Owner.java
+
+* Stage 4. Köra jUnit testerna
+
+  Här kör vi de testerna och ser så att enheterna funkar och gör det dem ska.
+
+* Stage 5. Köra Postman testerna
+
+  Här testar vi så att vi kan hämta och ändra information via API:n.
+
+* Stage 6. Köra RobotFW testerna
+
+  Här testar vi så att vi kan ändra information genom hemsidan.
+
 ## Hur man kör alla testmiljöer **lokalt** i Jenkins
 
 ### Skapa ett pipelinejobb i Jenkins
