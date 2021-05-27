@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation                               Infotiv Petclinic critical Flow Test
-#Resource                                    ../Resources/CriticalFlowKeywords.robot
+Resource                                    ../Resources/CriticalFlowKeywords.robot
 Library                                     SeleniumLibrary
 Test Setup                                  Begin WebTest
 Test Teardown                               End Web Test
@@ -9,17 +9,17 @@ ${BROWSER}                                  chrome
 ${URL}                                      http://localhost:4200/
 ${Welcome_Message}                          Welcome to Petclinic
 ${Add_Owner_page}                           New Owner
-${Firstname}                                Donald
-${Lastname}                                 Trump
-${Owner_fullname}                           Donald Trump
-${Adress}                                   DisneyWorld
+${Firstname}                                ABC
+${Lastname}                                 DEF
+${Owner_fullname}                           ABC DEF
+${Adress}                                   DisneyLand
 ${City}                                     LasAngeles
-${Mobile}                                   223459789
+${Mobile}                                   123456789
 ${New_ownerPage}                            New Owner
 ${Owners_List_Page}                         Owners
 ${Add_PetPage}                              Add Pet
-${Give_New_PetName}                         Venus
-${NewPet_BirthDate}                         2021/04/19
+${New_PetName}                              Venus
+${NewPet_BirthDate}                         2021/05/19
 ${Verify_pet_1_Added}                       Venus
 ${Owner_Information_Page}                   Owner Information
 ${Visit_Date}                               2021/05/26
@@ -67,7 +67,7 @@ User Adds A Pet To The Owner
     Click Element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
     Click Element                                 xpath:/html/body/app-root/app-owner-detail/div/div/button[3]
     Input New Pet Detalis
-    Pet Details                                   ${Give_New_PetName}               ${NewPet_BirthDate}
+    Pet Details                                   ${New_PetName}               ${NewPet_BirthDate}
     Wait until page contains                      ${Owner_Information_Page}
     ${pet_added}                                  get text                             xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/dd[1]
     Should Contain                                ${Verify_pet_1_Added}                ${pet_added}
@@ -90,7 +90,7 @@ Birth Date
     Input Text                                    xpath:/html/body/app-root/app-pet-add/div/div/form/div[4]/div/input          ${Birth_Date}
 #Add Visit
 Adds A Visit To The Newly Added pet
-    Wait until page contains                      ${Give_New_PetName}
+    Wait until page contains                      ${New_PetName}
     Click Element                                 Xpath:/html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[3]
     Input Text                                    Xpath://*[@id="visit"]/div[1]/div[1]/div/input        ${Visit_Date}
     Input Text                                    Xpath://*[@id="description"]                          ${Visit_Description}
@@ -101,8 +101,9 @@ Teardown
     Click Element                                 xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Click Element                                 xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[2]
 A New Owner Created,Added a Pet And Added A Visit To The Pet
-    #Page Should Contain                            ${Owner_fullname}
-    Page Should Contain                            ${Give_New_PetName}
+    Page Should Contain                            ${Owner_fullname}
+    Page Should Contain                            ${New_PetName}
     Page Should Contain                            ${Visit_Description}
+    Teardown
 End Web Test
     Close Browser
