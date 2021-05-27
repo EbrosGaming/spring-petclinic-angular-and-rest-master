@@ -73,14 +73,15 @@ Teardown
     Click Element                                 xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[2]/app-visit-list/table/tr/td[3]/button[2]
     Click Element                                 xpath://html/body/app-root/app-owner-detail/div/div/table[2]/tr/app-pet-list/table/tr/td[1]/dl/button[2]
 
-A New Owner Created,Added a Pet And Added A Visit To The Pet
+A New Owner Created AND Added A Pet And Added A Visit To The Pet To An Existing Owner
     Page Should Contain                            ${Existing_Owner}
     Page Should Contain                            ${New_PetName}
     Page Should Contain                            ${Visit_Description}
     Teardown
     Click Element                                  xpath:/html/body/app-root/app-owner-detail/div/div/button[1]  #ExistingOwner
     Wait until page contains                       ${Owners_List_Page}
-    Page Should Contain                            ${Owner_fullname}
+    Wait Until Page contains Element               xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+    Page Should Contain Element                    xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
 
 
 

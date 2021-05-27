@@ -37,7 +37,7 @@ Test To AddOwner->AddAPet->AddVisit
   Given User Adds An Owner
   When User Adds A Pet To The Owner
   And Adds A Visit To The Newly Added pet
-  Then A New Owner Created,Added a Pet And Added A Visit To The Pet
+  Then A New Owner Created AND Added A Pet And Added A Visit To The Pet To An Existing Owner
 
 
 
