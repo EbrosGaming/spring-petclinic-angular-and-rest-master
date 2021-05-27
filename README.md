@@ -11,7 +11,7 @@ Infotiv's project for IT-Högskolan's test automation course 2021
 #### SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Spring petclinic Angular And pring petclinic Rest master. 
 
 Spring-petlinic-angular > : is the front end application which is a client only. First you need to start REST Petclinic backend Api server before starting frontend application.
-```Robotframework``` folder in spring-petclinic-angular,  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . There is a separate readme file for Robotframework at (// add link ) .
+```Robotframework``` folder in spring-petclinic-angular,  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . There is a separate readme file for Robotframework at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/blob/main/spring-petclinic-angular/Robotframework/Readme.md .
 
 Spring-petclinic-rest-master > : is the backend version of the Spring Pet clinic application which provides only REST API.
 ```PostmanFiles``` folder, contains the Collection of requests and an Environment used to execute backend test cases using REST Api. There is a separate reademe file for Postman at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/tree/main/PostmanFiles .
