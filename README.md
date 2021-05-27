@@ -16,16 +16,16 @@ Spring-petclinic-rest-master > is the backend version of the Spring Pet clinic a
 
 Jenkinsfile in the repository contains the script with the stages of execution script. The names of the stages are described with names tu build environment for all types of tests, which are self explaining.There are certain steps followed in stage, which will follow the script and commands to be exucted in the step. .
 
-Stage > - Build Rest-API - is used to start the backend of the application . Command used is 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &' to connect to local server http://localhost:9966/petclinic/v2/api-docs.
+Stage  - Build Rest-API - is used to start the backend of the application . Command used is 'cd spring-petclinic-rest-master/spring-petclinic-rest-master && nohup mvn spring-boot:run &' to connect to local server http://localhost:9966/petclinic/v2/api-docs.
 
-Stage > - Build Angular-Front End - is used to start the front end application to use in Web Browser. Command 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'  is used to run the web application on localhost http://localhost:4200/petclinic/welcome.
+Stage  - Build Angular-Front End - is used to start the front end application to use in Web Browser. Command 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'  is used to run the web application on localhost http://localhost:4200/petclinic/welcome.
 
-Stage > - Build JUnit -  and - JUnit - are used for unit tests to compile and run automatically during regression testing in Jenkins.
+Stage  - Build JUnit -  and - JUnit - are used for unit tests to compile and run automatically during regression testing in Jenkins.
 
-Stage > - Robot - is used to execute the front end web application test cases through web browser .Command  used is 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests' to run with Chrome browswer. Test results and failures are notified in Results folder.
+Stage  - Robot - is used to execute the front end web application test cases through web browser .Command  used is 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests' to run with Chrome browswer. Test results and failures are notified in Results folder.
 
-Stage > - Postman - is used to run the backend test cases using rest API. Command used is 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit' to execute the Rest API test cases in the Spring Petclinic Postman collection.
+Stage  - Postman - is used to run the backend test cases using rest API. Command used is 'newman run PostmanFiles/Spring_PetClinic.postman_collection.json -e PostmanFiles/PetClinic_Environment.postman_environment.json -- reporters junit' to execute the Rest API test cases in the Spring Petclinic Postman collection.
 
-Stage > - Post is to post the Success or failure of test results reports of the test cases via email.
+Stage  - Post is to post the Success or failure of test results reports of the test cases via email.
 
 Test cases for Spring Petclinic can be executed with Jenkins pipeline, - Group C- PetClinic - is the pipeline, we have Created at ithsjenkins serverwhich clearly shows build stages and test execution success. 
