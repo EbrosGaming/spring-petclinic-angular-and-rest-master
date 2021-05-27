@@ -22,7 +22,7 @@ pipeline {
         stage('Robot') {
            steps {
              catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/CriticalFlow/Results spring-petclinic-angular/CriticalFlow/Tests'
+                 sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robot_CriticalFlow_Test/Results spring-petclinic-angular/Robot_CriticalFlow_Test/Tests'
                }
            }
 
@@ -32,7 +32,7 @@ pipeline {
                         step(
                             [
                                $class                  :   'RobotPublisher',
-                                outputPath              :   'spring-petclinic-angular/CriticalFlow/Results',
+                                outputPath              :   'spring-petclinic-angular/Robot_CriticalFlow_Test/Results',
                                 outputFileName          :   '**/output.xml',
                                 reportFileName          :   '**/report.html',
                                 logFileName             :   '**/log.html',
