@@ -59,7 +59,7 @@ User Adds An Owner
     Input Text                                     id=telephone                           ${Mobile}
     Click Element                                  xpath://div/button[contains(string(), "Add Owner")]
     wait until page contains                      ${Owners_List_Page}
-    wait until page contains Element              xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
+    wait until Element Is Visible                 xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
     page should contain Element                   xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
 #Add Pet
 User Adds A Pet To The Owner
