@@ -8,11 +8,11 @@ Infotiv's project for IT-Högskolan's test automation course 2021
 ###### Developed By Isac Ojaniemi , Jonna Hagberg , Adam Ballard , Pravalika , Swetha Rani Pannala , Sami Khelifi , Renu Ghumare
 
 
-#### SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Angular And Rest projects. 
+#### SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Spring petclinic Angular And pring petclinic Rest master. 
 
-Spring-petlinic-angular > is the front end application which is a client only. Use REST API from backend spring-petclinic-rest project. You need start backend server before starting frontend application . Robotframework folder  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . 
+Spring-petlinic-angular > : is the front end application which is a client only. Use REST API from backend spring-petclinic-rest project. You need start backend server before starting frontend application . Robotframework folder  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . 
 
-Spring-petclinic-rest-master > is the backend version of the Spring Pet clinic application which provides only REST API.PostmanFiles folder, contains the Collection of requests and an Environment used to execute backend test cases using REST Api.
+Spring-petclinic-rest-master > : is the backend version of the Spring Pet clinic application which provides only REST API.PostmanFiles folder, contains the Collection of requests and an Environment used to execute backend test cases using REST Api.
 
 Jenkinsfile in the repository contains the script with the stages of execution script. The names of the stages are described with names tu build environment for all types of tests, which are self explaining.There are certain steps followed in stage, which will follow the script and commands to be exucted in the step. .
 
