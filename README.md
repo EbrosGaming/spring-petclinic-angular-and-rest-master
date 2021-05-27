@@ -14,7 +14,7 @@ Spring-petlinic-angular > : is the front end application which is a client only.
 ```Robotframework``` folder in spring-petclinic-angular,  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . There is a separate readme file for Robotframework at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/blob/main/spring-petclinic-angular/Robotframework/Readme.md .
 
 Spring-petclinic-rest-master > : is the backend version of the Spring Pet clinic application which provides only REST API.
-```PostmanFiles``` folder, contains the Collection of requests and an Environment used to execute backend test cases using REST Api. There is a separate reademe file for Postman at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/tree/main/PostmanFiles .
+```PostmanFiles``` folder, contains the Collection of requests and an Environment used to execute backend test cases using REST Api. There is a separate reademe file for Postman at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/blob/main/PostmanFiles/README.md .
 
 Jenkinsfile in the repository contains the script with the stages of execution script. The names of the stages are described with names tu build environment for all types of tests, which are self explaining.There are certain steps followed in stage, which will follow the script and commands to be exucted in the step. .
 
