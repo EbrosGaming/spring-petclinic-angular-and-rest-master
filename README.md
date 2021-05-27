@@ -7,10 +7,9 @@ Infotiv's project for IT-Högskolan's test automation course 2021
 ## Test Automation and Agile Methodologies Project By Team C ( MT20 - ITHögskolan )
 ###### Developed By Isac Ojaniemi , Jonna Hagberg , Adam Ballard , Pravalika , Swetha Rani Pannala , Sami Khelifi , Renu Ghumare
 
+SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Spring petclinic Angular And pring petclinic Rest master. 
 
-#### SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Spring petclinic Angular And pring petclinic Rest master. 
-
-Spring-petlinic-angular > : is the front end application which is a client only. First you need to start REST Petclinic backend Api server before starting frontend application.
+Spring-petlinic-angular > : is the front end application which is a client only application. User needs to start REST Petclinic backend Api server before starting frontend application.
 ```Robotframework``` folder in spring-petclinic-angular,  contains the Robot framework test suites to execute the UI test cases in which all keywords used in testcases are stored in a single robot keywords file, named PetclinicKeywords.robot . There is a separate readme file for Robotframework at https://github.com/EbrosGaming/spring-petclinic-angular-and-rest-master/blob/main/spring-petclinic-angular/Robotframework/Readme.md .
 
 Spring-petclinic-rest-master > : is the backend version of the Spring Pet clinic application which provides only REST API.
