@@ -5,7 +5,7 @@ Infotiv's project for IT-Högskolan's test automation course 2021
 ![alt petclinic-junit](git-res/iths.png)
 
 ## Test Automation and Agile Methodologies Project By Team C ( MT20 - ITHögskolan )
-######## Contributed By Isac Ojaniemi , Jonna Hagberg , Adam Ballard , Pravalika , Swetha Rani Pannala , Sami Khelifi , Renu Ghumare
+###### Developed By Isac Ojaniemi , Jonna Hagberg , Adam Ballard , Pravalika , Swetha Rani Pannala , Sami Khelifi , Renu Ghumare
 
 
 SpringPetclinic Application is to maintain the Information about Pets ,Pet Types , Owners of the Pets, Reasons for PetClinic Visits and Veternarians and their Specialties.```EbrosGaming/spring-petclinic-angular-and-rest-master Repository``` contains Subfolders for Angular And Rest projects. 
