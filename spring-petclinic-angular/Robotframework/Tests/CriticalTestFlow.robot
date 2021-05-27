@@ -64,6 +64,7 @@ User Adds An Owner
 #Add Pet
 User Adds A Pet To The Owner
     wait until page contains                      ${Owner_fullname}
+    Element should be visible                     xpath://html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/
     Click Element                                 xpath:/html/body/app-root/app-owner-list/div/div/div/table/tbody/tr[11]/td[1]/a
     Click Element                                 xpath:/html/body/app-root/app-owner-detail/div/div/button[3]
     Input New Pet Detalis
