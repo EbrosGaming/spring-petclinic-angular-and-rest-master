@@ -17,7 +17,7 @@ pipeline {
               stage('Robot') {
             steps {
             	catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
-                	sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Robotframework/Tests/Results spring-petclinic-angular/Robotframework/Tests/CriticalTestflow.robot '
+                	sh 'robot --variable BROWSER:headlesschrome -d Results Tests/CriticalTestflow.robot '
                 }
             }
             post {
