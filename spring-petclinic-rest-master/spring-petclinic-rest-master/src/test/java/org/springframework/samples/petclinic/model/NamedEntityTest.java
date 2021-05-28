@@ -1,7 +1,6 @@
 package org.springframework.samples.petclinic.model;
 import static org.junit.jupiter.api.Assertions.*;
 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,7 +24,7 @@ public class NamedEntityTest {
         assertEquals("Donald", testName.getName());
     }
     @Test
-    @DisplayName("Test To string to return Name"")
+    @DisplayName("Test To check String to return Name")
     public void testToString()
     {
         assertEquals("Peter", testName.toString());
